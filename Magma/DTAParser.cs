@@ -377,38 +377,47 @@ namespace MagmaRokOn
                             }
                             else if ((line.Contains("('drum'") || line.Contains("(drum ")) && !line.Contains("solo"))
                             {
+                                song.DrumsDiffRaw = GetRawDifficultyValue(line);
                                 song.DrumsDiff = DrumDiff(line);
                             }
                             else if ((line.Contains("('guitar'") || line.Contains("(guitar ")) && !line.Contains("solo"))
                             {
+                                song.GuitarDiffRaw = GetRawDifficultyValue(line);
                                 song.GuitarDiff = GuitarDiff(line);
                             }
                             else if ((line.Contains("('bass'") || line.Contains("(bass ")) && !line.Contains("solo"))
                             {
+                                song.BassDiffRaw = GetRawDifficultyValue(line);
                                 song.BassDiff = BassDiff(line);
                             }
                             else if ((line.Contains("('vocals'") || line.Contains("(vocals ")) && !line.Contains("solo"))
                             {
+                                song.VocalsDiffRaw = GetRawDifficultyValue(line);
                                 song.VocalsDiff = VocalsDiff(line);
                             }
                             else if ((line.Contains("('keys'") || line.Contains("(keys ")) && !line.Contains("solo"))
                             {
+                                song.KeysDiffRaw = GetRawDifficultyValue(line);
                                 song.KeysDiff = KeysDiff(line);
                             }
                             else if (line.Contains("real_keys"))
                             {
+                                song.ProKeysDiffRaw = GetRawDifficultyValue(line);
                                 song.ProKeysDiff = ProKeysDiff(line);
                             }
                             else if (line.Contains("real_guitar") && !(line.Contains("tuning")))
                             {
+                                song.ProGuitarDiffRaw = GetRawDifficultyValue(line);
                                 song.ProGuitarDiff = ProGuitarDiff(line);
                             }
                             else if (line.Contains("real_bass") && !(line.Contains("tuning")))
                             {
+                                song.ProBassDiffRaw = GetRawDifficultyValue(line);
                                 song.ProBassDiff = ProBassDiff(line);
                             }
                             else if (line.Contains("('band'") || (line.Contains("(band ")))
                             {
+                                song.BandDiffRaw = GetRawDifficultyValue(line);
                                 song.BandDiff = BandDiff(line);
                             }
                             else if (line.Contains("version") && !line.Contains("short") && !line.Contains("fake"))
@@ -1120,6 +1129,19 @@ namespace MagmaRokOn
             catch (Exception)
             {
                 return -1;
+            }
+        }
+
+        public int GetRawDifficultyValue(string raw_line)
+        {
+            var line = RemoveDTAComments(raw_line);
+            try
+            {
+                return Convert.ToInt32(Regex.Match(line, @"\d+").Value);
+            }
+            catch
+            {
+                return 0;
             }
         }
 
@@ -2044,14 +2066,23 @@ namespace MagmaRokOn
         public int YearReleased { get; set; }
         public int YearRecorded { get; set; }
         public int DrumsDiff { get; set; }
+        public int DrumsDiffRaw { get; set; }
         public int ProBassDiff { get; set; }
+        public int ProBassDiffRaw { get; set; }
         public int BassDiff { get; set; }
+        public int BassDiffRaw { get; set; }
         public int ProGuitarDiff { get; set; }
+        public int ProGuitarDiffRaw { get; set; }
         public int GuitarDiff { get; set; }
+        public int GuitarDiffRaw { get; set; }
         public int KeysDiff { get; set; }
+        public int KeysDiffRaw { get; set; }
         public int ProKeysDiff { get; set; }
+        public int ProKeysDiffRaw {  get; set; }
         public int VocalsDiff { get; set; }
+        public int VocalsDiffRaw { get; set; }
         public int BandDiff { get; set; }
+        public int BandDiffRaw { get; set; }
         public int VocalParts { get; set; }
         public int TrackNumber { get; set; }
         public int Rating { get; set; }
@@ -2127,14 +2158,23 @@ namespace MagmaRokOn
             YearRecorded = 0;
             YearReleased = 0;
             DrumsDiff = 0;
+            DrumsDiffRaw = 0;
             ProBassDiff = 0;
+            ProBassDiffRaw = 0;
             BassDiff = 0;
+            BassDiffRaw = 0;
             ProGuitarDiff = 0;
+            ProGuitarDiffRaw = 0;
             GuitarDiff = 0;
+            GuitarDiffRaw = 0;
             VocalsDiff = 0;
+            VocalsDiffRaw = 0;
             KeysDiff = 0;
+            KeysDiffRaw = 0;
             ProKeysDiff = 0;
+            ProKeysDiffRaw = 0;
             BandDiff = 0;
+            BandDiffRaw = 0;  
             TrackNumber = 0;
             Rating = 4;
             GameVersion = -1;

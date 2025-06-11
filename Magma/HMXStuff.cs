@@ -228,7 +228,7 @@ namespace MagmaRokOn
 
         public static void Notify(string strMsg)
         {
-            MessageBox.Show("Warning: " + strMsg, "Magma: C3 Roks Edition", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Warning: " + strMsg, "Magma: Rok On Edition", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         public static void Fail(string strMsg)
@@ -238,27 +238,27 @@ namespace MagmaRokOn
 
         public static void ShowStopMsgBox(string strMsg)
         {
-            MessageBox.Show(strMsg, "Magma: C3 Roks Edition", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            MessageBox.Show(strMsg, "Magma: Rok On Edition", MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
 
         public static void ShowOKMsgBox(IWin32Window owner, string strMsg)
         {
-            MessageBox.Show(owner, strMsg, "Magma: C3 Roks Edition", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show(owner, strMsg, "Magma: Rok On Edition", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         public static DialogResult ShowOKCancelMsgBox(IWin32Window owner, string strMsg)
         {
-            return MessageBox.Show(owner, strMsg, "Magma: C3 Roks Edition", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            return MessageBox.Show(owner, strMsg, "Magma: Rok On Edition", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
         }
 
         public static DialogResult ShowYesNoMsgBox(IWin32Window owner, string strMsg)
         {
-            return MessageBox.Show(owner, strMsg, "Magma: C3 Roks Edition", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return MessageBox.Show(owner, strMsg, "Magma: Rok On Edition", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
         public static DialogResult ShowYesNoCancelMsgBox(IWin32Window owner, string strMsg)
         {
-            return MessageBox.Show(owner, strMsg, "Magma: C3 Roks Edition", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            return MessageBox.Show(owner, strMsg, "Magma: Rok On Edition", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
         }
     }
 
@@ -267,8 +267,8 @@ namespace MagmaRokOn
         private readonly LinkedList<string> mStringList;
 
         public const string xmas_msg = "Hello #AUTHOR,\r\n\r\nMerry Christmas, Happy Hanukkah, Happy Kwanzaa, Festivus For The Rest Of Us, " +
-                                       "and Happy Holidays!\r\n\r\n#WHEN I (TrojanNemo) sat down to prepare what I expected would be the final " +
-                                       "release of Magma: C3 Roks Edition, I knew I had to think of a way to thank you all for your part in " +
+                                       "and Happy Holidays!\r\n\r\n#WHEN I (Nemo) sat down to prepare what I expected would be the final " +
+                                       "release of Magma: Rok On Edition, I knew I had to think of a way to thank you all for your part in " +
                                        "making C3 the huge success that it is as of today.\r\n\r\nIf you're seeing this message, let me be the " +
                                        "first to tell you that you are a nerd!\r\nYou either looked at the source code, messed with your computer's " +
                                        "clock or are actually working on customs on December #DAYth.\r\nEither way, I think I speak for all other " +
@@ -281,10 +281,10 @@ namespace MagmaRokOn
                                        "six months, or that we would receive such a warm response from the community, or that we would change the " +
                                        "face of customs authoring forever with our tools and tutorials, and much less that we would be so lucky to " +
                                        "have as many great authors join our ranks as we have.\r\n\r\nNow, this isn't a magic trick, so I can't predict " +
-                                       "who you are or what your particular contributions to this project are. But if you're using Magma: C3 Roks Edition, " +
+                                       "who you are or what your particular contributions to this project are. But if you're using Magma: Rok On Edition, " +
                                        "you are most definitely a part of the C3 family, in one form or another.\r\n\r\nThank you for your support, " +
                                        "thank you for your contribution, and thank you for helping us keep this great game alive.\r\n\r\nKeep on " +
-                                       "rocking.\r\n\r\nTrojanNemo, October 25 2013";
+                                       "rocking.\r\n\r\nNemo, October 25 2013";
 
         public ThreadSafeStringList()
         {

@@ -27,7 +27,7 @@ namespace MagmaRokOn
     public partial class MainForm : Form
     {
         public string mAppTitle = "Magma: Rok On Edition v4";
-        public string mAppVersion = ".0.2";
+        public string mAppVersion = ".0.3";
         public string mDefaultAlbumArtPath;
         public string ProjectFolder;
         public string GuitarTuning = "(real_guitar_tuning (0 0 0 0 0 0))";
@@ -1143,7 +1143,11 @@ namespace MagmaRokOn
             ComboBoxGenre.SelectedIndex = ComboBoxGenre.Items.Count - 4; // default genre "Rock"
             ComboBoxSubGenre.SelectedIndex = ComboBoxSubGenre.Items.Count - 5; // default subgenre "Rock"
             ProjectFile.SubGenre = mSubGenreSymbols[ComboBoxSubGenre.SelectedIndex]; //force setting subgenre to proper value
-            
+
+            chkTonality.Checked = false;
+            cboTonality.SelectedIndex = 0;
+            ComboTonicNote.SelectedIndex = -1;
+            chkTonicNote.Checked = false;
             CheckDrums.Checked = true;
             ComboDrums.SelectedIndex = 0;
             CheckBass.Checked = true;
@@ -1159,7 +1163,11 @@ namespace MagmaRokOn
             numericCrowd.Value = -5;
             is2XMIDI = false;
             numericMilliseconds.Value = 0;
+            prevEndMilliseconds.Value = 0;
+            prevEndMinutes.Value = 1;
+            prevEndSeconds.Text = "00";
             SongPreview = 0;
+            PreviewEnd = 0;
             InstrumentSolos = "";
             chkSoloDrums.Checked = false;
             chkSoloGuitar.Checked = false;
@@ -1267,15 +1275,15 @@ namespace MagmaRokOn
             EncodingQualityUpDown.SelectedItem = "03 (default)";
             EncodingQuality = 3;
 
-            scrollDrums.Value = 0;
-            scrollBass.Value = 0;
+            scrollDrums.Value = 1;
+            scrollBass.Value = 1;
             scrollProBass.Value = 0;
-            scrollGuitar.Value = 0;
+            scrollGuitar.Value = 1;
             scrollProGuitar.Value = 0;
             scrollKeys.Value = 0;
             scrollProKeys.Value = 0;
-            scrollVocals.Value = 0;
-            scrollBand.Value = 0;
+            scrollVocals.Value = 1;
+            scrollBand.Value = 1;
 
             chkTempo.Checked = !neverCheckForTempoMap.Checked;
             chkDrumsMix.Checked = true;
@@ -1300,6 +1308,7 @@ namespace MagmaRokOn
         private void CheckDrums_CheckedChanged(object sender, EventArgs e)
         {
             var @checked = CheckDrums.Checked;
+            scrollDrums.Enabled = @checked;
             ComboDrums.Enabled = CheckDrums.Checked;
             ComboDrumSFX.Enabled = CheckDrums.Checked;
 
@@ -1330,6 +1339,7 @@ namespace MagmaRokOn
                 chkDrumsMix.Checked = DoDrumMixes;
             }
 
+            scrollDrums.Value = @checked && scrollDrums.Value == 0 ? 1 : 0;
             chkSoloDrums.Enabled = @checked;
             PictureDrumDifficulty1.Enabled = @checked;
             PictureDrumDifficulty2.Enabled = @checked;
@@ -1344,12 +1354,15 @@ namespace MagmaRokOn
         private void CheckBass_CheckedChanged(object sender, EventArgs e)
         {
             var @checked = ((CheckBox)sender).Checked;
+            scrollBass.Enabled = @checked;
             EnableDisableTrack("bass", @checked);
             SetTextBoxEnabledState(TextBoxBass, @checked);
 
             ComboHopo.Enabled = CheckGuitar.Checked || CheckBass.Checked || CheckKeys.Checked;
             numericMuteVol.Enabled = CheckDrums.Checked || CheckGuitar.Checked || CheckBass.Checked || CheckKeys.Checked;
-            
+
+            scrollBass.Value = @checked && scrollBass.Value == 0 ? 1 : 0;
+
             PictureBassDifficulty1.Enabled = @checked;
             PictureBassDifficulty2.Enabled = @checked;
             PictureBassDifficulty3.Enabled = @checked;
@@ -1371,8 +1384,11 @@ namespace MagmaRokOn
         private void CheckKeys_CheckedChanged(object sender, EventArgs e)
         {
             var @checked = ((CheckBox)sender).Checked;
+            scrollKeys.Enabled = @checked;
             EnableDisableTrack("keys", @checked);
             SetTextBoxEnabledState(TextBoxKeys, @checked);
+
+            scrollKeys.Value = @checked && scrollKeys.Value == 0 ? 1 : 0;
 
             PictureKeysDifficulty1.Enabled = @checked;
             PictureKeysDifficulty2.Enabled = @checked;
@@ -1405,11 +1421,14 @@ namespace MagmaRokOn
         private void CheckGuitar_CheckedChanged(object sender, EventArgs e)
         {
             var @checked = ((CheckBox)sender).Checked;
+            scrollGuitar.Enabled = @checked;
             EnableDisableTrack("guitar", @checked);
             SetTextBoxEnabledState(TextBoxGuitar, @checked);
 
             ComboHopo.Enabled = CheckGuitar.Checked || CheckBass.Checked || CheckKeys.Checked;
             numericMuteVol.Enabled = CheckDrums.Checked || CheckGuitar.Checked || CheckBass.Checked || CheckKeys.Checked;
+
+            scrollGuitar.Value = @checked && scrollGuitar.Value == 0 ? 1 : 0;
 
             PictureGuitarDifficulty1.Enabled = @checked;
             PictureGuitarDifficulty2.Enabled = @checked;
@@ -1451,6 +1470,7 @@ namespace MagmaRokOn
         private void CheckVocals_CheckedChanged(object sender, EventArgs e)
         {
             var @checked = ((CheckBox)sender).Checked;
+            scrollVocals.Enabled = @checked;
             EnableDisableTrack("vocals", @checked);
             SetTextBoxEnabledState(TextBoxVocals, @checked);
             SetTextBoxEnabledState(TextBoxDryVocals, @checked);
@@ -1469,6 +1489,8 @@ namespace MagmaRokOn
             numericTuningCents.Enabled = @checked;
             NumericGuidePitchAttenuation.Enabled = @checked;
             ComboVocalPercussion.Enabled = @checked;
+
+            scrollVocals.Value = @checked && scrollVocals.Value == 0 ? 1 : 0;
 
             PictureVocalDifficulty1.Enabled = @checked;
             PictureVocalDifficulty2.Enabled = @checked;
@@ -2274,6 +2296,7 @@ namespace MagmaRokOn
             }
             
             if (!PassesAudioChecks()) return;
+            if (!doSongPreview(true)) return;
             if (!MidiIsClean()) return;
             if (!CompletedTODO()) return;
 
@@ -3500,7 +3523,10 @@ namespace MagmaRokOn
         private void chkTonicNote_CheckedChanged(object sender, EventArgs e)
         {
             ComboTonicNote.Enabled = chkTonicNote.Checked;
-            chkTonality.Checked = chkTonicNote.Checked;
+            if (!chkTonicNote.Checked)
+            {
+                chkTonality.Checked = false;
+            }
 
             if (!chkTonicNote.Checked)
             {
@@ -3539,6 +3565,7 @@ namespace MagmaRokOn
             PictureProBassDifficulty7.Enabled = chkProBass.Checked;
 
             UpdateDifficultyDisplayNEMO(PictureProBassDifficulty1, RankProBass, chkProBass.Checked);
+            scrollProBass.Enabled = chkProBass.Checked;
             DoShowToast("Pro Bass " + (chkProBass.Checked ? "enabled" : "disabled"));
             RefreshWindowTitle();
          }
@@ -3567,6 +3594,7 @@ namespace MagmaRokOn
             PictureProGuitarDifficulty7.Enabled = chkProGuitar.Checked;
 
             UpdateDifficultyDisplayNEMO(PictureProGuitarDifficulty1, RankProGuitar, chkProGuitar.Checked);
+            scrollProGuitar.Enabled = chkProGuitar.Checked;
             DoShowToast("Pro Guitar " + (chkProGuitar.Checked ? "enabled" : "disabled"));
             RefreshWindowTitle();
         }
@@ -3673,6 +3701,7 @@ namespace MagmaRokOn
             PictureProKeysDifficulty7.Enabled = chkProKeys.Checked;
 
             UpdateDifficultyDisplayNEMO(PictureProKeysDifficulty1, ProjectFile.RankProKeys, chkProKeys.Checked);
+            scrollProKeys.Enabled = chkProKeys.Checked;
             DoShowToast("Pro Keys " + (chkProKeys.Checked? "enabled!" : "disabled..."));
             RefreshWindowTitle();
         }
@@ -3760,7 +3789,11 @@ namespace MagmaRokOn
            if (SongPreview != 0)
            {
                sw.WriteLine("SongPreview=" + SongPreview);
-                sw.WriteLine("SongPreviewEnd=" + PreviewEnd);
+                if (PreviewEnd == 0 || PreviewEnd <= SongPreview)
+                {
+                    PreviewEnd = SongPreview + 30000;
+                }
+               sw.WriteLine("SongPreviewEnd=" + PreviewEnd);
            }
            sw.WriteLine("CheckTempoMap=" + chkTempo.Checked);
            sw.WriteLine("WiiMode=" + wiiConversion.Checked);
@@ -3785,6 +3818,7 @@ namespace MagmaRokOn
             sw.WriteLine("proKeysDifficulty=" + scrollProKeys.Value);
             sw.WriteLine("vocalsDifficulty=" + scrollVocals.Value);
             sw.WriteLine("bandDifficulty=" + scrollBand.Value);
+            sw.WriteLine("BandFailCueSFX=" + cboBandFail.SelectedIndex);
             sw.WriteLine("");
            sw.WriteLine("TO DO List Begin");
 
@@ -3898,14 +3932,16 @@ namespace MagmaRokOn
                    }
                    else if (line.Contains("TonicNote=") && !line.Contains("-1"))
                    {
-                       ComboTonicNote.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line));
-                       chkTonicNote.Checked = true;
+                        ComboTonicNote.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line));
+                        chkTonicNote.Checked = true;
+                        ComboTonicNote.Enabled = true;
                    }
-                   else if (line.Contains("Tonality=") && line.Contains("-1"))
+                   else if (line.Contains("Tonality=") && !line.Contains("-1"))
                    {
                         cboTonality.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line));
                         chkTonality.Checked = true;
-                    }
+                        cboTonality.Enabled = true;
+                   }
                    else if (line.Contains("RhythmBass="))
                    {
                        chkRhythmBass.Checked = line.Contains("1") || line.ToLowerInvariant().Contains("true");
@@ -4051,6 +4087,10 @@ namespace MagmaRokOn
                        ProGuitarDiff = Convert.ToInt16(Tools.GetConfigString(line));
                        doProGuitarDiff(line);
                    }
+                   else if (line.Contains("BandFailCueSFX="))
+                    {
+                        cboBandFail.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
                    else if (line.Contains("ProGuitarTuning="))
                    {
                        const int index = 37; // 'ProGuitarTuning=(real_guitar_tuning ('
@@ -4839,7 +4879,7 @@ namespace MagmaRokOn
                         ProjectCompiler = Tools.GetConfigString(sr.ReadLine());
                         wiiConversion.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
 
-                        if (!version.Contains("v3.1") && !version.Contains("v3.2") && !version.Contains("v3.3")) break;
+                        if (!version.Contains("v3.1") && !version.Contains("v3.2") && !version.Contains("v3.3") && !version.Contains("v4.0")) break;
                         signSongAsLIVE.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
                         use441KHz24bitToolStripMenuItem.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
                         use48KHz24bitToolStripMenuItem.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
@@ -6251,14 +6291,23 @@ namespace MagmaRokOn
             numericReRecord.Value = song.YearRecorded == 0 ? DateTime.Now.Year : song.YearRecorded;
             chkReRecord.Checked = song.YearRecorded != 0;
             DrumDiff(song.DrumsDiff);
+            scrollDrums.Value = song.DrumsDiffRaw;
             BassDiff(song.BassDiff);
+            scrollBass.Value = song.BassDiffRaw;
             ProBassDiff = song.ProBassDiff;
+            scrollProBass.Value = song.ProBassDiffRaw;
             GuitarDiff(song.GuitarDiff);
+            scrollGuitar.Value = song.GuitarDiffRaw;
             ProGuitarDiff = song.ProGuitarDiff;
+            scrollProGuitar.Value = song.ProGuitarDiffRaw;
             VocalsDiff(song.VocalsDiff);
+            scrollVocals.Value = song.VocalsDiffRaw;
             KeysDiff(song.KeysDiff);
+            scrollKeys.Value = song.KeysDiffRaw;
             ProKeysDiff(song.ProKeysDiff);
+            scrollProKeys.Value = song.ProKeysDiffRaw;
             BandDiff(song.BandDiff);
+            scrollBand.Value = song.BandDiffRaw;
             ProjectFile.Genre = song.RawGenre;
             ProjectFile.SubGenre = song.RawSubGenre;
             
@@ -7290,7 +7339,7 @@ namespace MagmaRokOn
             RefreshWindowTitle();
         }
 
-        private void doSongPreview()
+        private bool doSongPreview(bool sanity_check = false)
         {
             //do preview start
             int num1;
@@ -7364,12 +7413,15 @@ namespace MagmaRokOn
             num3 = (num2 * 60) + num1;
             PreviewEnd = (num3 * 1000) + (int)prevEndMilliseconds.Value; //we'll use this when converting to CON
 
-
             //sanity check
+            if (!sanity_check) return true;
             if (PreviewEnd <= SongPreview)
             {
+                PreviewEnd = SongPreview + 30000; //default to 30 seconds more
                 MessageBox.Show("Invalid values for preview start and preview end detected, please correct before compiling!", mAppTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
             }
+            return true;
         }
 
         private void NumericPreviewMins_ValueChanged(object sender, EventArgs e)
@@ -7384,7 +7436,6 @@ namespace MagmaRokOn
             {
                 NumericPreviewMins.Value = 0;
             }
-
             doSongPreview();
             RefreshWindowTitle();
         }
@@ -7948,7 +7999,7 @@ namespace MagmaRokOn
                     LabelBassPan, LabelKeysPan, LabelBackingPan, LabelDrumKickPan, LabelDrumKitPan, LabelDrumSnarePan, LabelVocalPan,
                     LabelEncodingQuality, LabelSongName, LabelArtist, LabelAlbumName, LabelLanguages, LabelGenre, LabelSubgenre,
                     LabelYearReleased, LabelAuthor, label1, label2, LabelTrackNumber, LabelReRecording, LabelPreviewSeparator, label3,
-                    LabelSolos, LabelEndPreview
+                    LabelSolos, LabelEndPreview, LabelBandFail, label5, label6
                 };
 
             foreach (var label in labels)
@@ -7969,7 +8020,7 @@ namespace MagmaRokOn
                 {
                     CheckBoxLangEnglish, CheckBoxLangFrench, CheckBoxLangGerman, CheckBoxLangItalian, CheckBoxLangJapanese,
                     CheckBoxLangSpanish, chkReRecord, chkMaster, CheckBoxFromAlbum, chkTempo, chkKeysAnim, chkAutoKeys, chkDrumsMix,
-                    chkSoloDrums, chkSoloGuitar,chkSoloBass, chkSoloKeys, chkSoloVocals, chkTonicNote, chkAuthorDTA
+                    chkSoloDrums, chkSoloGuitar,chkSoloBass, chkSoloKeys, chkSoloVocals, chkTonicNote, chkAuthorDTA, chkTonality
                 };
 
             foreach (var checkbox in checkboxes)
@@ -10166,12 +10217,16 @@ namespace MagmaRokOn
         
         private void PlaybackTimer_Tick(object sender, EventArgs e)
         {
+            if (PreviewEnd == 0)
+            {
+                PreviewEnd = SongPreview + 30000;
+            }
             DrawSpectrum();
             // the stream is still playing...
             var pos = Bass.BASS_ChannelGetPosition(BassStream); // position in bytes
             var PlaybackSeconds = Bass.BASS_ChannelBytes2Seconds(BassStream, pos); // the elapsed time length
             //calculate how many seconds are left to play
-            var time_left = ((PreviewEnd - ProjectFile.PreviewStart) / 1000) - PlaybackSeconds;
+            var time_left = ((SongPreview + PreviewEnd) / 1000) - PlaybackSeconds;
             if ((int)time_left == 3.0) //start fade-out
             {
                 Bass.BASS_ChannelSlideAttribute(BassMixer, BASSAttribute.BASS_ATTRIB_VOL, 0, 3000);
@@ -10211,8 +10266,9 @@ namespace MagmaRokOn
 
             // create a stereo mixer
             BassMixer = BassMix.BASS_Mixer_StreamCreate(44100, 2, BASSFlag.BASS_MIXER_END);
-            float PlaybackSeconds = ProjectFile.PreviewStart == 0 ? 0 : (float)ProjectFile.PreviewStart / (float)1000;
-            
+            //float PlaybackSeconds = ProjectFile.PreviewStart == 0 ? 0 : (float)ProjectFile.PreviewStart / (float)1000;
+            float PlaybackSeconds = SongPreview == 0 ? 0 : (float)SongPreview / (float)1000;
+
             //get audio streams
             var tracks = new List<string> {"guitar","bass","vocals","backing","keys","drum_kick","drum_kit","drum_snare"};
             var channels = 0;
@@ -10529,7 +10585,12 @@ namespace MagmaRokOn
         {
             cboTonality.Enabled = chkTonality.Checked;
             doTonality = chkTonality.Checked;
+            if (doTonality && cboTonality.SelectedIndex == -1)
+            {
+                cboTonality.SelectedIndex = 0;
+            }
             songTonality = cboTonality.SelectedIndex;
+            RefreshWindowTitle();
         }
 
         private void chkDIYStems_CheckedChanged(object sender, EventArgs e)
@@ -10596,7 +10657,6 @@ namespace MagmaRokOn
             {
                 prevEndMinutes.Value = 0;
             }
-
             doSongPreview();
             RefreshWindowTitle();
         }
@@ -10651,46 +10711,116 @@ namespace MagmaRokOn
         private void scrollDrums_ValueChanged(object sender, EventArgs e)
         {
             lblDrumsDiff.Text = scrollDrums.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollDrums.Value, 124, 151, 178, 242, 345, 448);
+            UpdateDifficultyDisplayNEMO(PictureDrumDifficulty1, difficulty, difficulty > 0);
+        }
+
+        private int getPipDifficultyFromRawValue(int rawDifficulty, int Diff1, int Diff2, int Diff3, int Diff4, int Diff5, int Diff6)
+        {
+            if (rawDifficulty == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                if (rawDifficulty > 0 && rawDifficulty <= Diff1)
+                {
+                    return 1;
+                }
+                else if (rawDifficulty > Diff1 && rawDifficulty <= Diff2)
+                {
+                    return 2;
+                }
+                else if (rawDifficulty > Diff2 && rawDifficulty <= Diff3)
+                {
+                    return 3;
+                }
+                else if (rawDifficulty > Diff3 && rawDifficulty <= Diff4)
+                {
+                    return 4;
+                }
+                else if (rawDifficulty > Diff4 && rawDifficulty <= Diff5)
+                {
+                    return 5;
+                }
+                else if (rawDifficulty > Diff5 && rawDifficulty <= Diff6)
+                {
+                    return 6;
+                }
+                else if (rawDifficulty > Diff6)
+                {
+                    return 7;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
         }
 
         private void scrollBass_ValueChanged(object sender, EventArgs e)
         {
             lblBassDiff.Text = scrollBass.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollBass.Value, 135,181,228,293,364,436);
+            UpdateDifficultyDisplayNEMO(PictureBassDifficulty1, difficulty, difficulty > 0);
         }
 
         private void scrollProBass_ValueChanged(object sender, EventArgs e)
         {
             lblProBassDiff.Text = scrollProBass.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollProBass.Value, 150,208,267,325,384,442);
+            UpdateDifficultyDisplayNEMO(PictureProBassDifficulty1, difficulty, difficulty > 0);
         }
 
         private void scrollGuitar_ValueChanged(object sender, EventArgs e)
         {
             lblGuitarDiff.Text = scrollGuitar.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollGuitar.Value, 139, 176,221,267,333,409);
+            UpdateDifficultyDisplayNEMO(PictureGuitarDifficulty1, difficulty, difficulty > 0);
         }
 
         private void scrollProGuitar_ValueChanged(object sender, EventArgs e)
         {
             lblProGuitarDiff.Text = scrollProGuitar.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollProGuitar.Value, 150,208,267,325,384,442);
+            UpdateDifficultyDisplayNEMO(PictureProGuitarDifficulty1, difficulty, difficulty > 0);
         }
 
         private void scrollVocals_ValueChanged(object sender, EventArgs e)
         {
             lblVocalsDiff.Text = scrollVocals.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollVocals.Value, 132,175,218,279,353,427);
+            UpdateDifficultyDisplayNEMO(PictureVocalDifficulty1, difficulty, difficulty > 0);
         }
 
         private void scrollKeys_ValueChanged(object sender, EventArgs e)
         {
             lblKeysDiff.Text = scrollKeys.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollKeys.Value, 153,211,269,327,385,443);
+            UpdateDifficultyDisplayNEMO(PictureKeysDifficulty1, difficulty, difficulty > 0);
         }
 
         private void scrollProKeys_ValueChanged(object sender, EventArgs e)
         {
             lblProKeysDiff.Text = scrollProKeys.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollProKeys.Value, 153, 211, 269, 327, 385, 443);
+            UpdateDifficultyDisplayNEMO(PictureProKeysDifficulty1, difficulty, difficulty > 0);
         }
 
         private void scrollBand_ValueChanged(object sender, EventArgs e)
         {
             lblBandDiff.Text = scrollBand.Value.ToString();
+            RefreshWindowTitle();
+            var difficulty = getPipDifficultyFromRawValue(scrollBand.Value, 165,215,243,267,292,345);
+            UpdateDifficultyDisplayNEMO(PictureBandDifficulty1, difficulty, difficulty > 0);
         }
     }
 }
