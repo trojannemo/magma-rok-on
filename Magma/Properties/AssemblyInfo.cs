@@ -21,6 +21,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("3e20a1aa-b80f-4641-abea-b466decff514")]
-[assembly: AssemblyFileVersion("4.0.3.0")]
+[assembly: AssemblyFileVersion("4.0.4.0")]
 [assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: AssemblyVersion("4.0.3.0")]
+[assembly: AssemblyVersion("4.0.4.0")]

@@ -27,7 +27,7 @@ namespace MagmaRokOn
     public partial class MainForm : Form
     {
         public string mAppTitle = "Magma: Rok On Edition v4";
-        public string mAppVersion = ".0.3";
+        public string mAppVersion = ".0.4";
         public string mDefaultAlbumArtPath;
         public string ProjectFolder;
         public string GuitarTuning = "(real_guitar_tuning (0 0 0 0 0 0))";
@@ -1272,7 +1272,7 @@ namespace MagmaRokOn
                 TextBoxAuthor.Text = DefaultAuthor;
             }
 
-            EncodingQualityUpDown.SelectedItem = "03 (default)";
+            cboEncodingQuality.SelectedIndex = 2;// "03 (default)";
             EncodingQuality = 3;
 
             scrollDrums.Value = 1;
@@ -1610,7 +1610,7 @@ namespace MagmaRokOn
                 {
                     MessageBox.Show("You have selected a drum mix requiring multiple audio stems.\nAudio Quality 3 has been automatically selected" +
                                     "\ndue to known issues with playback on the PS3.", mAppTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    EncodingQualityUpDown.SelectedItem = "03 (default)";
+                    cboEncodingQuality.SelectedIndex = 2;// "3 (default)";
                     EncodingQuality = 3;
                 }
             }
@@ -3735,7 +3735,7 @@ namespace MagmaRokOn
            sw.WriteLine("CustomID=" + CustomID);
            sw.WriteLine("Version=" + SongVersion);
            sw.WriteLine("IsMaster=" + chkMaster.Checked);
-           sw.WriteLine("EncodingQuality=" + EncodingQualityUpDown.SelectedIndex);
+           sw.WriteLine("EncodingQuality=" + EncodingQuality);
            if (CheckCrowd.Checked && TextBoxCrowd.Text!="")
            {
                sw.WriteLine("CrowdAudio=" + TextBoxCrowd.Text);
@@ -3864,7 +3864,7 @@ namespace MagmaRokOn
                    }
                    else if (line.Contains("EncodingQuality="))
                    {
-                       EncodingQualityUpDown.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line));
+                       cboEncodingQuality.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line)) - 1;
                        GetEncodingQuality();
                    }
                    else if (line.Contains("CrowdAudio="))
@@ -5206,60 +5206,24 @@ namespace MagmaRokOn
 
         private void GetEncodingQuality(bool ShowWiiMessage = true)
         {
-            var qual = EncodingQualityUpDown.SelectedItem.ToString();
-            if (wiiConversion.Checked && !WiiWarning && ShowWiiMessage && qual != "01 (lowest)" && qual != "02" && qual != "03")
+            var qual = cboEncodingQuality.SelectedIndex;
+            if (wiiConversion.Checked && !WiiWarning && ShowWiiMessage && qual != 1 && qual != 2 && qual != 3)
             {
                 MessageBox.Show("You're currently using Wii Mode.\nDue to the Wii's limited memory, you are restricted to using\nAudio Quality 3 " +
                                 "or lower.",mAppTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 WiiWarning = true;
-                EncodingQualityUpDown.SelectedItem = "03 (default)";
+                cboEncodingQuality.SelectedIndex = 2; // "3 (default)";
                 return;
             }
 
             WiiWarning = false;
-            switch (EncodingQualityUpDown.SelectedItem.ToString())
-            {
-                case "01 (lowest)":
-                    EncodingQuality = 1;
-                    break;
-                case "02":
-                    EncodingQuality = 2;
-                    break;
-                case "03 (default)":
-                    EncodingQuality = 3;
-                    break;
-                case "04":
-                    EncodingQuality = 4;
-                    break;
-                case "05":
-                    EncodingQuality = 5;
-                    break;
-                case "06":
-                    EncodingQuality = 6;
-                    break;
-                case "07":
-                    EncodingQuality = 7;
-                    break;
-                case "08":
-                    EncodingQuality = 8;
-                    break;
-                case "09":
-                    EncodingQuality = 9;
-                    break;
-                case "10 (highest)":
-                    EncodingQuality = 10;
-                    break;
-                default:
-                    EncodingQuality = 3;
-                    EncodingQualityUpDown.SelectedItem = "03 (default)";
-                    break;
-            }
+            EncodingQuality = cboEncodingQuality.SelectedIndex + 1;  
 
             if (ComboDrums.SelectedIndex > 0 && EncodingQuality > 3)
             {
                 MessageBox.Show("You have selected a drum mix requiring multiple audio stems.\nAudio Quality 3 has been automatically selected" +
                                 "\ndue to known issues with playback on the PS3.", mAppTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                EncodingQualityUpDown.SelectedItem = "03 (default)";
+                cboEncodingQuality.SelectedIndex = 2;// "3 (default)";
                 EncodingQuality = 3;
             }
         }
@@ -6835,7 +6799,7 @@ namespace MagmaRokOn
         {
             WiiWarning = true;
             ComboDrums.SelectedIndex = 0;
-            EncodingQualityUpDown.SelectedItem = "03 (default)";
+            cboEncodingQuality.SelectedIndex = 2; //3 (default)
             EncodingQuality = 3;
             if (!useUniqueNumericSongID.Checked && !string.IsNullOrEmpty(txtSongID.Text))
             {
@@ -8184,12 +8148,12 @@ namespace MagmaRokOn
                 {
                     case 0:
                         numeric.BackColor = color;
-                        EncodingQualityUpDown.BackColor = color;
+                        cboEncodingQuality.BackColor = color;
                         DomainPreviewSecs.BackColor = color;
                         break;
                     case 1:
                         numeric.ForeColor = color;
-                        EncodingQualityUpDown.ForeColor = color;
+                        cboEncodingQuality.ForeColor = color;
                         DomainPreviewSecs.ForeColor = color;
                         break;
                 }
@@ -10821,6 +10785,11 @@ namespace MagmaRokOn
             RefreshWindowTitle();
             var difficulty = getPipDifficultyFromRawValue(scrollBand.Value, 165,215,243,267,292,345);
             UpdateDifficultyDisplayNEMO(PictureBandDifficulty1, difficulty, difficulty > 0);
+        }
+
+        private void cboEncodingQuality_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EncodingQuality = cboEncodingQuality.SelectedIndex + 1;
         }
     }
 }

@@ -432,7 +432,6 @@ namespace MagmaRokOn
             this.TextBoxCrowd = new System.Windows.Forms.TextBox();
             this.LabelCrowd = new System.Windows.Forms.Label();
             this.CheckCrowd = new System.Windows.Forms.CheckBox();
-            this.EncodingQualityUpDown = new System.Windows.Forms.DomainUpDown();
             this.LabelEncodingQuality = new System.Windows.Forms.Label();
             this.groupDrumMix = new System.Windows.Forms.GroupBox();
             this.chkDrumsMix = new System.Windows.Forms.CheckBox();
@@ -668,6 +667,7 @@ namespace MagmaRokOn
             this.panel12 = new System.Windows.Forms.Panel();
             this.PlaybackTimer = new System.Windows.Forms.Timer(this.components);
             this.updater = new System.ComponentModel.BackgroundWorker();
+            this.cboEncodingQuality = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.TopLevelTabs.SuspendLayout();
             this.TabPageInformation.SuspendLayout();
@@ -2732,6 +2732,7 @@ namespace MagmaRokOn
             this.TabPageAudio.BackColor = System.Drawing.Color.Black;
             this.TabPageAudio.BackgroundImage = global::MagmaRokOn.Properties.Resources.bg3;
             this.TabPageAudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TabPageAudio.Controls.Add(this.cboEncodingQuality);
             this.TabPageAudio.Controls.Add(this.prevEndMilliseconds);
             this.TabPageAudio.Controls.Add(this.prevEndSeconds);
             this.TabPageAudio.Controls.Add(this.prevEndMinutes);
@@ -2833,7 +2834,6 @@ namespace MagmaRokOn
             this.TabPageAudio.Controls.Add(this.TextBoxCrowd);
             this.TabPageAudio.Controls.Add(this.LabelCrowd);
             this.TabPageAudio.Controls.Add(this.CheckCrowd);
-            this.TabPageAudio.Controls.Add(this.EncodingQualityUpDown);
             this.TabPageAudio.Controls.Add(this.LabelEncodingQuality);
             this.TabPageAudio.Controls.Add(this.groupDrumMix);
             this.TabPageAudio.Controls.Add(this.DomainPreviewSecs);
@@ -4878,31 +4878,6 @@ namespace MagmaRokOn
             this.ToolTip.SetToolTip(this.CheckCrowd, "Click here to enable a crowd track for this song");
             this.CheckCrowd.UseVisualStyleBackColor = false;
             this.CheckCrowd.CheckedChanged += new System.EventHandler(this.CheckCrowd_CheckedChanged);
-            // 
-            // EncodingQualityUpDown
-            // 
-            this.EncodingQualityUpDown.BackColor = System.Drawing.Color.White;
-            this.EncodingQualityUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EncodingQualityUpDown.ForeColor = System.Drawing.Color.Black;
-            this.EncodingQualityUpDown.Items.Add("10 (highest)");
-            this.EncodingQualityUpDown.Items.Add("09");
-            this.EncodingQualityUpDown.Items.Add("08");
-            this.EncodingQualityUpDown.Items.Add("07");
-            this.EncodingQualityUpDown.Items.Add("06");
-            this.EncodingQualityUpDown.Items.Add("05");
-            this.EncodingQualityUpDown.Items.Add("04");
-            this.EncodingQualityUpDown.Items.Add("03 (default)");
-            this.EncodingQualityUpDown.Items.Add("02");
-            this.EncodingQualityUpDown.Items.Add("01 (lowest)");
-            this.EncodingQualityUpDown.Location = new System.Drawing.Point(405, 507);
-            this.EncodingQualityUpDown.Name = "EncodingQualityUpDown";
-            this.EncodingQualityUpDown.ReadOnly = true;
-            this.EncodingQualityUpDown.Size = new System.Drawing.Size(82, 20);
-            this.EncodingQualityUpDown.TabIndex = 67;
-            this.EncodingQualityUpDown.Text = "03 (default)";
-            this.EncodingQualityUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ToolTip.SetToolTip(this.EncodingQualityUpDown, "Set the encoding quality for the audio. Default is 3.");
-            this.EncodingQualityUpDown.SelectedItemChanged += new System.EventHandler(this.EncodingQualityUpDown_SelectedItemChanged);
             // 
             // LabelEncodingQuality
             // 
@@ -8595,6 +8570,30 @@ namespace MagmaRokOn
             this.updater.DoWork += new System.ComponentModel.DoWorkEventHandler(this.updater_DoWork);
             this.updater.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.updater_RunWorkerCompleted);
             // 
+            // cboEncodingQuality
+            // 
+            this.cboEncodingQuality.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboEncodingQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEncodingQuality.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEncodingQuality.FormattingEnabled = true;
+            this.cboEncodingQuality.Items.AddRange(new object[] {
+            "1 (lowest)",
+            "2",
+            "3 (default)",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10 (highest)"});
+            this.cboEncodingQuality.Location = new System.Drawing.Point(405, 506);
+            this.cboEncodingQuality.Name = "cboEncodingQuality";
+            this.cboEncodingQuality.Size = new System.Drawing.Size(103, 23);
+            this.cboEncodingQuality.TabIndex = 172;
+            this.ToolTip.SetToolTip(this.cboEncodingQuality, "Select audio quality");
+            this.cboEncodingQuality.SelectedIndexChanged += new System.EventHandler(this.cboEncodingQuality_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -8848,7 +8847,6 @@ namespace MagmaRokOn
         private TextBox txtSongID;
         private Label lblDrumMix;
         private GroupBox groupDrumMix;
-        private DomainUpDown EncodingQualityUpDown;
         private Label LabelEncodingQuality;
         private Button btnCrowd;
         private TextBox TextBoxCrowd;
@@ -9164,5 +9162,6 @@ namespace MagmaRokOn
         private HScrollBar scrollProKeys;
         private HScrollBar scrollBand;
         private Label lblBandDiff;
+        private ComboBox cboEncodingQuality;
     }
 }
