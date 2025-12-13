@@ -7,6 +7,29 @@ Modified by TrojanNemo 2013-2015, FujiSkunk 2019-2024, TrojanNemo 2025-Present
 
 FEATURES / CHANGE LOG:
 
+v4.0.3
+
+FIXED tonality always saving as -1 instead of the proper value
+FIXED enabling/disabling tonality not activating the "need to save changes" marker
+FIXED tonality checkbox label not changing with skin changes
+FIXED Band Fail SFX label not changing with skin changes
+FIXED most of the difficulty bubbles not having the correct cursor
+FIXED behavior when importing a CON file, it would put the right difficulty bubbles but not the right difficulty value in the slider
+FIXED wonky behavior with preview start and end times, now only checks for validity of values when compiling
+FIXED behavior when starting a new project would not clear the preview end values
+FIXED preview end labels not changing with skin changes
+FIXED audio preview not working since introduction of the preview end value
+FIXED "Use unique numeric ID" option toggle not saving across instances
+FIXED Band Fail SFX value not saving or loading from the .rok project file
+FIXED behavior for tonic note and tonality to make more sense
+FIXED custom skins not staying selected due to broken option loading code
+
+ADDED feature so now instrument difficulty pips update automatically as you change the difficulty value in the slider
+ADDED flat equivalents for sharps in the tonic note dropdown as requested by ataeaf
+ADDED updated ark file thanks to Linos that should allow MagmaCompiler to pass through a chart with YARG's new range shift indicators
+
+----------
+
 v4.0.2
 CHANGES
 - Fine tuned the band fail mix cues to remove unnecessary duplicates and rename the remaining ones to something more legible while ensuring it still works when writing to the DTA
@@ -702,3 +725,4 @@ The entire C3 Authors community, who beta tested and gave great feedback.
 -------------------
 
 For technical support or for more great tools like this one, visit our forums at forums.customscreators.com
+
