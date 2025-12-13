@@ -4,7 +4,7 @@ Decompiled using JetBrains DotPeek and rebuilt in Visual Studio by Nemo in 2013<
 Maintained by Nemo between 2013-2015<br>
 [The Dark Ages] 2015-2019<br>
 Maintained by FujiSkunk between 2019-2024<br>
-And back to Nemo 2025-Present (as of this writing, January 28, 2025)<br>
+And back to Nemo 2025-Present (as of this writing, December 13, 2025)<br>
 <br>
 
 ⚠️ Important:
