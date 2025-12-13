@@ -5,7 +5,7 @@ Maintained by Nemo between 2013-2015<br>
 [The Dark Ages] 2015-2019<br>
 Maintained by FujiSkunk between 2019-2024<br>
 And back to Nemo 2025-Present (as of this writing, December 13, 2025)<br>
-<br><br>
+<br>
 
 ⚠️ Important:<br>
 This repository contains source code only.<br>
