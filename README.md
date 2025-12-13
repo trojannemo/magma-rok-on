@@ -6,6 +6,16 @@ Maintained by Nemo between 2013-2015<br>
 Maintained by FujiSkunk between 2019-2024<br>
 And back to Nemo 2025-Present (as of this writing, January 28, 2025)<br>
 <br>
+
+⚠️ Important:
+
+This repository contains source code only.
+
+Required runtime binaries are available under Releases.
+
+See BUILDING.md for compile instructions.
+
+
 This was literally the tool to create Rock Band 3 songs and customs. With our collective improvements it continues to be the de facto tool, but now it's even better.<br>
 <br>
 If you're going to just download and compile without much or any editing to the source code, please make sure to download everything in the /bin/ and /res/ folders and put it in the appropriate folders wherever your executable is. These are all the dependencies, third-party tools and assets Magma expects to have access to.
