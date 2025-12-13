@@ -1,9 +1,0 @@
-Tuning Offset Cents adjusts the entire midi vocal chart up or down by tiny intervals for songs that are slightly between keys
-You use a negative value to adjust down and a positive value to adjust up, to match the vocal stem
-There are 100 cents in a half-step, so it's a very, very precise scale and it's best to work in intervals of 10 because a human can't even tell a difference in 1 or 2 cents
-You will never need a value greater than 50, otherwise you're adjusting by more than a quarter-step, which means you charted the wrong notes, as opposed to the song being out of tune
-Also it's very uncommon for a song to need a tuning offset at all, so only use it if you're absolutely sure it needs it
-
-The best way to test the offset for accuracy is to take the song into practice mode and turn on guide pitch, and see if it matches the vocal track more closely, and adjust from there in intervals of 10, checking the guide pitch each time until its right on the money
-
-Many thanks to OrangeHarrison for this information
