@@ -1,44 +1,100 @@
-# Magma: Rok On Edition
-Developed by Harmonix Music Systems for use with the Rock Band Network<br>
-Decompiled using JetBrains DotPeek and rebuilt in Visual Studio by Nemo in 2013<br>
-Maintained by Nemo between 2013-2015<br>
-[The Dark Ages] 2015-2019<br>
-Maintained by FujiSkunk between 2019-2024<br>
-And back to Nemo 2025-Present (as of this writing, December 13, 2025)<br>
-<br>
+# 🔥 Magma: Rok On Edition
 
-⚠️ Important:<br>
-This repository contains source code only.<br>
-Required runtime binaries are available under Releases.<br>
-See BUILDING.md for compile instructions.<br>
-<br>
-This was literally the tool to create Rock Band 3 songs and customs. With our collective improvements it continues to be the de facto tool, but now it's even better.<br>
-<br>
-If you're going to just download and compile without much or any editing to the source code, please make sure to download everything in the /bin/ and /res/ folders and put it in the appropriate folders wherever your executable is. These are all the dependencies, third-party tools and assets Magma expects to have access to.
-<br><br>
-Magma is written in C# using .NET Framework 4.8.1 and using Visual Studio 2022 Community Edition. For best results make sure you use the same.
-<br><br>
-If you have technical questions or want to discuss Magma with me, I can be found in most Rock Band related Discord servers under the same username. Send me a message and let's talk.
-<br><br>
-Magma wouldn't be possible without the initial development by Harmonix, so many thanks to them for that and for creating this amazing music game franchise.
-<br><br>But others helped make Magma: Rok On Edition what it is, and they deserve recognition and thanks, so let's get into it.
-<br><br>
-<u>Credit where credit is due</u>:
-<br>
-emist for the assembly hacking to MagmaCompiler<br>
-xorloser for all his great tools and knowledge<br>
-DJ Shepherd for the x360 library<br>
-Nyxyxylyth for base code to convert RBA files<br>
-PikminGuts92 for the ark file modifications<br>
-NewCreature for the modifications to oggenc<br>
-raynebc for midishrink and help with MIDI editing<br>
-Mark Heath for the NAudio.MIDI library:<br>
-http://naudio.codeplex.com/<br>
-Ian Luck for the BASS audio library:<br>
-http://www.un4seen.com/<br>
-Bernd Niedergesaess for the BASS.NET API:<br>
-http://bass.radio42.com/<br>
-<br>
-Thanks to everyone else who helped along the way<br>
-<br>
-I am not affiliated in any way with Harmonix Music Systems and this project is not sanctioned by Harmonix Music Systems
+---
+
+## Project History
+
+**Magma: Rok On Edition** is a community-maintained continuation of **Magma**, the original tool developed by **Harmonix Music Systems** for use with the **Rock Band Network**.
+
+### Timeline
+
+- **Original development:** Harmonix Music Systems  
+- **Decompiled and rebuilt:** Nemo (2013) using JetBrains dotPeek  
+- **Maintained by Nemo:** 2013–2015  
+- **[The Dark Ages]:** 2015–2019  
+- **Maintained by FujiSkunk:** 2019–2024  
+- **Maintained by Nemo:** 2025–Present  
+  *(as of December 13, 2025)*
+
+---
+
+## ⚠️ Important
+
+This repository contains **source code only**.
+
+- Required runtime binaries are distributed under **Releases**
+- See **BUILDING.md** for detailed compile instructions
+
+If you plan to compile Magma without modifying the source code, you **must** download the contents of the `/bin/` and `/res/` folders and place them alongside the compiled executable.
+
+These folders contain:
+- Required dependencies
+- Third-party tools
+- Runtime assets Magma expects to access at launch
+
+---
+
+## About
+
+This was **the** tool used to create **Rock Band 3 songs and customs**.
+
+Through collective community effort and continued maintenance, **Magma: Rok On Edition** remains the *de facto* tool for authoring Rock Band 3 content — now with improvements and fixes that go well beyond the original release.
+
+---
+
+## Development Environment
+
+- **Language:** C#  
+- **Framework:** .NET Framework **4.8.1**  
+- **IDE:** Visual Studio **2022 Community Edition**
+
+For best results, use the same environment.
+
+---
+
+## Community & Support
+
+If you have technical questions or want to discuss Magma:
+
+- You can find me in most **Rock Band–related Discord servers** under the same username
+
+Send me a message — I’m always happy to talk shop.
+
+---
+
+## Credits
+
+Magma would not be possible without the original work by **Harmonix Music Systems**, and enormous thanks go to them for creating such an iconic music game franchise.
+
+Many others also contributed significantly to making **Magma: Rok On Edition** what it is today:
+
+- **emist** — assembly hacking for MagmaCompiler  
+- **xorloser** — tools, research, and deep technical knowledge  
+- **DJ Shepherd** — x360 library  
+- **Nyxyxylyth** — base RBA conversion code  
+- **PikminGuts92 & Linos** — ARK file modifications  
+- **NewCreature** — oggenc modifications  
+- **raynebc** — *midishrink* and MIDI editing expertise  
+
+### Libraries & Dependencies
+
+- **Mark Heath** — NAudio.MIDI  
+  http://naudio.codeplex.com/
+
+- **Ian Luck** — BASS audio library  
+  http://www.un4seen.com/
+
+- **Bernd Niedergesaess** — BASS.NET API  
+  http://bass.radio42.com/
+
+---
+
+## Disclaimer
+
+This project is **not affiliated with or endorsed by Harmonix Music Systems**.
+
+Magma: Rok On Edition exists as a community-driven continuation of a legacy tool, preserved and improved for educational, archival, and creative purposes.
+
+---
+
+Thanks to everyone who helped along the way.
