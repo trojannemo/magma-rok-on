@@ -1,5 +1,7 @@
 # 🔥 Magma: Rok On Edition
 
+![Magma: Rock On Edition](https://nemosnautilus.com/magma/magmav400.png)
+
 ---
 
 ## Project History
