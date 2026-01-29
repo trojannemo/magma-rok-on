@@ -10064,7 +10064,19 @@ namespace MagmaRokOn
         {
             if (string.IsNullOrEmpty(TextBoxBuildDestination.Text)) return "0";
             var corrector = new SongIDCorrector();
-            return corrector.ShortnameToSongID(Path.GetFileName(TextBoxBuildDestination.Text)).ToString();
+            var fileName = Path.GetFileName(TextBoxBuildDestination.Text);
+            // Let me explain, rb3con in the internal name is removed, but not here.
+            // This will do it and the 1x is to prevent the version name from being used without the 1x,
+            // as this generates incorrect IDs. This solves it.
+            if (fileName.EndsWith("_rb3con"))
+            {
+                fileName = fileName.Substring(0, fileName.Length - "_rb3con".Length);
+            }
+            if (is2XMIDI || (!is2XMIDI && is2xBassPedal))
+            {
+                fileName += "1x";
+            }
+            return corrector.ShortnameToSongID(fileName).ToString();
         }       
 
         private void useUniqueNumericSongID_CheckedChanged(object sender, EventArgs e)
