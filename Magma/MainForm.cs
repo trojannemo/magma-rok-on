@@ -10072,7 +10072,8 @@ namespace MagmaRokOn
             {
                 fileName = fileName.Substring(0, fileName.Length - "_rb3con".Length);
             }
-            if (is2XMIDI || (!is2XMIDI && is2xBassPedal))
+            Console.WriteLine(chk2xBass.Checked);
+            if (chk2xBass.Checked)
             {
                 fileName += "1x";
             }
