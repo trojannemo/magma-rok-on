@@ -1,6 +1,6 @@
 # 🔥 Magma: Rok On Edition
 
-![Magma: Rock On Edition](https://nemosnautilus.com/magma/magmav400.png)
+![Magma: Rock On Edition](https://nemosnautilus.com/magma/magmav410.png)
 
 ---
 
@@ -15,8 +15,8 @@
 - **Maintained by Nemo:** 2013–2015  
 - **[The Dark Ages]:** 2015–2019  
 - **Maintained by FujiSkunk:** 2019–2024  
-- **Maintained by Nemo:** 2025–Present  
-  *(as of December 13, 2025)*
+- **Maintained by Nemo:** 2025–2026 
+  *(as of March 13, 2026)*
 
 ---
 
