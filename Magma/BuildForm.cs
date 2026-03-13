@@ -1504,22 +1504,7 @@ namespace MagmaRokOn
         private void BuildForm_Shown(object sender, EventArgs e)
         {
             switch (mMainForm.ActiveSkin)
-            {
-                case "fire":
-                    btnClipboard.BackgroundImage = Resources.btn_xlarge_lava;
-                    btnVisualize.BackgroundImage = Resources.btn_xlarge_lava;
-                    btnNautilus.BackgroundImage = Resources.btn_xlarge_lava;
-                    ButtonClose.BackgroundImage = Resources.btn_large_lava;
-                    break;
-               case "colorful":
-                    SkinDefaults();
-                    SkinButtonStyles(FlatStyle.Flat);
-                    SkinButtonText(Color.White);
-                    btnClipboard.BackColor = Color.FromArgb(27, 178, 37);
-                    btnVisualize.BackColor = Color.FromArgb(196, 33, 34);
-                    btnNautilus.BackColor = Color.FromArgb(230, 216, 0);
-                    ButtonClose.BackColor = Color.FromArgb(39, 85, 196);
-                    break;
+            {                
                case "custom":
                     SkinDefaults();
                     SkinButtonStyles(mMainForm.SkinButtonStyle);

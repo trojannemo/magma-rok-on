@@ -1,15 +1,16 @@
-﻿using System;
+﻿using MagmaRokOn.x360;
+using NAudio.Midi;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using MagmaRokOn.x360;
-using NAudio.Midi;
 
 namespace MagmaRokOn
 {
@@ -2094,24 +2095,101 @@ namespace MagmaRokOn
         public bool CreateAlbumArt(string image, string bmp)
         {
             var img = NemoLoadImage(image);
-            var albumart = new Bitmap(256, 256);
+            var albumart = new Bitmap(256, 256, PixelFormat.Format32bppArgb);
             albumart.SetResolution(img.HorizontalResolution, img.VerticalResolution);
 
             using (var graphics = Graphics.FromImage(albumart))
             {
-                graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-                graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
                 graphics.DrawImage(img, 0, 0, albumart.Width, albumart.Height);
             }
 
             DeleteFile(bmp);
-            albumart.Save(bmp, ImageFormat.Bmp);
-            //Application.DoEvents();
+            SaveBmpInfoHeader32bpp(bmp, albumart);
+
+            albumart.Dispose();
+            img.Dispose();
 
             return File.Exists(bmp);
         }
-        
+
+        public static void SaveBmpInfoHeader32bpp(string path, Bitmap bmp)
+        {
+            if (bmp == null) throw new ArgumentNullException(nameof(bmp));
+
+            // Force a known pixel format to avoid surprises
+            Bitmap src = bmp;
+            Bitmap converted = null;
+            if (bmp.PixelFormat != PixelFormat.Format32bppArgb && bmp.PixelFormat != PixelFormat.Format32bppPArgb)
+            {
+                converted = new Bitmap(bmp.Width, bmp.Height, PixelFormat.Format32bppArgb);
+                using (var g = Graphics.FromImage(converted))
+                    g.DrawImageUnscaled(bmp, 0, 0);
+                src = converted;
+            }
+
+            var rect = new Rectangle(0, 0, src.Width, src.Height);
+            var data = src.LockBits(rect, ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+
+            try
+            {
+                int w = src.Width;
+                int h = src.Height;
+
+                // BMP rows are padded to 4 bytes; for 32bpp, stride is already multiple of 4
+                int stride = data.Stride;
+                int imageSize = stride * h;
+
+                // File header (14) + info header (40) = 54
+                const int fileHeaderSize = 14;
+                const int infoHeaderSize = 40;
+                int offBits = fileHeaderSize + infoHeaderSize;
+                int fileSize = offBits + imageSize;
+
+                using (var fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read))
+                using (var bw = new BinaryWriter(fs))
+                {
+                    // BITMAPFILEHEADER
+                    bw.Write((ushort)0x4D42);      // 'BM'
+                    bw.Write(fileSize);
+                    bw.Write((ushort)0);           // bfReserved1
+                    bw.Write((ushort)0);           // bfReserved2
+                    bw.Write(offBits);             // bfOffBits
+
+                    // BITMAPINFOHEADER (40 bytes)
+                    bw.Write(infoHeaderSize);      // biSize
+                    bw.Write(w);                   // biWidth
+                    bw.Write(h);                   // biHeight (positive => bottom-up)
+                    bw.Write((ushort)1);           // biPlanes
+                    bw.Write((ushort)32);          // biBitCount
+                    bw.Write(0);                   // biCompression = BI_RGB
+                    bw.Write(imageSize);           // biSizeImage
+                    bw.Write((int)(src.HorizontalResolution * 39.3701)); // biXPelsPerMeter (approx)
+                    bw.Write((int)(src.VerticalResolution * 39.3701));   // biYPelsPerMeter
+                    bw.Write(0);                   // biClrUsed
+                    bw.Write(0);                   // biClrImportant
+
+                    // Pixel data: must be bottom-up for positive height
+                    // data.Scan0 is top-down in memory, so write rows in reverse order.
+                    byte[] row = new byte[stride];
+                    for (int y = h - 1; y >= 0; y--)
+                    {
+                        IntPtr rowPtr = IntPtr.Add(data.Scan0, y * stride);
+                        Marshal.Copy(rowPtr, row, 0, stride);
+                        bw.Write(row);
+                    }
+                }
+            }
+            finally
+            {
+                src.UnlockBits(data);
+                converted?.Dispose();
+            }
+        }
+
+
         /// <summary>
         /// Loads and formats help file for display on the HelpForm
         /// </summary>

@@ -59,8 +59,7 @@ namespace MagmaRokOn
             this.ButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonClose.AutoSize = true;
             this.ButtonClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonClose.BackColor = System.Drawing.Color.Black;
-            this.ButtonClose.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.ButtonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonClose.FlatAppearance.BorderSize = 0;
@@ -80,8 +79,7 @@ namespace MagmaRokOn
             this.btnVisualize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVisualize.AutoSize = true;
             this.btnVisualize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnVisualize.BackColor = System.Drawing.Color.Black;
-            this.btnVisualize.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnVisualize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnVisualize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVisualize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVisualize.FlatAppearance.BorderSize = 0;
@@ -102,8 +100,7 @@ namespace MagmaRokOn
             this.btnNautilus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNautilus.AutoSize = true;
             this.btnNautilus.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNautilus.BackColor = System.Drawing.Color.Black;
-            this.btnNautilus.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnNautilus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnNautilus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNautilus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNautilus.FlatAppearance.BorderSize = 0;
@@ -124,8 +121,7 @@ namespace MagmaRokOn
             this.btnClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClipboard.AutoSize = true;
             this.btnClipboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnClipboard.BackColor = System.Drawing.Color.Black;
-            this.btnClipboard.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnClipboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnClipboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClipboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClipboard.FlatAppearance.BorderSize = 0;
@@ -145,7 +141,7 @@ namespace MagmaRokOn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(490, 323);
             this.Controls.Add(this.btnClipboard);
             this.Controls.Add(this.btnNautilus);
@@ -153,6 +149,7 @@ namespace MagmaRokOn
             this.Controls.Add(this.ButtonClose);
             this.Controls.Add(this.TextBoxBuild);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

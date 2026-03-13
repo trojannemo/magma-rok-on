@@ -11,7 +11,7 @@ namespace MagmaRokOn
     {
         private static string mStrSavedDirectory = "";
         private static readonly Dictionary<string, string> mFileStartPaths = new Dictionary<string, string>();
-        public const string kAppName = "Magma: C3 Roks Edition v3";
+        public const string kAppName = "Magma: Rok On Edition";
         private const string bKey = "2X14232420202322";
         private const string user = "nemo";
         private const string domain = "keepitfishy";
@@ -79,7 +79,7 @@ namespace MagmaRokOn
             {
                 UGCDebug.ShowStopMsgBox(Environment.GetCommandLineArgs()[0] + " cannot run because something went wrong while loading " +
                                         "MagmaCore.dll.\n\nTry running the app again, and if it continues to happen, your best bet is to " +
-                                        "re-run the original installer, which will make sure all the files are in the right places.");
+                                        "re-download from https://github.com/trojannemo/magma-rok-on or from https://nemosnautilus.com/magma/, which will make sure all the files are in the right places.");
                 return;
             }
             try

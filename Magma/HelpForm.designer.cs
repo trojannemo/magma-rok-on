@@ -55,8 +55,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClose.AutoSize = true;
             this.btnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnClose.BackColor = System.Drawing.Color.Black;
-            this.btnClose.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
@@ -76,8 +75,7 @@
             this.btnReadMe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReadMe.AutoSize = true;
             this.btnReadMe.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnReadMe.BackColor = System.Drawing.Color.Black;
-            this.btnReadMe.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnReadMe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnReadMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReadMe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReadMe.FlatAppearance.BorderSize = 0;
@@ -97,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(490, 323);
             this.Controls.Add(this.btnReadMe);
             this.Controls.Add(this.btnClose);

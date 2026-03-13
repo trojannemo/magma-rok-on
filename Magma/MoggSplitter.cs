@@ -30,12 +30,12 @@ namespace MagmaRokOn
             nautilus = new nTools();
         }
 
-        public bool ExtractDecryptMogg(string CON_file, bool bypass)
+        public bool ExtractDecryptMogg(string CON_file)
         {
-            return ExtractDecryptMogg(CON_file, bypass, new NemoTools(), new DTAParser());
+            return ExtractDecryptMogg(CON_file, new NemoTools(), new DTAParser());
         }
 
-        public bool ExtractDecryptMogg(string CON_file, bool bypass, NemoTools tools, DTAParser parser)
+        public bool ExtractDecryptMogg(string CON_file, NemoTools tools, DTAParser parser)
         {
             Initialize();
             Tools = tools;
@@ -86,8 +86,8 @@ namespace MagmaRokOn
             }
             xCON.CloseIO();
             LoadLibraries();
-            nautilus.DecM(File.ReadAllBytes(temp_mogg), false, true, DecryptMode.ToMemory);
-            return true;
+            var success = nautilus.DecM(File.ReadAllBytes(temp_mogg), false, false, DecryptMode.ToMemory);
+            return success;
         }
 
         private static void UnloadLibraries()
@@ -105,7 +105,7 @@ namespace MagmaRokOn
 
         public bool DownmixMogg(string CON_file, string output, MoggSplitFormat format, bool doWii = false, double start = 0.0, double length = 0.0, double fadeIn = 0.0, double fadeOut = 0.0, double volume = 0.0)
         {
-            if (!ExtractDecryptMogg(CON_file, true)) return false;
+            if (!ExtractDecryptMogg(CON_file)) return false;
             try
             {
                 if (!InitBass()) return false;
@@ -169,7 +169,7 @@ namespace MagmaRokOn
 
         public bool SplitMogg(string CON_file, string output_folder, string StemsToSplit, MoggSplitFormat format)
         {
-            return ExtractDecryptMogg(CON_file, false) && DoSplitMogg(output_folder, StemsToSplit, format);
+            return ExtractDecryptMogg(CON_file) && DoSplitMogg(output_folder, StemsToSplit, format);
         }
 
         public enum MoggSplitFormat
@@ -179,6 +179,59 @@ namespace MagmaRokOn
 
         private bool InitBass()
         {
+            try
+            {
+                LoadLibraries();
+                Bass.BASS_Free(); // safe to call even if not initialized
+
+                bool ok = Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);
+                var err = Bass.BASS_ErrorGetCode();
+
+                ErrorLog.Add($"BASS_Init returned: {ok}, error: {err}");
+
+                if (!ok)
+                {
+                    ErrorLog.Add("Error initializing BASS.NET");
+                    Tools.ReleaseStreamHandle();
+                    return false;
+                }
+
+                BASS_INFO info = new BASS_INFO();
+                bool infoOk = Bass.BASS_GetInfo(info);
+                ErrorLog.Add($"BASS_GetInfo returned: {infoOk}, error: {Bass.BASS_ErrorGetCode()}");
+
+                if (!infoOk)
+                {
+                    ErrorLog.Add("BASS says init succeeded, but GetInfo failed. Likely DLL load/bitness issue.");
+                    return false;
+                }
+
+                Bass.BASS_SetConfig(BASSConfig.BASS_CONFIG_BUFFER, 20000);
+                return true;
+            }
+            catch (BadImageFormatException ex)
+            {
+                ErrorLog.Add("BadImageFormatException (x86/x64 mismatch).");
+                ErrorLog.Add(ex.Message);
+                return false;
+            }
+            catch (DllNotFoundException ex)
+            {
+                ErrorLog.Add("DllNotFoundException (bass.dll or dependency missing).");
+                ErrorLog.Add(ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Add("Error initializing BASS.NET");
+                ErrorLog.Add(ex.ToString());
+                return false;
+            }
+        }
+
+        private bool InitBass1()
+        {
+            LoadLibraries();
             try
             {
                 if (!Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero))
@@ -291,7 +344,7 @@ namespace MagmaRokOn
             try
             {
                 if (!InitBass()) return false;
-                SourceStream = Bass.BASS_StreamCreateFile(Tools.GetOggStreamIntPtr(), 0, Tools.PlayingSongOggData.Length, BASSFlag.BASS_STREAM_DECODE);
+                SourceStream = Bass.BASS_StreamCreateFile(nautilus.GetOggStreamIntPtr(), 0, nautilus.PlayingSongOggData.Length, BASSFlag.BASS_STREAM_DECODE);
                 var info = Bass.BASS_ChannelGetInfo(SourceStream);
                 var ArrangedChannels = ArrangeStreamChannels(info.chans, true);
                 var isSlave = false;

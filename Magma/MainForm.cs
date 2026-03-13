@@ -27,7 +27,7 @@ namespace MagmaRokOn
     public partial class MainForm : Form
     {
         public string mAppTitle = "Magma: Rok On Edition v4";
-        public string mAppVersion = ".0.4";
+        public string mAppVersion = ".1.0";
         public string mDefaultAlbumArtPath;
         public string ProjectFolder;
         public string GuitarTuning = "(real_guitar_tuning (0 0 0 0 0 0))";
@@ -49,7 +49,7 @@ namespace MagmaRokOn
         public string Language = "English,";
         public string DefaultAuthor = "";
         public string DrumMixText;
-        public string ActiveSkin = "dark";
+        public string ActiveSkin = "clean";
         public string InstrumentSolos;
         public string SKIN_PATH;
         public string UniqueNumericID;
@@ -110,14 +110,14 @@ namespace MagmaRokOn
         public int DrumSFX;
         public int HopoValue;
         public int TuningCents = 0;
-        public int EncodingQuality = 5; //default (is higher than HMX's standard of 3)
+        public int EncodingQuality = 3;
         public int CrowdSampleRate;
         public int SongVersion = 1;
         public int MuteVol = -96;
         public int VocalMuteVol = -12;
         public int animTempo = 32;
         
-        private static Color mMenuHighlight = Color.FromArgb(135, 0, 0);
+      private static Color mMenuHighlight = Color.FromArgb(135, 0, 0);
         private static Color mMenuBackground = Color.Black;
         private static Color mMenuText = Color.Gray;
         private static Color mMenuBorder = Color.WhiteSmoke;
@@ -127,7 +127,7 @@ namespace MagmaRokOn
         private readonly Color ChartRed = Color.FromArgb(255, 0, 0);
         private readonly Color ChartGreen = Color.FromArgb(0, 255, 0);
 
-        private Color mTabOnColor;
+       private Color mTabOnColor;
         private Color mTabOffColor;
         private Color mTabHoverColor;
         private Color mTextBoxEnabledBackColor;
@@ -233,88 +233,7 @@ namespace MagmaRokOn
         public bool doTonality;
         public int songTonality;
 
-        private readonly nTools nautilus;
-
-        private sealed class DarkRenderer : ToolStripProfessionalRenderer
-        {
-            public DarkRenderer() : base(new DarkColors()) { }
-        }
-        
-        private sealed class DarkColors : ProfessionalColorTable
-        {
-            public override Color MenuItemSelected
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color MenuItemSelectedGradientBegin
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color MenuItemSelectedGradientEnd
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color MenuBorder
-            {
-                get { return mMenuBorder; }
-            }
-            public override Color MenuItemBorder
-            {
-                get { return mMenuBorder; }
-            }
-            public override Color MenuItemPressedGradientBegin
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color MenuItemPressedGradientEnd
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color MenuItemPressedGradientMiddle
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color CheckBackground
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color CheckPressedBackground
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color CheckSelectedBackground
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color ButtonSelectedBorder
-            {
-                get { return mMenuHighlight; }
-            }
-            public override Color SeparatorDark
-            {
-                get { return mMenuText; }
-            }
-            public override Color SeparatorLight
-            {
-                get { return mMenuText; }
-            }
-            public override Color ImageMarginGradientBegin
-            {
-                get { return mMenuBackground; }
-            }
-            public override Color ImageMarginGradientEnd
-            {
-                get { return mMenuBackground; }
-            }
-            public override Color ImageMarginGradientMiddle
-            {
-                get { return mMenuBackground; }
-            }
-            public override Color ToolStripDropDownBackground
-            {
-                get { return mMenuBackground; }
-            }
-        }
+        private readonly nTools nautilus;               
 
         public MainForm(string args)
         {
@@ -325,7 +244,7 @@ namespace MagmaRokOn
             mStartupPath = Application.StartupPath;
             mTabOnColor = Color.WhiteSmoke;
             mTabOffColor = Color.LightGray;
-            mTabHoverColor = Color.FromArgb(135, 0, 0);
+            mTabHoverColor = Color.LightGray;
             mTextBoxEnabledBackColor = Color.White;
             mTextBoxDisabledBackColor = Color.LightGray;
             PictureBoxAlbumArt.AllowDrop = true;
@@ -355,19 +274,12 @@ namespace MagmaRokOn
                 //
             }
 
-            menuStrip1.Renderer = new DarkRenderer();
-            contextMenuStrip1.Renderer = new DarkRenderer();
-            contextMenuStrip2.Renderer = new DarkRenderer();
-            contextMenuStrip3.Renderer = new DarkRenderer();
-            contextMenuStrip4.Renderer = new DarkRenderer();
-            SkinMenuSkinChoices();
-
             arguments = args;
             Tools = new NemoTools();
             Parser = new DTAParser();
 
-            PipDevil = Resources.skull_sm;
-            PipDevilOff = Resources.skull_disabled_sm;
+            PipDevil = Resources.pip_devil;
+            PipDevilOff = Resources.pip_devil_disabled;
             PipOn = Resources.difficulty_button_ON;
             PipOff = Resources.difficulty_button_off;
             PipDisabledOn = Resources.difficulty_button_on_disabled;
@@ -539,9 +451,7 @@ namespace MagmaRokOn
             NumericUpDownYear.Maximum = 2112;
             NumericUpDownYear.Value = DateTime.Now.Year;
             NumericPreviewMins.Value = new Decimal(0);
-            DomainPreviewSecs.SelectedItem = "30";
-            //mAnimationSpeeds = DataArrayUtl.GetIntList("ugc", "anim_tempos");
-            //ComboAnimationSpeed.DataSource = LocaleUtl.Localize(mAnimationSpeeds, "animation_speed_");
+            DomainPreviewSecs.SelectedItem = "30";            
             ComboVocalScroll.Items.Clear();
             ComboVocalScroll.Items.Add("Comatose - 3000");
             ComboVocalScroll.Items.Add("Slower - 2750");
@@ -630,7 +540,6 @@ namespace MagmaRokOn
                 }
                 NumericGuidePitchAttenuation.Value = (Decimal)ProjectFile.GuidePitchVolume;
                 TextBoxMidiFile.Text = ProjectFile.MidiFile;
-                //UiUtl.SetLocalizedComboBoxValue(ComboAnimationSpeed, ProjectFile.Tempo, mAnimationSpeeds);
                 
                 if (ProjectFile.PreviewStart > 0 && ProjectFile.PreviewStart <= 570000)
                 {
@@ -1016,6 +925,22 @@ namespace MagmaRokOn
             refreshing = true;
             readFix(filePath);
 
+            switch (ProjectFile.Tempo)
+            {
+                case 16:
+                    ComboAnimationSpeed.SelectedIndex = 0;
+                    break;
+                case 32:
+                    ComboAnimationSpeed.SelectedIndex = 1;
+                    break;
+                case 64:
+                    ComboAnimationSpeed.SelectedIndex = 2;
+                    break;
+                default:
+                    ComboAnimationSpeed.SelectedIndex = 1;
+                    break;
+            }
+
             TextBoxAlbumArt.Text = TextBoxAlbumArt.Text.Replace(ProjDir, "");
             TextBoxBuildDestination.Text = TextBoxBuildDestination.Text.Replace(ProjDir, "");
             TextBoxMidiFile.Text = TextBoxMidiFile.Text.Replace(ProjDir, "");
@@ -1205,7 +1130,7 @@ namespace MagmaRokOn
                 TextBoxVocals.Text = SilenceStereo44_24;
             }
             
-            ComboAnimationSpeed.SelectedIndex = 2; // 32
+            ComboAnimationSpeed.SelectedIndex = 1; // 32
 
             txtSongID.Text = "";
             UniqueNumericID = "";
@@ -2966,21 +2891,17 @@ namespace MagmaRokOn
         private void UpdateDifficultyDisplayNEMO(object sender, int difficulty, bool enabled)
         {
             if (!GetDifficultyBoxes(sender)) return;
-
-            //these two don't change look regardless of tier
-            difficultyboxes[0].Image = enabled ? PipOff : PipDisabledOff;
-            difficultyboxes[6].Image = enabled ? PipDevil : PipDevilOff;
-            
+                      
             if (difficulty == 7)
             {
-                for (var i = 1; i < 6; i++)
+                for (var i = 0; i < 7; i++)
                 {
                     difficultyboxes[i].Image = enabled ? PipDevil : PipDevilOff;
                 }
             }
             else
             {
-                for (var i = 1; i < 6; i++)
+                for (var i = 0; i < 7; i++)
                 {
                     if (i < difficulty)
                     {
@@ -2992,6 +2913,13 @@ namespace MagmaRokOn
                     }
                 }
             }
+
+            //these two don't change look regardless of tier
+            if (!enabled)
+            {
+                difficultyboxes[0].Image = PipDisabledOff;
+            }
+            difficultyboxes[6].Image = enabled ? PipDevil : PipDevilOff;
         }
         
         private void ButtonClearAlbumArt_Click(object sender, EventArgs e)
@@ -4766,9 +4694,9 @@ namespace MagmaRokOn
                 sw.WriteLine("KeepExtracted=" + doNotDeleteExtractedFiles.Checked);
                 sw.WriteLine("ShowToDoList=" + openToDoListByDefault.Checked);
                 sw.WriteLine("ShowToast=" + showToast.Checked);
-                sw.WriteLine("UseFireSkin=" + burnBabyBurn.Checked);
-                sw.WriteLine("UseColorfulSkin=" + cIsForColorfulTool.Checked);
-                sw.WriteLine("UseDarkSkin=" + oldDarkTool.Checked);
+                sw.WriteLine("UseFireSkin=False");
+                sw.WriteLine("UseColorfulSkin=False");
+                sw.WriteLine("UseDarkSkin=False");
                 sw.WriteLine("OverrideArt=" + overrideAlbumArt.Checked);
                 sw.WriteLine("OverrideMIDI=" + overrideMIDIFile.Checked);
                 sw.WriteLine("OverrideMogg=" + overrideAudioFile.Checked);
@@ -4864,9 +4792,9 @@ namespace MagmaRokOn
                         doNotDeleteExtractedFiles.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
                         openToDoListByDefault.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
                         showToast.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
-                        burnBabyBurn.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
-                        cIsForColorfulTool.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
-                        oldDarkTool.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
+                        sr.ReadLine(); //deprecated
+                        sr.ReadLine(); //deprecated
+                        sr.ReadLine(); //deprecated
                         overrideAlbumArt.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
                         overrideMIDIFile.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
                         overrideAudioFile.Checked = sr.ReadLine().ToLowerInvariant().Contains("true");
@@ -4903,57 +4831,7 @@ namespace MagmaRokOn
                 {
                     Width = WIDTH_EXPANDED;
                 }
-                if (burnBabyBurn.Checked)
-                {
-                    TabPageInformation.BackgroundImage = Resources.bg_onfire2;
-                    TabPageAudio.BackgroundImage = Resources.bg_onfire2;
-                    TabPageGameData.BackgroundImage = Resources.bg_onfire2;
-                    PictureBoxMagmaLogoTop.Image = Resources.magma_onfire;
-                    PictureBoxMagmaLogoTop.BackgroundImage = null;
-                    PanelHeader.BackgroundImage = null;
-                    todoPic.Image = Resources.todo_onfire;
-                    ButtonClearAlbumArt.BackgroundImage = Resources.btn_small_lava;
-                    ButtonAlbumArt.BackgroundImage = Resources.btn_small_lava;
-                    ButtonBuildTo.BackgroundImage = Resources.btn_small_lava;
-                    ButtonBuildSong.BackgroundImage = Resources.btn_large_lava;
-                    ButtonDrumKit.BackgroundImage = Resources.btn_small_lava;
-                    ButtonDrumSnare.BackgroundImage = Resources.btn_small_lava;
-                    ButtonDrumKick.BackgroundImage = Resources.btn_small_lava;
-                    ButtonBass.BackgroundImage = Resources.btn_small_lava;
-                    ButtonGuitar.BackgroundImage = Resources.btn_small_lava;
-                    ButtonKeys.BackgroundImage = Resources.btn_small_lava;
-                    ButtonVocals.BackgroundImage = Resources.btn_small_lava;
-                    ButtonDryVocals.BackgroundImage = Resources.btn_small_lava;
-                    ButtonDryVocalsHarmony2.BackgroundImage = Resources.btn_small_lava;
-                    ButtonDryVocalsHarmony3.BackgroundImage = Resources.btn_small_lava;
-                    ButtonBacking.BackgroundImage = Resources.btn_small_lava;
-                    btnCrowd.BackgroundImage = Resources.btn_small_lava;
-                    btnPlay.BackgroundImage = Resources.btn_small_lava;
-                    ButtonBrowseForMIDI.BackgroundImage = Resources.btn_small_lava;
-                    btnID.BackgroundImage = Resources.btn_small_lava;
-                    ButtonExportMIDI.BackgroundImage = Resources.btn_large_lava;
-                    btnTester.BackgroundImage = Resources.btn_large_lava;
-                    btnCleaner.BackgroundImage = Resources.btn_large_lava;
-                    btnDescDefault.BackgroundImage = Resources.btn_large_lava;
-                    btnDispDefault.BackgroundImage = Resources.btn_large_lava;
-                    btnDispDLC.BackgroundImage = Resources.btn_large_lava;
-                    ZeroBacking.BackgroundImage = Resources.btn_small_lava;
-                    ZeroGuitar.BackgroundImage = Resources.btn_small_lava;
-                    ZeroBass.BackgroundImage = Resources.btn_small_lava;
-                    ZeroKeys.BackgroundImage = Resources.btn_small_lava;
-                    ZeroVocals.BackgroundImage = Resources.btn_small_lava;
-                    ZeroDrumKick.BackgroundImage = Resources.btn_small_lava;
-                    ZeroDrumKit.BackgroundImage = Resources.btn_small_lava;
-                    ZeroDrumSnare.BackgroundImage = Resources.btn_small_lava;
-                    ZeroCrowd.BackgroundImage = Resources.btn_small_lava;
-                    ActiveSkin = "fire";
-                }
-                else if (cIsForColorfulTool.Checked)
-                {
-                    useColorfulSkin();
-                    ActiveSkin = "colorful";
-                }
-                else if (customSkinTool.Checked && File.Exists(SKIN_PATH))
+                if (customSkinTool.Checked && File.Exists(SKIN_PATH))
                 {
                     LoadCustomSkin(SKIN_PATH);
                 }
@@ -6082,12 +5960,12 @@ namespace MagmaRokOn
             var basstune4 = "0";
 
             //disable all instruments
-            CheckVocals.Checked = false;
+            CheckVocals.Checked = true;
             CheckHarmonyVocals2.Checked = false;
             CheckHarmonyVocals3.Checked = false;
-            CheckDrums.Checked = false;
-            CheckBass.Checked = false;
-            CheckGuitar.Checked = false;
+            CheckDrums.Checked = true;
+            CheckBass.Checked = true;
+            CheckGuitar.Checked = true;
             CheckKeys.Checked = false;
             CheckBacking.Checked = false;
             CheckCrowd.Checked = false;
@@ -6199,21 +6077,15 @@ namespace MagmaRokOn
             {
                 case 16:
                     ComboAnimationSpeed.SelectedIndex = 0;
-                    break;
-                case 24:
-                    ComboAnimationSpeed.SelectedIndex = 1;
-                    break;
+                    break;                
                 case 32:
-                    ComboAnimationSpeed.SelectedIndex = 2;
-                    break;
-                case 48:
-                    ComboAnimationSpeed.SelectedIndex = 3;
-                    break;
+                    ComboAnimationSpeed.SelectedIndex = 1;
+                    break;                
                 case 64:
-                    ComboAnimationSpeed.SelectedIndex = 4;
+                    ComboAnimationSpeed.SelectedIndex = 2;
                     break;
                 default:
-                    ComboAnimationSpeed.SelectedIndex = 2;
+                    ComboAnimationSpeed.SelectedIndex = 1;
                     break;
             }
             switch (song.ScrollSpeed)
@@ -6248,7 +6120,8 @@ namespace MagmaRokOn
                 default:
                     ComboVocalScroll.SelectedIndex = 4;
                     break;
-            }
+            }            
+
             TextBoxAlbumName.Text = song.Album;
             CheckBoxFromAlbum.Checked = TextBoxAlbumName.Text != "";
             NumericUpDownYear.Value = song.YearReleased;
@@ -6293,6 +6166,28 @@ namespace MagmaRokOn
                 chkKaraoke.Checked = false;
                 chkDIYStems.Checked = true;
             }
+
+            var silence_stereo = "";
+            if (useSilenceTracksByDefault.Checked && use441KHzToolStripMenuItem.Checked)
+            {
+                silence_stereo = SilenceStereo44;
+            }
+            if (useSilenceTracksByDefault.Checked && use48KHzToolStripMenuItem.Checked)
+            {
+                silence_stereo = SilenceStereo48;
+            }
+            CheckDrums.Checked = ProjectFile.GetTrack("drum_kit").Enabled;
+            TextBoxDrumSnare.Text = "";
+            TextBoxDrumKit.Text = "";
+            TextBoxDrumKit.Text = CheckDrums.Checked ? silence_stereo : "";
+            CheckBass.Checked = ProjectFile.GetTrack("bass").Enabled;
+            TextBoxBass.Text = CheckBass.Checked ? silence_stereo : "";
+            CheckGuitar.Checked = ProjectFile.GetTrack("guitar").Enabled;
+            TextBoxGuitar.Text = CheckGuitar.Checked ? silence_stereo : "";
+            CheckKeys.Checked = ProjectFile.GetTrack("keys").Enabled;
+            TextBoxKeys.Text = CheckKeys.Checked ? silence_stereo : "";
+            CheckVocals.Checked = ProjectFile.GetTrack("vocals").Enabled;
+            TextBoxVocals.Text = CheckVocals.Checked ? silence_stereo : "";
 
             if (song.ProGuitarTuning != "")
             {
@@ -6362,7 +6257,7 @@ namespace MagmaRokOn
             catch (Exception)
             {}
             RefreshGenres();
-            var silence_stereo = "";
+            /*var silence_stereo = "";
             if (useSilenceTracksByDefault.Checked && use441KHzToolStripMenuItem.Checked)
             {
                 silence_stereo = SilenceStereo44;
@@ -6371,7 +6266,7 @@ namespace MagmaRokOn
             {
                 silence_stereo = SilenceStereo48;
             }
-            CheckDrums.Checked = ProjectFile.GetTrack("drum_kit").Enabled;
+            /*CheckDrums.Checked = ProjectFile.GetTrack("drum_kit").Enabled;
             TextBoxDrumSnare.Text = "";
             TextBoxDrumKit.Text = "";
             TextBoxDrumKit.Text = CheckDrums.Checked ? silence_stereo : "";
@@ -6382,7 +6277,7 @@ namespace MagmaRokOn
             CheckKeys.Checked = ProjectFile.GetTrack("keys").Enabled;
             TextBoxKeys.Text = CheckKeys.Checked ? silence_stereo : "";
             CheckVocals.Checked = ProjectFile.GetTrack("vocals").Enabled;
-            TextBoxVocals.Text = CheckVocals.Checked ? silence_stereo : "";
+            TextBoxVocals.Text = CheckVocals.Checked ? silence_stereo : "";*/
 
             switch (song.VocalParts)
             {
@@ -7643,12 +7538,10 @@ namespace MagmaRokOn
 
         private void ComboAnimationSpeed_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var animTempos = new int[] { 16, 24, 32, 48, 64 };
+            var animTempos = new int[] { 16, 32, 64 };
             ProjectFile.Tempo = animTempos[ComboAnimationSpeed.SelectedIndex];
             animTempo = ProjectFile.Tempo;
-            DoShowToast("Animation speed changed to " + ComboAnimationSpeed.Items[ComboAnimationSpeed.SelectedIndex]);
-            //ProjectFile.Tempo = mAnimationSpeeds[ComboAnimationSpeed.SelectedIndex];
-            //DoShowToast("Animation speed changed to " + ComboAnimationSpeed.Items[ComboAnimationSpeed.SelectedIndex]);
+            DoShowToast("Animation speed changed to " + ComboAnimationSpeed.Items[ComboAnimationSpeed.SelectedIndex]);            
             RefreshWindowTitle();
         }
 
@@ -8046,7 +7939,7 @@ namespace MagmaRokOn
 
         private void SkinToDoStuff(Color color, int type)
         {
-            var item = ActiveItem; //save it to put back after we skin the boxes
+            /*var item = ActiveItem; //save it to put back after we skin the boxes
 
             for (var i = 0; i < 15; i++)
             {
@@ -8071,7 +7964,7 @@ namespace MagmaRokOn
                 }
             }
 
-            ActiveItem = item;
+            ActiveItem = item;*/
         }
 
         private void SkinComboBoxes(Color color, int type)
@@ -8210,7 +8103,6 @@ namespace MagmaRokOn
             PanelFooter.BorderStyle = BorderStyle.FixedSingle;
             PanelFooter.BackgroundImage = null;
             PanelFooter.BackColor = color;
-            pictureBox9.Visible = false;
         }
 
         private void SkinTabAudio(Color color)
@@ -8289,141 +8181,7 @@ namespace MagmaRokOn
             btnCleaner.BackColor = color;
             btnID.BackgroundImage = null;
             btnID.BackColor = color;
-        }
-
-        private void useOGSkin()
-        {
-            SkinDefaults();
-            UpdateSkinnedPips();
-            PictureBoxMagmaLogoTop.Image = Resources.magma_logo_sized_colorful;
-            todoPic.Image = Resources.todo_color;
-
-            //group boxes
-            SkinGroupBoxes(Color.Transparent, 0);
-            SkinGroupBoxes(Color.Black, 1);
-
-            //button styles
-            SkinButtonStyles(FlatStyle.Flat);
-
-            mTabOffColor = Color.DimGray;
-            mTabOnColor = Color.White;
-            mTabHoverColor = Color.White;
-
-            UpdateSkinnedTabButtons();
-
-            SkinTabData(SystemColors.GradientInactiveCaption);
-            SkinTabButtonData(Color.FromArgb(230, 216, 0));
-            SkinDataButtons(Color.FromArgb(230, 216, 0));
-
-            SkinTabAudio(SystemColors.GradientInactiveCaption);
-            SkinTabButtonAudio(Color.FromArgb(196, 33, 34));
-            SkinAudioButtons(Color.FromArgb(196, 33, 34));
-
-            SkinTabInfo(SystemColors.GradientInactiveCaption);
-            SkinInfoButtons(Color.FromArgb(27, 178, 37));
-            SkinTabButtonInfo(Color.FromArgb(27, 178, 37));
-
-            //button text color
-            SkinButtonText(Color.White);
-
-            //footer
-            SkinFooter(SystemColors.GradientInactiveCaption);
-
-            //labels
-            SkinLabels(Color.Black, 1);
-            SkinLabels(Color.Transparent, 0);
-
-            //text boxes
-            SkinTextBoxes(Color.White, 0);
-            SkinTextBoxes(Color.Black, 1);
-
-            //combo boxes
-            SkinComboBoxesStyle(FlatStyle.Flat);
-            SkinComboBoxes(Color.White, 0);
-            SkinComboBoxes(Color.Black, 1);
-
-            //numeric updowns
-            SkinNumerics(Color.White, 0);
-            SkinNumerics(Color.Black, 1);
-
-            mMenuHighlight = Color.FromArgb(239, 106, 5);
-            mMenuBackground = Color.FromArgb(39, 85, 196);
-            mMenuText = Color.White;
-            mMenuBorder = Color.FromArgb(239, 106, 5);
-            menuStrip1.Renderer = new DarkRenderer();
-            SkinMenu(mMenuBackground, 0);
-            SkinMenu(mMenuText, 1);
-
-            //buttons global
-            SkinFooterButtons(Color.FromArgb(39, 85, 196));
-        }
-
-        private void useColorfulSkin()
-        {
-            SkinDefaults();
-            UpdateSkinnedPips();
-            PictureBoxMagmaLogoTop.Image = Resources.magma_logo_sized_colorful;
-            todoPic.Image = Resources.todo_color;
-
-            //group boxes
-            SkinGroupBoxes(Color.Transparent, 0);
-            SkinGroupBoxes(Color.Black, 1);
-            
-            //button styles
-            SkinButtonStyles(FlatStyle.Flat);
-
-            mTabOffColor = Color.DimGray;
-            mTabOnColor = Color.White;
-            mTabHoverColor = Color.White;
-
-            UpdateSkinnedTabButtons();
-
-            SkinTabData(SystemColors.GradientInactiveCaption);
-            SkinTabButtonData(Color.FromArgb(230, 216, 0));
-            SkinDataButtons(Color.FromArgb(230, 216, 0));
-
-            SkinTabAudio(SystemColors.GradientInactiveCaption);
-            SkinTabButtonAudio(Color.FromArgb(196, 33, 34));
-            SkinAudioButtons(Color.FromArgb(196, 33, 34));
-
-            SkinTabInfo(SystemColors.GradientInactiveCaption);
-            SkinInfoButtons(Color.FromArgb(27, 178, 37));
-            SkinTabButtonInfo(Color.FromArgb(27, 178, 37));
-            
-            //button text color
-            SkinButtonText(Color.White);
-
-            //footer
-            SkinFooter(SystemColors.GradientInactiveCaption);
-
-            //labels
-            SkinLabels(Color.Black, 1);
-            SkinLabels(Color.Transparent, 0);
-
-            //text boxes
-            SkinTextBoxes(Color.White,0);
-            SkinTextBoxes(Color.Black,1);
-
-            //combo boxes
-            SkinComboBoxesStyle(FlatStyle.Flat);
-            SkinComboBoxes(Color.White,0);
-            SkinComboBoxes(Color.Black,1);
-            
-            //numeric updowns
-            SkinNumerics(Color.White,0);
-            SkinNumerics(Color.Black, 1);
-
-            mMenuHighlight = Color.FromArgb(239,106,5);
-            mMenuBackground = Color.FromArgb(39, 85, 196);
-            mMenuText = Color.White;
-            mMenuBorder = Color.FromArgb(239, 106, 5);
-            menuStrip1.Renderer = new DarkRenderer();
-            SkinMenu(mMenuBackground,0);
-            SkinMenu(mMenuText, 1);
-            
-            //buttons global
-            SkinFooterButtons(Color.FromArgb(39, 85, 196));
-        }
+        }        
 
         private void SkinHeader(Color color)
         {
@@ -8551,56 +8309,7 @@ namespace MagmaRokOn
                 }
                 item.Font = newfont;
             }
-            SkinMenuSkinChoices();
-        }
-
-        private void SkinMenuSkinChoices()
-        {
-            var newfont = new Font(fileToolStripMenuItem.Font, FontStyle.Regular);
-            var oldfont = new Font("Tahoma", (float)8.25, FontStyle.Bold);
-
-            oldDarkTool.BackColor = Color.Black;
-            oldDarkTool.ForeColor = Color.LightGray;
-            oldDarkTool.Font = oldfont;
-
-            if (!customSkinTool.Checked)
-            {
-                customSkinTool.BackColor = Color.White;
-                customSkinTool.ForeColor = Color.Black;
-                customSkinTool.Font = newfont;
-            }
-            
-            cIsForColorfulTool.BackColor = Color.FromArgb(39, 85, 196);
-            cIsForColorfulTool.ForeColor = Color.White;
-            cIsForColorfulTool.Font = newfont;
-        }
-        
-        private void oldDarkToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            cIsForColorfulTool.Checked = false;
-            oldDarkTool.Checked = true;
-            customSkinTool.Checked = false;
-            burnBabyBurn.Checked = false;
-            ActiveSkin = "dark";
-
-            MessageBox.Show("Please restart Magma: Rok On Edition to activate this skin", mAppTitle, MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-        }
-        
-        private void cIsForColorfulToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            cIsForColorfulTool.Checked = true;
-            oldDarkTool.Checked = false;
-            customSkinTool.Checked = false;
-            burnBabyBurn.Checked = false;
-
-            customSkinTool.Text = "Custom Skin";
-            customSkinTool.BackColor = Color.White;
-            customSkinTool.ForeColor = Color.Black;
-
-            ActiveSkin = "colorful";
-            useColorfulSkin();
-        }
+        }                     
         
         private TextBox getActiveTextBox()
         {
@@ -8731,8 +8440,8 @@ namespace MagmaRokOn
             }
             else
             {
-                textbox.BackColor = ToDoBackColor;
-                textbox.ForeColor = ToDoForeColor;
+                textbox.BackColor = Color.White;
+                textbox.ForeColor = Color.Black;
             }
 
             picDone.Image = ToDoCompleted[ActiveItem] ? ToDoImgDone : ToDoImgNotDone;
@@ -9503,50 +9212,87 @@ namespace MagmaRokOn
             {
                 case "Drum":
                     ProjectFile.RankDrum = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureDrumDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureDrumDifficulty1, difficulty, true);
                     scrollDrums.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Bass":
                     ProjectFile.RankBass = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureBassDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureBassDifficulty1, difficulty, true);
                     scrollBass.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "ProBass":
                     RankProBass = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureProBassDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureProBassDifficulty1, difficulty, true);
                     scrollProBass.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Guitar":
                     ProjectFile.RankGuitar = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureGuitarDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureGuitarDifficulty1, difficulty, true);
                     scrollGuitar.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "ProGuitar":
                     RankProGuitar = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureProGuitarDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureProGuitarDifficulty1, difficulty, true);
                     scrollProGuitar.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Vocal":
                     ProjectFile.RankVocals = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureVocalDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureVocalDifficulty1, difficulty, true);
                     scrollVocals.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Keys":
                     ProjectFile.RankKeys = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureKeysDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureKeysDifficulty1, difficulty, true);
                     scrollKeys.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "ProKeys":
                     ProjectFile.RankProKeys = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureProKeysDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureProKeysDifficulty1, difficulty, true);
                     scrollProKeys.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Band":
                     ProjectFile.RankBand = difficulty;
-                    UpdateDifficultyDisplayNEMO(PictureBandDifficulty1, difficulty, true);
+                    //UpdateDifficultyDisplayNEMO(PictureBandDifficulty1, difficulty, true);
                     scrollBand.Value = GetDifficultyValue(difficulty, track);
                     break;
             }
+
+            int diff;
+            switch (track)
+            {
+                case "Drum":
+                    diff = ProjectFile.RankDrum;
+                    break;
+                case "Bass":
+                    diff = ProjectFile.RankBass;
+                    break;
+                case "ProBass":
+                    diff = RankProBass;
+                    break;
+                case "Guitar":
+                    diff = ProjectFile.RankGuitar;
+                    break;
+                case "ProGuitar":
+                    diff = RankProGuitar;
+                    break;
+                case "Vocal":
+                    diff = ProjectFile.RankVocals;
+                    break;
+                case "Keys":
+                    diff = ProjectFile.RankKeys;
+                    break;
+                case "ProKeys":
+                    diff = ProjectFile.RankProKeys;
+                    break;
+                case "Band":
+                    diff = ProjectFile.RankBand;
+                    break;
+                default:
+                    MessageBox.Show("I don't know what track you're trying to change the difficulty for, sorry\nTry again",
+                        mAppTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+            }
+            UpdateDifficultyDisplayNEMO(sender, diff, true);
             RefreshWindowTitle();
         }
 
@@ -9803,14 +9549,12 @@ namespace MagmaRokOn
             }
 
             customSkinTool.Checked = true;
-            cIsForColorfulTool.Checked = false;
-            oldDarkTool.Checked = false;
-            burnBabyBurn.Checked = false;
+            cleanLightTool.Checked = false;
             ActiveSkin = "custom";
 
             SkinBackground(Color.Black);
             SkinHeader(Color.Black);
-            todoPic.Image = Resources.todo_white;
+            todoPic.Image = Resources.todo_header;
 
             var line = "";
             //old method used a crapload of ifs and else-ifs
@@ -9947,9 +9691,9 @@ namespace MagmaRokOn
             Tools.DeleteFile(SKIN_PATH + ".bak");
 
             UpdateSkinnedTabButtons();
-            PictureBoxMagmaLogoTop.Image = Resources.magma_logo_sized_original;
+            PictureBoxMagmaLogoTop.Image = Resources.magma_logo;
 
-            menuStrip1.Renderer = new DarkRenderer();
+            /*menuStrip1.Renderer = new DarkRenderer();*/
             SkinMenu(mMenuBackground, 0);
             SkinMenu(mMenuText, 1);
 
@@ -10531,19 +10275,7 @@ namespace MagmaRokOn
                 return;
             }
             Process.Start(Application.StartupPath + "\\" + changelog);
-        }
-
-        private void burnBabyBurn_Click(object sender, EventArgs e)
-        {
-            cIsForColorfulTool.Checked = false;
-            oldDarkTool.Checked = false;
-            customSkinTool.Checked = false;
-            burnBabyBurn.Checked = true;
-            ActiveSkin = "fire";
-
-            MessageBox.Show("Please restart Magma: Rok On Edition to activate this skin", mAppTitle, MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-        }
+        }        
 
         private void chkTonality_CheckedChanged(object sender, EventArgs e)
         {
@@ -10688,31 +10420,31 @@ namespace MagmaRokOn
             }
             else
             {
-                if (rawDifficulty > 0 && rawDifficulty <= Diff1)
+                if (rawDifficulty > 0 && rawDifficulty < Diff1)
                 {
                     return 1;
                 }
-                else if (rawDifficulty > Diff1 && rawDifficulty <= Diff2)
+                else if (rawDifficulty >= Diff1 && rawDifficulty < Diff2)
                 {
                     return 2;
                 }
-                else if (rawDifficulty > Diff2 && rawDifficulty <= Diff3)
+                else if (rawDifficulty >= Diff2 && rawDifficulty < Diff3)
                 {
                     return 3;
                 }
-                else if (rawDifficulty > Diff3 && rawDifficulty <= Diff4)
+                else if (rawDifficulty >= Diff3 && rawDifficulty < Diff4)
                 {
                     return 4;
                 }
-                else if (rawDifficulty > Diff4 && rawDifficulty <= Diff5)
+                else if (rawDifficulty >= Diff4 && rawDifficulty < Diff5)
                 {
                     return 5;
                 }
-                else if (rawDifficulty > Diff5 && rawDifficulty <= Diff6)
+                else if (rawDifficulty >= Diff5 && rawDifficulty < Diff6)
                 {
                     return 6;
                 }
-                else if (rawDifficulty > Diff6)
+                else if (rawDifficulty >= Diff6)
                 {
                     return 7;
                 }
@@ -10790,6 +10522,15 @@ namespace MagmaRokOn
         private void cboEncodingQuality_SelectedIndexChanged(object sender, EventArgs e)
         {
             EncodingQuality = cboEncodingQuality.SelectedIndex + 1;
+        }
+
+        private void cleanLightTool_Click(object sender, EventArgs e)
+        {
+            customSkinTool.Checked = false;
+            cleanLightTool.Checked = true;
+            ActiveSkin = "clean";
+
+            MessageBox.Show("Please restart Magma: Rok On Edition to activate this skin", mAppTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

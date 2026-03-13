@@ -209,9 +209,7 @@ namespace MagmaRokOn
             this.showToast = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.skinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.burnBabyBurn = new System.Windows.Forms.ToolStripMenuItem();
-            this.cIsForColorfulTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.oldDarkTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.cleanLightTool = new System.Windows.Forms.ToolStripMenuItem();
             this.customSkinTool = new System.Windows.Forms.ToolStripMenuItem();
             this.aDVANCEDUSEONLYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overrideAlbumArt = new System.Windows.Forms.ToolStripMenuItem();
@@ -312,17 +310,16 @@ namespace MagmaRokOn
             this.useDefaultArt = new System.Windows.Forms.ToolStripMenuItem();
             this.visitAlbumArtRepository = new System.Windows.Forms.ToolStripMenuItem();
             this.TabPageAudio = new System.Windows.Forms.TabPage();
+            this.cboEncodingQuality = new System.Windows.Forms.ComboBox();
             this.prevEndMilliseconds = new System.Windows.Forms.NumericUpDown();
             this.prevEndSeconds = new System.Windows.Forms.DomainUpDown();
             this.prevEndMinutes = new System.Windows.Forms.NumericUpDown();
             this.LabelEndPreview = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.picSpectrum = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.numericMilliseconds = new System.Windows.Forms.NumericUpDown();
             this.ZeroCrowd = new System.Windows.Forms.Button();
-            this.picHelpCrowd = new System.Windows.Forms.PictureBox();
             this.numericCrowd = new System.Windows.Forms.NumericUpDown();
             this.LabelCrowdPan = new System.Windows.Forms.Label();
             this.ZeroBacking = new System.Windows.Forms.Button();
@@ -443,11 +440,12 @@ namespace MagmaRokOn
             this.LabelLength = new System.Windows.Forms.Label();
             this.LabelPreviewSeparator = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.picSpectrum = new System.Windows.Forms.PictureBox();
+            this.picHelpCrowd = new System.Windows.Forms.PictureBox();
             this.TabPageGameData = new System.Windows.Forms.TabPage();
             this.cboBandFail = new System.Windows.Forms.ComboBox();
             this.LabelBandFail = new System.Windows.Forms.Label();
             this.cboTonality = new System.Windows.Forms.ComboBox();
-            this.picHelpSolos = new System.Windows.Forms.PictureBox();
             this.chkSoloVocals = new System.Windows.Forms.CheckBox();
             this.chkSoloKeys = new System.Windows.Forms.CheckBox();
             this.chkSoloBass = new System.Windows.Forms.CheckBox();
@@ -461,7 +459,6 @@ namespace MagmaRokOn
             this.chkTempo = new System.Windows.Forms.CheckBox();
             this.chkKeysAnim = new System.Windows.Forms.CheckBox();
             this.chkAutoKeys = new System.Windows.Forms.CheckBox();
-            this.picHelpMuteVol = new System.Windows.Forms.PictureBox();
             this.LabelMuteVolume = new System.Windows.Forms.Label();
             this.numericMuteVol = new System.Windows.Forms.NumericUpDown();
             this.LabelMuteVolumeVocals = new System.Windows.Forms.Label();
@@ -471,15 +468,12 @@ namespace MagmaRokOn
             this.groupID = new System.Windows.Forms.GroupBox();
             this.btnID = new System.Windows.Forms.Button();
             this.txtSongID = new System.Windows.Forms.TextBox();
-            this.picDrumSFX = new System.Windows.Forms.PictureBox();
-            this.picHelpTuningCents = new System.Windows.Forms.PictureBox();
             this.LabelTuningCents = new System.Windows.Forms.Label();
             this.numericTuningCents = new System.Windows.Forms.NumericUpDown();
             this.ComboDrumSFX = new System.Windows.Forms.ComboBox();
             this.LabelDrumKitSFX = new System.Windows.Forms.Label();
             this.ComboHopo = new System.Windows.Forms.ComboBox();
             this.LabelHopoThreshold = new System.Windows.Forms.Label();
-            this.picHelpGuitarTuning = new System.Windows.Forms.PictureBox();
             this.BassTuning4 = new System.Windows.Forms.TextBox();
             this.BassTuning3 = new System.Windows.Forms.TextBox();
             this.BassTuning2 = new System.Windows.Forms.TextBox();
@@ -494,7 +488,6 @@ namespace MagmaRokOn
             this.LabelGuitarTuning = new System.Windows.Forms.Label();
             this.ComboRating = new System.Windows.Forms.ComboBox();
             this.LabelSongRating = new System.Windows.Forms.Label();
-            this.picHelpTonicNote = new System.Windows.Forms.PictureBox();
             this.chkTonicNote = new System.Windows.Forms.CheckBox();
             this.ComboTonicNote = new System.Windows.Forms.ComboBox();
             this.NumericGuidePitchAttenuation = new System.Windows.Forms.NumericUpDown();
@@ -607,12 +600,17 @@ namespace MagmaRokOn
             this.LabelBandDifficulty = new System.Windows.Forms.Label();
             this.ButtonExportMIDI = new System.Windows.Forms.Button();
             this.chkTonality = new System.Windows.Forms.CheckBox();
+            this.picHelpSolos = new System.Windows.Forms.PictureBox();
+            this.picHelpMuteVol = new System.Windows.Forms.PictureBox();
+            this.picDrumSFX = new System.Windows.Forms.PictureBox();
+            this.picHelpTuningCents = new System.Windows.Forms.PictureBox();
+            this.picHelpGuitarTuning = new System.Windows.Forms.PictureBox();
+            this.picHelpTonicNote = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loadTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveCurrentListAsTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelFooter = new System.Windows.Forms.Panel();
             this.ButtonBuildTo = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.LabelBuildTo = new System.Windows.Forms.Label();
             this.ButtonBuildSong = new System.Windows.Forms.Button();
             this.TextBoxBuildDestination = new System.Windows.Forms.TextBox();
@@ -622,12 +620,11 @@ namespace MagmaRokOn
             this.ButtonGameDataTab = new System.Windows.Forms.Button();
             this.ButtonAudioTab = new System.Windows.Forms.Button();
             this.ButtonInformationTab = new System.Windows.Forms.Button();
-            this.picTemplate = new System.Windows.Forms.PictureBox();
-            this.picImportant = new System.Windows.Forms.PictureBox();
-            this.picRemove = new System.Windows.Forms.PictureBox();
             this.picDone = new System.Windows.Forms.PictureBox();
+            this.picRemove = new System.Windows.Forms.PictureBox();
+            this.picImportant = new System.Windows.Forms.PictureBox();
+            this.picTemplate = new System.Windows.Forms.PictureBox();
             this.picWii = new System.Windows.Forms.PictureBox();
-            this.PictureBoxMagmaLogoTop = new System.Windows.Forms.PictureBox();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.picChecklist = new System.Windows.Forms.PictureBox();
             this.todo1 = new System.Windows.Forms.TextBox();
@@ -660,14 +657,12 @@ namespace MagmaRokOn
             this.list14 = new System.Windows.Forms.TextBox();
             this.todo15 = new System.Windows.Forms.TextBox();
             this.list15 = new System.Windows.Forms.TextBox();
-            this.todoPic = new System.Windows.Forms.PictureBox();
             this.panelTODO = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.todoPic = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.PlaybackTimer = new System.Windows.Forms.Timer(this.components);
             this.updater = new System.ComponentModel.BackgroundWorker();
-            this.cboEncodingQuality = new System.Windows.Forms.ComboBox();
+            this.PictureBoxMagmaLogoTop = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.TopLevelTabs.SuspendLayout();
             this.TabPageInformation.SuspendLayout();
@@ -693,9 +688,7 @@ namespace MagmaRokOn
             this.TabPageAudio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prevEndMilliseconds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prevEndMinutes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSpectrum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMilliseconds)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpCrowd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCrowd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericBackingAttenuation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericVocalAttenuation)).BeginInit();
@@ -716,20 +709,16 @@ namespace MagmaRokOn
             this.contextMenuStrip2.SuspendLayout();
             this.groupDrumMix.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumericPreviewMins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSpectrum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpCrowd)).BeginInit();
             this.TabPageGameData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpSolos)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpMuteVol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMuteVol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericVocalMute)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numVersion)).BeginInit();
             this.groupID.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDrumSFX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpTuningCents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTuningCents)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpGuitarTuning)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpTonicNote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericGuidePitchAttenuation)).BeginInit();
             this.GroupBoxDifficulty.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBandDifficulty6)).BeginInit();
@@ -795,27 +784,30 @@ namespace MagmaRokOn
             ((System.ComponentModel.ISupportInitialize)(this.PictureDrumDifficulty2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureDrumDifficulty7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureDrumDifficulty1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpSolos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpMuteVol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDrumSFX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpTuningCents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpGuitarTuning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpTonicNote)).BeginInit();
             this.contextMenuStrip3.SuspendLayout();
             this.PanelFooter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderCharCheck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImportant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRemove)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImportant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWii)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).BeginInit();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picChecklist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.todoPic)).BeginInit();
             this.panelTODO.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.todoPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Black;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -823,13 +815,13 @@ namespace MagmaRokOn
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(152, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(139, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
             this.fileToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
@@ -838,35 +830,35 @@ namespace MagmaRokOn
             this.saveToolStripMenuItem,
             this.saveAsToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newToolStripMenuItem
             // 
-            this.newToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.newToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.newToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.newToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.FileNewMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.openToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.openToolStripMenuItem.Text = "&Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.FileOpenMenuItem_Click);
             // 
             // importSongToolStripMenuItem
             // 
-            this.importSongToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.importSongToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
             this.importSongToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importCONLIVEFileToolStripMenuItem,
             this.importSongsdtaFileToolStripMenuItem,
@@ -874,18 +866,18 @@ namespace MagmaRokOn
             this.importpngxboxFileToolStripMenuItem,
             this.toolStripMenuItem8,
             this.wiiConversion});
-            this.importSongToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.importSongToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.importSongToolStripMenuItem.Name = "importSongToolStripMenuItem";
             this.importSongToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.importSongToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.importSongToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.importSongToolStripMenuItem.Text = "&Import...";
             // 
             // importCONLIVEFileToolStripMenuItem
             // 
-            this.importCONLIVEFileToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.importCONLIVEFileToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.importCONLIVEFileToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.importCONLIVEFileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.importCONLIVEFileToolStripMenuItem.Name = "importCONLIVEFileToolStripMenuItem";
-            this.importCONLIVEFileToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.importCONLIVEFileToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.importCONLIVEFileToolStripMenuItem.Text = "Import CON file";
             this.importCONLIVEFileToolStripMenuItem.ToolTipText = "Click here to import a song in CON/LIVE format to its individual parts so you can" +
     " modify it";
@@ -893,29 +885,29 @@ namespace MagmaRokOn
             // 
             // importSongsdtaFileToolStripMenuItem
             // 
-            this.importSongsdtaFileToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.importSongsdtaFileToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.importSongsdtaFileToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.importSongsdtaFileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.importSongsdtaFileToolStripMenuItem.Name = "importSongsdtaFileToolStripMenuItem";
-            this.importSongsdtaFileToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.importSongsdtaFileToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.importSongsdtaFileToolStripMenuItem.Text = "Import songs.dta file";
             this.importSongsdtaFileToolStripMenuItem.ToolTipText = "Click here to import all the metadata from a songs.dta file into your project";
             this.importSongsdtaFileToolStripMenuItem.Click += new System.EventHandler(this.importSongsdtaFileToolStripMenuItem_Click);
             // 
             // importSonginiFileToolStripMenuItem
             // 
-            this.importSonginiFileToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.importSonginiFileToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.importSonginiFileToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.importSonginiFileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.importSonginiFileToolStripMenuItem.Name = "importSonginiFileToolStripMenuItem";
-            this.importSonginiFileToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.importSonginiFileToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.importSonginiFileToolStripMenuItem.Text = "Import song.ini file";
             this.importSonginiFileToolStripMenuItem.Click += new System.EventHandler(this.importSonginiFileToolStripMenuItem_Click);
             // 
             // importpngxboxFileToolStripMenuItem
             // 
-            this.importpngxboxFileToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.importpngxboxFileToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.importpngxboxFileToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.importpngxboxFileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.importpngxboxFileToolStripMenuItem.Name = "importpngxboxFileToolStripMenuItem";
-            this.importpngxboxFileToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.importpngxboxFileToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.importpngxboxFileToolStripMenuItem.Text = "Import .png_xbox file";
             this.importpngxboxFileToolStripMenuItem.ToolTipText = "Click here to import and convert to bmp a Rock Band album art file";
             this.importpngxboxFileToolStripMenuItem.Click += new System.EventHandler(this.importpngxboxFileToolStripMenuItem_Click);
@@ -923,53 +915,54 @@ namespace MagmaRokOn
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(193, 6);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(175, 6);
             // 
             // wiiConversion
             // 
-            this.wiiConversion.BackColor = System.Drawing.Color.Black;
+            this.wiiConversion.BackColor = System.Drawing.Color.Gainsboro;
             this.wiiConversion.CheckOnClick = true;
-            this.wiiConversion.ForeColor = System.Drawing.Color.LightGray;
+            this.wiiConversion.ForeColor = System.Drawing.Color.Black;
             this.wiiConversion.Name = "wiiConversion";
             this.wiiConversion.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.wiiConversion.Size = new System.Drawing.Size(196, 22);
+            this.wiiConversion.Size = new System.Drawing.Size(178, 22);
             this.wiiConversion.Text = "Wii Mode";
             this.wiiConversion.CheckedChanged += new System.EventHandler(this.wiiConversion_CheckedChanged);
             this.wiiConversion.Click += new System.EventHandler(this.wiiConversion_Click);
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.FileSaveMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
-            this.saveAsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.saveAsToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.saveAsToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.saveAsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.Space)));
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.saveAsToolStripMenuItem.Text = "Save &As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.FileSaveAsMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.FileExitMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.useSilenceTracksByDefault,
             this.analyzeMIDIFileForContents,
@@ -995,15 +988,15 @@ namespace MagmaRokOn
             this.toolStripMenuItem4,
             this.skinsToolStripMenuItem,
             this.aDVANCEDUSEONLYToolStripMenuItem});
-            this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.optionsToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // useSilenceTracksByDefault
             // 
-            this.useSilenceTracksByDefault.BackColor = System.Drawing.Color.Black;
+            this.useSilenceTracksByDefault.BackColor = System.Drawing.Color.Gainsboro;
             this.useSilenceTracksByDefault.Checked = true;
             this.useSilenceTracksByDefault.CheckOnClick = true;
             this.useSilenceTracksByDefault.CheckState = System.Windows.Forms.CheckState.Checked;
@@ -1013,75 +1006,75 @@ namespace MagmaRokOn
             this.toolStripMenuItem9,
             this.use441KHz24bitToolStripMenuItem,
             this.use48KHz24bitToolStripMenuItem});
-            this.useSilenceTracksByDefault.ForeColor = System.Drawing.Color.LightGray;
+            this.useSilenceTracksByDefault.ForeColor = System.Drawing.Color.Black;
             this.useSilenceTracksByDefault.Name = "useSilenceTracksByDefault";
-            this.useSilenceTracksByDefault.Size = new System.Drawing.Size(280, 22);
+            this.useSilenceTracksByDefault.Size = new System.Drawing.Size(246, 22);
             this.useSilenceTracksByDefault.Text = "Use silence tracks by default";
             this.useSilenceTracksByDefault.ToolTipText = "Check to automatically populate the instrument audio with silence tracks";
             this.useSilenceTracksByDefault.Click += new System.EventHandler(this.useSilenceTracksByDefaultToolStripMenuItem_Click);
             // 
             // use441KHzToolStripMenuItem
             // 
-            this.use441KHzToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.use441KHzToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
             this.use441KHzToolStripMenuItem.Checked = true;
             this.use441KHzToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.use441KHzToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.use441KHzToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.use441KHzToolStripMenuItem.Name = "use441KHzToolStripMenuItem";
-            this.use441KHzToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.use441KHzToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.use441KHzToolStripMenuItem.Text = "Use 44.1 kHz";
             this.use441KHzToolStripMenuItem.Click += new System.EventHandler(this.use441KHzToolStripMenuItem_Click);
             // 
             // use48KHzToolStripMenuItem
             // 
-            this.use48KHzToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.use48KHzToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.use48KHzToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.use48KHzToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.use48KHzToolStripMenuItem.Name = "use48KHzToolStripMenuItem";
-            this.use48KHzToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.use48KHzToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.use48KHzToolStripMenuItem.Text = "Use 48 kHz";
             this.use48KHzToolStripMenuItem.Click += new System.EventHandler(this.use48KHzToolStripMenuItem_Click);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(190, 6);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(173, 6);
             // 
             // use441KHz24bitToolStripMenuItem
             // 
-            this.use441KHz24bitToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.use441KHz24bitToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.use441KHz24bitToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.use441KHz24bitToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.use441KHz24bitToolStripMenuItem.Name = "use441KHz24bitToolStripMenuItem";
-            this.use441KHz24bitToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.use441KHz24bitToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.use441KHz24bitToolStripMenuItem.Text = "Use 44.1 kHz (24-bit)";
             this.use441KHz24bitToolStripMenuItem.Click += new System.EventHandler(this.use441KHz24bitToolStripMenuItem_Click);
             // 
             // use48KHz24bitToolStripMenuItem
             // 
-            this.use48KHz24bitToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.use48KHz24bitToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.use48KHz24bitToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.use48KHz24bitToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.use48KHz24bitToolStripMenuItem.Name = "use48KHz24bitToolStripMenuItem";
-            this.use48KHz24bitToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.use48KHz24bitToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.use48KHz24bitToolStripMenuItem.Text = "Use 48 kHz (24-bit)";
             this.use48KHz24bitToolStripMenuItem.Click += new System.EventHandler(this.use48KHz24bitToolStripMenuItem_Click);
             // 
             // analyzeMIDIFileForContents
             // 
-            this.analyzeMIDIFileForContents.BackColor = System.Drawing.Color.Black;
+            this.analyzeMIDIFileForContents.BackColor = System.Drawing.Color.Gainsboro;
             this.analyzeMIDIFileForContents.Checked = true;
             this.analyzeMIDIFileForContents.CheckOnClick = true;
             this.analyzeMIDIFileForContents.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.analyzeMIDIFileForContents.ForeColor = System.Drawing.Color.LightGray;
+            this.analyzeMIDIFileForContents.ForeColor = System.Drawing.Color.Black;
             this.analyzeMIDIFileForContents.Name = "analyzeMIDIFileForContents";
-            this.analyzeMIDIFileForContents.Size = new System.Drawing.Size(280, 22);
+            this.analyzeMIDIFileForContents.Size = new System.Drawing.Size(246, 22);
             this.analyzeMIDIFileForContents.Text = "Analyze MIDI file for contents";
             this.analyzeMIDIFileForContents.Click += new System.EventHandler(this.analyzeMIDIFileForContents_Click);
             // 
             // overrideProjectFileAuthor
             // 
-            this.overrideProjectFileAuthor.BackColor = System.Drawing.Color.Black;
+            this.overrideProjectFileAuthor.BackColor = System.Drawing.Color.Gainsboro;
             this.overrideProjectFileAuthor.CheckOnClick = true;
-            this.overrideProjectFileAuthor.ForeColor = System.Drawing.Color.LightGray;
+            this.overrideProjectFileAuthor.ForeColor = System.Drawing.Color.Black;
             this.overrideProjectFileAuthor.Name = "overrideProjectFileAuthor";
-            this.overrideProjectFileAuthor.Size = new System.Drawing.Size(280, 22);
+            this.overrideProjectFileAuthor.Size = new System.Drawing.Size(246, 22);
             this.overrideProjectFileAuthor.Text = "Override project file author";
             this.overrideProjectFileAuthor.ToolTipText = "Will replace whatever author name is in the project file with your Default Author" +
     " name";
@@ -1089,11 +1082,11 @@ namespace MagmaRokOn
             // 
             // deleteRBAFiles
             // 
-            this.deleteRBAFiles.BackColor = System.Drawing.Color.Black;
+            this.deleteRBAFiles.BackColor = System.Drawing.Color.Gainsboro;
             this.deleteRBAFiles.CheckOnClick = true;
-            this.deleteRBAFiles.ForeColor = System.Drawing.Color.LightGray;
+            this.deleteRBAFiles.ForeColor = System.Drawing.Color.Black;
             this.deleteRBAFiles.Name = "deleteRBAFiles";
-            this.deleteRBAFiles.Size = new System.Drawing.Size(280, 22);
+            this.deleteRBAFiles.Size = new System.Drawing.Size(246, 22);
             this.deleteRBAFiles.Text = "Delete .rba file(s) after converting";
             this.deleteRBAFiles.ToolTipText = "Select this if you want to force Magma to create a new RBA (increases compilation" +
     " time)";
@@ -1101,11 +1094,11 @@ namespace MagmaRokOn
             // 
             // signSongAsLIVE
             // 
-            this.signSongAsLIVE.BackColor = System.Drawing.Color.Black;
+            this.signSongAsLIVE.BackColor = System.Drawing.Color.Gainsboro;
             this.signSongAsLIVE.CheckOnClick = true;
-            this.signSongAsLIVE.ForeColor = System.Drawing.Color.LightGray;
+            this.signSongAsLIVE.ForeColor = System.Drawing.Color.Black;
             this.signSongAsLIVE.Name = "signSongAsLIVE";
-            this.signSongAsLIVE.Size = new System.Drawing.Size(280, 22);
+            this.signSongAsLIVE.Size = new System.Drawing.Size(246, 22);
             this.signSongAsLIVE.Text = "Sign song as LIVE rather than CON";
             this.signSongAsLIVE.Click += new System.EventHandler(this.signSongAsLIVE_Click);
             // 
@@ -1113,63 +1106,63 @@ namespace MagmaRokOn
             // 
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(277, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(243, 6);
             // 
             // useUniqueNumericSongID
             // 
-            this.useUniqueNumericSongID.BackColor = System.Drawing.Color.Black;
+            this.useUniqueNumericSongID.BackColor = System.Drawing.Color.Gainsboro;
             this.useUniqueNumericSongID.Checked = true;
             this.useUniqueNumericSongID.CheckOnClick = true;
             this.useUniqueNumericSongID.CheckState = System.Windows.Forms.CheckState.Checked;
             this.useUniqueNumericSongID.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.batchReplaceSongIDs,
             this.batchRestoreSongIDs});
-            this.useUniqueNumericSongID.ForeColor = System.Drawing.Color.LightGray;
+            this.useUniqueNumericSongID.ForeColor = System.Drawing.Color.Black;
             this.useUniqueNumericSongID.Name = "useUniqueNumericSongID";
-            this.useUniqueNumericSongID.Size = new System.Drawing.Size(280, 22);
+            this.useUniqueNumericSongID.Size = new System.Drawing.Size(246, 22);
             this.useUniqueNumericSongID.Text = "Use unique numeric song ID";
             this.useUniqueNumericSongID.CheckedChanged += new System.EventHandler(this.useUniqueNumericSongID_CheckedChanged);
             this.useUniqueNumericSongID.Click += new System.EventHandler(this.useUniqueNumericSongID_Click);
             // 
             // batchReplaceSongIDs
             // 
-            this.batchReplaceSongIDs.BackColor = System.Drawing.Color.Black;
-            this.batchReplaceSongIDs.ForeColor = System.Drawing.Color.LightGray;
+            this.batchReplaceSongIDs.BackColor = System.Drawing.Color.Gainsboro;
+            this.batchReplaceSongIDs.ForeColor = System.Drawing.Color.Black;
             this.batchReplaceSongIDs.Name = "batchReplaceSongIDs";
-            this.batchReplaceSongIDs.Size = new System.Drawing.Size(203, 22);
+            this.batchReplaceSongIDs.Size = new System.Drawing.Size(184, 22);
             this.batchReplaceSongIDs.Text = "Batch replace song IDs";
             this.batchReplaceSongIDs.Click += new System.EventHandler(this.batchReplaceSongIDs_Click);
             // 
             // batchRestoreSongIDs
             // 
-            this.batchRestoreSongIDs.BackColor = System.Drawing.Color.Black;
-            this.batchRestoreSongIDs.ForeColor = System.Drawing.Color.LightGray;
+            this.batchRestoreSongIDs.BackColor = System.Drawing.Color.Gainsboro;
+            this.batchRestoreSongIDs.ForeColor = System.Drawing.Color.Black;
             this.batchRestoreSongIDs.Name = "batchRestoreSongIDs";
-            this.batchRestoreSongIDs.Size = new System.Drawing.Size(203, 22);
+            this.batchRestoreSongIDs.Size = new System.Drawing.Size(184, 22);
             this.batchRestoreSongIDs.Text = "Batch restore song IDs";
             this.batchRestoreSongIDs.Visible = false;
             this.batchRestoreSongIDs.Click += new System.EventHandler(this.batchRestoreSongIDs_Click);
             // 
             // increaseSongVersionAutomatically
             // 
-            this.increaseSongVersionAutomatically.BackColor = System.Drawing.Color.Black;
+            this.increaseSongVersionAutomatically.BackColor = System.Drawing.Color.Gainsboro;
             this.increaseSongVersionAutomatically.Checked = true;
             this.increaseSongVersionAutomatically.CheckOnClick = true;
             this.increaseSongVersionAutomatically.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.increaseSongVersionAutomatically.ForeColor = System.Drawing.Color.LightGray;
+            this.increaseSongVersionAutomatically.ForeColor = System.Drawing.Color.Black;
             this.increaseSongVersionAutomatically.Name = "increaseSongVersionAutomatically";
-            this.increaseSongVersionAutomatically.Size = new System.Drawing.Size(280, 22);
+            this.increaseSongVersionAutomatically.Size = new System.Drawing.Size(246, 22);
             this.increaseSongVersionAutomatically.Text = "Increase song version automatically";
             this.increaseSongVersionAutomatically.Click += new System.EventHandler(this.increaseSongVersionAutomatically_Click);
             // 
             // appendSongVersionToSongID
             // 
-            this.appendSongVersionToSongID.BackColor = System.Drawing.Color.Black;
+            this.appendSongVersionToSongID.BackColor = System.Drawing.Color.Gainsboro;
             this.appendSongVersionToSongID.CheckOnClick = true;
             this.appendSongVersionToSongID.Enabled = false;
-            this.appendSongVersionToSongID.ForeColor = System.Drawing.Color.LightGray;
+            this.appendSongVersionToSongID.ForeColor = System.Drawing.Color.Black;
             this.appendSongVersionToSongID.Name = "appendSongVersionToSongID";
-            this.appendSongVersionToSongID.Size = new System.Drawing.Size(280, 22);
+            this.appendSongVersionToSongID.Size = new System.Drawing.Size(246, 22);
             this.appendSongVersionToSongID.Text = "Append song version to song ID";
             this.appendSongVersionToSongID.ToolTipText = "You should leave this enabled so the user doesn\'t experience ID conflicts with up" +
     "dated versions of the song";
@@ -1177,33 +1170,33 @@ namespace MagmaRokOn
             // 
             // appendSongVersionToFileName
             // 
-            this.appendSongVersionToFileName.BackColor = System.Drawing.Color.Black;
+            this.appendSongVersionToFileName.BackColor = System.Drawing.Color.Gainsboro;
             this.appendSongVersionToFileName.CheckOnClick = true;
-            this.appendSongVersionToFileName.ForeColor = System.Drawing.Color.LightGray;
+            this.appendSongVersionToFileName.ForeColor = System.Drawing.Color.Black;
             this.appendSongVersionToFileName.Name = "appendSongVersionToFileName";
-            this.appendSongVersionToFileName.Size = new System.Drawing.Size(280, 22);
+            this.appendSongVersionToFileName.Size = new System.Drawing.Size(246, 22);
             this.appendSongVersionToFileName.Text = "Append song version to file name";
             this.appendSongVersionToFileName.Click += new System.EventHandler(this.appendSongVersionToFileNameToolStripMenuItem_Click);
             // 
             // appendrb3conToFile
             // 
-            this.appendrb3conToFile.BackColor = System.Drawing.Color.Black;
+            this.appendrb3conToFile.BackColor = System.Drawing.Color.Gainsboro;
             this.appendrb3conToFile.Checked = true;
             this.appendrb3conToFile.CheckOnClick = true;
             this.appendrb3conToFile.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.appendrb3conToFile.ForeColor = System.Drawing.Color.LightGray;
+            this.appendrb3conToFile.ForeColor = System.Drawing.Color.Black;
             this.appendrb3conToFile.Name = "appendrb3conToFile";
-            this.appendrb3conToFile.Size = new System.Drawing.Size(280, 22);
+            this.appendrb3conToFile.Size = new System.Drawing.Size(246, 22);
             this.appendrb3conToFile.Text = "Append \'_rb3con\' to file name";
             this.appendrb3conToFile.Click += new System.EventHandler(this.appendrb3conToFileToolStripMenuItem_Click);
             // 
             // removeSubgenre
             // 
-            this.removeSubgenre.BackColor = System.Drawing.Color.Black;
+            this.removeSubgenre.BackColor = System.Drawing.Color.Gainsboro;
             this.removeSubgenre.CheckOnClick = true;
-            this.removeSubgenre.ForeColor = System.Drawing.Color.LightGray;
+            this.removeSubgenre.ForeColor = System.Drawing.Color.Black;
             this.removeSubgenre.Name = "removeSubgenre";
-            this.removeSubgenre.Size = new System.Drawing.Size(280, 22);
+            this.removeSubgenre.Size = new System.Drawing.Size(246, 22);
             this.removeSubgenre.Text = "Remove subgenre from DTA file";
             this.removeSubgenre.Click += new System.EventHandler(this.removeSubgenre_Click);
             // 
@@ -1211,15 +1204,15 @@ namespace MagmaRokOn
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(277, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(243, 6);
             // 
             // keepSongsdtaFile
             // 
-            this.keepSongsdtaFile.BackColor = System.Drawing.Color.Black;
+            this.keepSongsdtaFile.BackColor = System.Drawing.Color.Gainsboro;
             this.keepSongsdtaFile.CheckOnClick = true;
-            this.keepSongsdtaFile.ForeColor = System.Drawing.Color.LightGray;
+            this.keepSongsdtaFile.ForeColor = System.Drawing.Color.Black;
             this.keepSongsdtaFile.Name = "keepSongsdtaFile";
-            this.keepSongsdtaFile.Size = new System.Drawing.Size(280, 22);
+            this.keepSongsdtaFile.Size = new System.Drawing.Size(246, 22);
             this.keepSongsdtaFile.Text = "Keep songs.dta file";
             this.keepSongsdtaFile.ToolTipText = "Select this if you want to keep the songs.dta file that goes in the CON in case y" +
     "ou want to make manual edits";
@@ -1227,11 +1220,11 @@ namespace MagmaRokOn
             // 
             // doNotDeleteExtractedFiles
             // 
-            this.doNotDeleteExtractedFiles.BackColor = System.Drawing.Color.Black;
+            this.doNotDeleteExtractedFiles.BackColor = System.Drawing.Color.Gainsboro;
             this.doNotDeleteExtractedFiles.CheckOnClick = true;
-            this.doNotDeleteExtractedFiles.ForeColor = System.Drawing.Color.LightGray;
+            this.doNotDeleteExtractedFiles.ForeColor = System.Drawing.Color.Black;
             this.doNotDeleteExtractedFiles.Name = "doNotDeleteExtractedFiles";
-            this.doNotDeleteExtractedFiles.Size = new System.Drawing.Size(280, 22);
+            this.doNotDeleteExtractedFiles.Size = new System.Drawing.Size(246, 22);
             this.doNotDeleteExtractedFiles.Text = "Keep extracted files folder";
             this.doNotDeleteExtractedFiles.ToolTipText = "Select this if you want to access the raw files that were in the RBA file";
             this.doNotDeleteExtractedFiles.Click += new System.EventHandler(this.doNotDeleteExtractedFilesToolStripMenuItem_Click);
@@ -1240,16 +1233,16 @@ namespace MagmaRokOn
             // 
             this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(277, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(243, 6);
             // 
             // aNSIMenu
             // 
-            this.aNSIMenu.BackColor = System.Drawing.Color.Black;
+            this.aNSIMenu.BackColor = System.Drawing.Color.Gainsboro;
             this.aNSIMenu.Checked = true;
             this.aNSIMenu.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.aNSIMenu.ForeColor = System.Drawing.Color.LightGray;
+            this.aNSIMenu.ForeColor = System.Drawing.Color.Black;
             this.aNSIMenu.Name = "aNSIMenu";
-            this.aNSIMenu.Size = new System.Drawing.Size(280, 22);
+            this.aNSIMenu.Size = new System.Drawing.Size(246, 22);
             this.aNSIMenu.Text = "Use ANSI encoding (default)";
             this.aNSIMenu.ToolTipText = "Leave this checked unless the name of the song, artist or album has special chara" +
     "cters";
@@ -1257,10 +1250,10 @@ namespace MagmaRokOn
             // 
             // uTF8Menu
             // 
-            this.uTF8Menu.BackColor = System.Drawing.Color.Black;
-            this.uTF8Menu.ForeColor = System.Drawing.Color.LightGray;
+            this.uTF8Menu.BackColor = System.Drawing.Color.Gainsboro;
+            this.uTF8Menu.ForeColor = System.Drawing.Color.Black;
             this.uTF8Menu.Name = "uTF8Menu";
-            this.uTF8Menu.Size = new System.Drawing.Size(280, 22);
+            this.uTF8Menu.Size = new System.Drawing.Size(246, 22);
             this.uTF8Menu.Text = "Use UTF-8 encoding";
             this.uTF8Menu.ToolTipText = "Use this if the name of the song, artist or album has special characters";
             this.uTF8Menu.Click += new System.EventHandler(this.uTF8ToolStripMenuItem_Click);
@@ -1268,27 +1261,27 @@ namespace MagmaRokOn
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(277, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(243, 6);
             // 
             // openToDoListByDefault
             // 
-            this.openToDoListByDefault.BackColor = System.Drawing.Color.Black;
+            this.openToDoListByDefault.BackColor = System.Drawing.Color.Gainsboro;
             this.openToDoListByDefault.CheckOnClick = true;
-            this.openToDoListByDefault.ForeColor = System.Drawing.Color.LightGray;
+            this.openToDoListByDefault.ForeColor = System.Drawing.Color.Black;
             this.openToDoListByDefault.Name = "openToDoListByDefault";
-            this.openToDoListByDefault.Size = new System.Drawing.Size(280, 22);
+            this.openToDoListByDefault.Size = new System.Drawing.Size(246, 22);
             this.openToDoListByDefault.Text = "Open To-Do list by default";
             this.openToDoListByDefault.Click += new System.EventHandler(this.openToDoListByDefaultToolStripMenuItem_Click);
             // 
             // showToast
             // 
-            this.showToast.BackColor = System.Drawing.Color.Black;
+            this.showToast.BackColor = System.Drawing.Color.Gainsboro;
             this.showToast.Checked = true;
             this.showToast.CheckOnClick = true;
             this.showToast.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showToast.ForeColor = System.Drawing.Color.LightGray;
+            this.showToast.ForeColor = System.Drawing.Color.Black;
             this.showToast.Name = "showToast";
-            this.showToast.Size = new System.Drawing.Size(280, 22);
+            this.showToast.Size = new System.Drawing.Size(246, 22);
             this.showToast.Text = "Show toast notifications";
             this.showToast.ToolTipText = "Disable if you don\'t want to get the small pop-ups telling you what the program i" +
     "s doing";
@@ -1296,61 +1289,38 @@ namespace MagmaRokOn
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(277, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(243, 6);
             // 
             // skinsToolStripMenuItem
             // 
-            this.skinsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.skinsToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
             this.skinsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.burnBabyBurn,
-            this.cIsForColorfulTool,
-            this.oldDarkTool,
+            this.cleanLightTool,
             this.customSkinTool});
-            this.skinsToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.skinsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.skinsToolStripMenuItem.Name = "skinsToolStripMenuItem";
-            this.skinsToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.skinsToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
             this.skinsToolStripMenuItem.Text = "Skins";
             // 
-            // burnBabyBurn
+            // cleanLightTool
             // 
-            this.burnBabyBurn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.burnBabyBurn.Checked = true;
-            this.burnBabyBurn.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.burnBabyBurn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
-            this.burnBabyBurn.Name = "burnBabyBurn";
-            this.burnBabyBurn.Size = new System.Drawing.Size(148, 22);
-            this.burnBabyBurn.Text = "Lava";
-            this.burnBabyBurn.Click += new System.EventHandler(this.burnBabyBurn_Click);
-            // 
-            // cIsForColorfulTool
-            // 
-            this.cIsForColorfulTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(85)))), ((int)(((byte)(196)))));
-            this.cIsForColorfulTool.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cIsForColorfulTool.ForeColor = System.Drawing.Color.White;
-            this.cIsForColorfulTool.Name = "cIsForColorfulTool";
-            this.cIsForColorfulTool.Size = new System.Drawing.Size(148, 22);
-            this.cIsForColorfulTool.Text = "C is for Colorful";
-            this.cIsForColorfulTool.Click += new System.EventHandler(this.cIsForColorfulToolStripMenuItem_Click);
-            // 
-            // oldDarkTool
-            // 
-            this.oldDarkTool.BackColor = System.Drawing.Color.Black;
-            this.oldDarkTool.ForeColor = System.Drawing.Color.LightGray;
-            this.oldDarkTool.Name = "oldDarkTool";
-            this.oldDarkTool.Size = new System.Drawing.Size(148, 22);
-            this.oldDarkTool.Text = "Old && Dark";
-            this.oldDarkTool.Click += new System.EventHandler(this.oldDarkToolStripMenuItem_Click);
+            this.cleanLightTool.Checked = true;
+            this.cleanLightTool.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cleanLightTool.Name = "cleanLightTool";
+            this.cleanLightTool.Size = new System.Drawing.Size(220, 22);
+            this.cleanLightTool.Text = "Clean Light (StackOverflow0x)";
+            this.cleanLightTool.Click += new System.EventHandler(this.cleanLightTool_Click);
             // 
             // customSkinTool
             // 
             this.customSkinTool.Name = "customSkinTool";
-            this.customSkinTool.Size = new System.Drawing.Size(148, 22);
+            this.customSkinTool.Size = new System.Drawing.Size(220, 22);
             this.customSkinTool.Text = "Custom Skin";
             this.customSkinTool.Click += new System.EventHandler(this.customSkinTool_Click);
             // 
             // aDVANCEDUSEONLYToolStripMenuItem
             // 
-            this.aDVANCEDUSEONLYToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.aDVANCEDUSEONLYToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
             this.aDVANCEDUSEONLYToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.overrideAlbumArt,
             this.overrideMIDIFile,
@@ -1364,20 +1334,20 @@ namespace MagmaRokOn
             this.selectNautilusPath,
             this.selectAudacityPath,
             this.changeCompilerExecutable});
-            this.aDVANCEDUSEONLYToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.aDVANCEDUSEONLYToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.aDVANCEDUSEONLYToolStripMenuItem.Name = "aDVANCEDUSEONLYToolStripMenuItem";
-            this.aDVANCEDUSEONLYToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.aDVANCEDUSEONLYToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
             this.aDVANCEDUSEONLYToolStripMenuItem.Text = "ADVANCED SETTINGS";
             // 
             // overrideAlbumArt
             // 
-            this.overrideAlbumArt.BackColor = System.Drawing.Color.Black;
+            this.overrideAlbumArt.BackColor = System.Drawing.Color.Gainsboro;
             this.overrideAlbumArt.Checked = true;
             this.overrideAlbumArt.CheckOnClick = true;
             this.overrideAlbumArt.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.overrideAlbumArt.ForeColor = System.Drawing.Color.LightGray;
+            this.overrideAlbumArt.ForeColor = System.Drawing.Color.Black;
             this.overrideAlbumArt.Name = "overrideAlbumArt";
-            this.overrideAlbumArt.Size = new System.Drawing.Size(291, 22);
+            this.overrideAlbumArt.Size = new System.Drawing.Size(256, 22);
             this.overrideAlbumArt.Text = "Override album art (*.png_xbox)";
             this.overrideAlbumArt.ToolTipText = "Replaces the album art from the RBA with any *.png_xbox file you put in the proje" +
     "ct folder";
@@ -1385,11 +1355,11 @@ namespace MagmaRokOn
             // 
             // overrideMIDIFile
             // 
-            this.overrideMIDIFile.BackColor = System.Drawing.Color.Black;
+            this.overrideMIDIFile.BackColor = System.Drawing.Color.Gainsboro;
             this.overrideMIDIFile.CheckOnClick = true;
-            this.overrideMIDIFile.ForeColor = System.Drawing.Color.LightGray;
+            this.overrideMIDIFile.ForeColor = System.Drawing.Color.Black;
             this.overrideMIDIFile.Name = "overrideMIDIFile";
-            this.overrideMIDIFile.Size = new System.Drawing.Size(291, 22);
+            this.overrideMIDIFile.Size = new System.Drawing.Size(256, 22);
             this.overrideMIDIFile.Text = "Override MIDI file (override.mid)";
             this.overrideMIDIFile.ToolTipText = "Replaces the MIDI from the RBA with override.mid file placed in the project folde" +
     "r";
@@ -1397,11 +1367,11 @@ namespace MagmaRokOn
             // 
             // overrideAudioFile
             // 
-            this.overrideAudioFile.BackColor = System.Drawing.Color.Black;
+            this.overrideAudioFile.BackColor = System.Drawing.Color.Gainsboro;
             this.overrideAudioFile.CheckOnClick = true;
-            this.overrideAudioFile.ForeColor = System.Drawing.Color.LightGray;
+            this.overrideAudioFile.ForeColor = System.Drawing.Color.Black;
             this.overrideAudioFile.Name = "overrideAudioFile";
-            this.overrideAudioFile.Size = new System.Drawing.Size(291, 22);
+            this.overrideAudioFile.Size = new System.Drawing.Size(256, 22);
             this.overrideAudioFile.Text = "Override audio file (*.mogg)";
             this.overrideAudioFile.ToolTipText = "Replaces the audio file from the RBA with any *.mogg file you put in the project " +
     "folder";
@@ -1409,11 +1379,11 @@ namespace MagmaRokOn
             // 
             // overrideMiloFile
             // 
-            this.overrideMiloFile.BackColor = System.Drawing.Color.Black;
+            this.overrideMiloFile.BackColor = System.Drawing.Color.Gainsboro;
             this.overrideMiloFile.CheckOnClick = true;
-            this.overrideMiloFile.ForeColor = System.Drawing.Color.LightGray;
+            this.overrideMiloFile.ForeColor = System.Drawing.Color.Black;
             this.overrideMiloFile.Name = "overrideMiloFile";
-            this.overrideMiloFile.Size = new System.Drawing.Size(291, 22);
+            this.overrideMiloFile.Size = new System.Drawing.Size(256, 22);
             this.overrideMiloFile.Text = "Override animations file (*.milo_xbox)";
             this.overrideMiloFile.ToolTipText = "Replaces the animations file from the RBA with any *.milo_xbox file you put in th" +
     "e project folder";
@@ -1422,101 +1392,101 @@ namespace MagmaRokOn
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(288, 6);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(253, 6);
             // 
             // albumArtDimensions
             // 
-            this.albumArtDimensions.BackColor = System.Drawing.Color.Black;
+            this.albumArtDimensions.BackColor = System.Drawing.Color.Gainsboro;
             this.albumArtDimensions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.x256,
             this.x512,
             this.x1024,
             this.x2048});
-            this.albumArtDimensions.ForeColor = System.Drawing.Color.LightGray;
+            this.albumArtDimensions.ForeColor = System.Drawing.Color.Black;
             this.albumArtDimensions.Name = "albumArtDimensions";
-            this.albumArtDimensions.Size = new System.Drawing.Size(291, 22);
+            this.albumArtDimensions.Size = new System.Drawing.Size(256, 22);
             this.albumArtDimensions.Text = "Album art dimensions";
             // 
             // x256
             // 
-            this.x256.BackColor = System.Drawing.Color.Black;
-            this.x256.ForeColor = System.Drawing.Color.LightGray;
+            this.x256.BackColor = System.Drawing.Color.Gainsboro;
+            this.x256.ForeColor = System.Drawing.Color.Black;
             this.x256.Name = "x256";
-            this.x256.Size = new System.Drawing.Size(176, 22);
+            this.x256.Size = new System.Drawing.Size(161, 22);
             this.x256.Text = "256x256";
             this.x256.Click += new System.EventHandler(this.x256ToolStripMenuItem_Click);
             // 
             // x512
             // 
-            this.x512.BackColor = System.Drawing.Color.Black;
+            this.x512.BackColor = System.Drawing.Color.Gainsboro;
             this.x512.Checked = true;
             this.x512.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.x512.ForeColor = System.Drawing.Color.LightGray;
+            this.x512.ForeColor = System.Drawing.Color.Black;
             this.x512.Name = "x512";
-            this.x512.Size = new System.Drawing.Size(176, 22);
+            this.x512.Size = new System.Drawing.Size(161, 22);
             this.x512.Text = "512x512 (default)";
             this.x512.Click += new System.EventHandler(this.x512ToolStripMenuItem_Click);
             // 
             // x1024
             // 
-            this.x1024.BackColor = System.Drawing.Color.Black;
-            this.x1024.ForeColor = System.Drawing.Color.LightGray;
+            this.x1024.BackColor = System.Drawing.Color.Gainsboro;
+            this.x1024.ForeColor = System.Drawing.Color.Black;
             this.x1024.Name = "x1024";
-            this.x1024.Size = new System.Drawing.Size(176, 22);
+            this.x1024.Size = new System.Drawing.Size(161, 22);
             this.x1024.Text = "1024x1024";
             this.x1024.Click += new System.EventHandler(this.x1024ToolStripMenuItem_Click);
             // 
             // x2048
             // 
-            this.x2048.BackColor = System.Drawing.Color.Black;
-            this.x2048.ForeColor = System.Drawing.Color.LightGray;
+            this.x2048.BackColor = System.Drawing.Color.Gainsboro;
+            this.x2048.ForeColor = System.Drawing.Color.Black;
             this.x2048.Name = "x2048";
-            this.x2048.Size = new System.Drawing.Size(176, 22);
+            this.x2048.Size = new System.Drawing.Size(161, 22);
             this.x2048.Text = "2048x2048";
             this.x2048.Click += new System.EventHandler(this.x2048ToolStripMenuItem_Click);
             // 
             // neverCheckForTempoMap
             // 
-            this.neverCheckForTempoMap.BackColor = System.Drawing.Color.Black;
+            this.neverCheckForTempoMap.BackColor = System.Drawing.Color.Gainsboro;
             this.neverCheckForTempoMap.CheckOnClick = true;
-            this.neverCheckForTempoMap.ForeColor = System.Drawing.Color.LightGray;
+            this.neverCheckForTempoMap.ForeColor = System.Drawing.Color.Black;
             this.neverCheckForTempoMap.Name = "neverCheckForTempoMap";
-            this.neverCheckForTempoMap.Size = new System.Drawing.Size(291, 22);
+            this.neverCheckForTempoMap.Size = new System.Drawing.Size(256, 22);
             this.neverCheckForTempoMap.Text = "Never check for tempo map";
             this.neverCheckForTempoMap.ToolTipText = "DO NOT ENABLE THIS unless you are absolutely sure you know what you are doing";
             this.neverCheckForTempoMap.Click += new System.EventHandler(this.neverCheckForTempoMap_Click);
             // 
             // bypassNemosMIDIValidator
             // 
-            this.bypassNemosMIDIValidator.BackColor = System.Drawing.Color.Black;
+            this.bypassNemosMIDIValidator.BackColor = System.Drawing.Color.Gainsboro;
             this.bypassNemosMIDIValidator.CheckOnClick = true;
-            this.bypassNemosMIDIValidator.ForeColor = System.Drawing.Color.LightGray;
+            this.bypassNemosMIDIValidator.ForeColor = System.Drawing.Color.Black;
             this.bypassNemosMIDIValidator.Name = "bypassNemosMIDIValidator";
-            this.bypassNemosMIDIValidator.Size = new System.Drawing.Size(291, 22);
+            this.bypassNemosMIDIValidator.Size = new System.Drawing.Size(256, 22);
             this.bypassNemosMIDIValidator.Text = "Bypass Nemo\'s MIDI Validator";
             this.bypassNemosMIDIValidator.Click += new System.EventHandler(this.bypassNemosMIDIValidatorToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(288, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(253, 6);
             // 
             // selectNautilusPath
             // 
-            this.selectNautilusPath.BackColor = System.Drawing.Color.Black;
-            this.selectNautilusPath.ForeColor = System.Drawing.Color.LightGray;
+            this.selectNautilusPath.BackColor = System.Drawing.Color.Gainsboro;
+            this.selectNautilusPath.ForeColor = System.Drawing.Color.Black;
             this.selectNautilusPath.Name = "selectNautilusPath";
-            this.selectNautilusPath.Size = new System.Drawing.Size(291, 22);
+            this.selectNautilusPath.Size = new System.Drawing.Size(256, 22);
             this.selectNautilusPath.Text = "Select Nautilus path";
             this.selectNautilusPath.ToolTipText = "You need this to enable \'Visualize\' and \'Nautilus\' after building your song";
             this.selectNautilusPath.Click += new System.EventHandler(this.selectToolsPath_Click);
             // 
             // selectAudacityPath
             // 
-            this.selectAudacityPath.BackColor = System.Drawing.Color.Black;
-            this.selectAudacityPath.ForeColor = System.Drawing.Color.LightGray;
+            this.selectAudacityPath.BackColor = System.Drawing.Color.Gainsboro;
+            this.selectAudacityPath.ForeColor = System.Drawing.Color.Black;
             this.selectAudacityPath.Name = "selectAudacityPath";
-            this.selectAudacityPath.Size = new System.Drawing.Size(291, 22);
+            this.selectAudacityPath.Size = new System.Drawing.Size(256, 22);
             this.selectAudacityPath.Text = "Select Audacity path";
             this.selectAudacityPath.ToolTipText = "You only need this if you\'re going to import an existing song that is in CON/LIVE" +
     " format";
@@ -1524,52 +1494,53 @@ namespace MagmaRokOn
             // 
             // changeCompilerExecutable
             // 
-            this.changeCompilerExecutable.BackColor = System.Drawing.Color.Black;
-            this.changeCompilerExecutable.ForeColor = System.Drawing.Color.LightGray;
+            this.changeCompilerExecutable.BackColor = System.Drawing.Color.Gainsboro;
+            this.changeCompilerExecutable.ForeColor = System.Drawing.Color.Black;
             this.changeCompilerExecutable.Name = "changeCompilerExecutable";
-            this.changeCompilerExecutable.Size = new System.Drawing.Size(291, 22);
+            this.changeCompilerExecutable.Size = new System.Drawing.Size(256, 22);
             this.changeCompilerExecutable.Text = "Change compiler executable";
             this.changeCompilerExecutable.ToolTipText = "DO NOT CHANGE THIS unless you know what you are doing";
             this.changeCompilerExecutable.Click += new System.EventHandler(this.changeCompilerExecutableToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkForUpdates,
             this.viewChangeLog,
             this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // checkForUpdates
             // 
-            this.checkForUpdates.BackColor = System.Drawing.Color.Black;
-            this.checkForUpdates.ForeColor = System.Drawing.Color.LightGray;
+            this.checkForUpdates.BackColor = System.Drawing.Color.Gainsboro;
+            this.checkForUpdates.ForeColor = System.Drawing.Color.Black;
             this.checkForUpdates.Name = "checkForUpdates";
-            this.checkForUpdates.Size = new System.Drawing.Size(209, 22);
+            this.checkForUpdates.Size = new System.Drawing.Size(191, 22);
             this.checkForUpdates.Text = "Check for updates";
             this.checkForUpdates.Click += new System.EventHandler(this.checkForUpdates_Click);
             // 
             // viewChangeLog
             // 
-            this.viewChangeLog.BackColor = System.Drawing.Color.Black;
-            this.viewChangeLog.ForeColor = System.Drawing.Color.LightGray;
+            this.viewChangeLog.BackColor = System.Drawing.Color.Gainsboro;
+            this.viewChangeLog.ForeColor = System.Drawing.Color.Black;
             this.viewChangeLog.Name = "viewChangeLog";
             this.viewChangeLog.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F1)));
-            this.viewChangeLog.Size = new System.Drawing.Size(209, 22);
+            this.viewChangeLog.Size = new System.Drawing.Size(191, 22);
             this.viewChangeLog.Text = "View change log";
             this.viewChangeLog.Click += new System.EventHandler(this.viewChangeLog_Click);
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -1591,8 +1562,7 @@ namespace MagmaRokOn
             // TabPageInformation
             // 
             this.TabPageInformation.AllowDrop = true;
-            this.TabPageInformation.BackColor = System.Drawing.Color.Black;
-            this.TabPageInformation.BackgroundImage = global::MagmaRokOn.Properties.Resources.bg3;
+            this.TabPageInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.TabPageInformation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TabPageInformation.Controls.Add(this.chkPartial);
             this.TabPageInformation.Controls.Add(this.picPartial);
@@ -1688,6 +1658,7 @@ namespace MagmaRokOn
             // 
             this.picPartial.BackColor = System.Drawing.Color.Transparent;
             this.picPartial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPartial.Image = ((System.Drawing.Image)(resources.GetObject("picPartial.Image")));
             this.picPartial.Location = new System.Drawing.Point(143, 376);
             this.picPartial.Name = "picPartial";
             this.picPartial.Size = new System.Drawing.Size(64, 54);
@@ -1713,6 +1684,7 @@ namespace MagmaRokOn
             // 
             this.picUnpitched.BackColor = System.Drawing.Color.Transparent;
             this.picUnpitched.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picUnpitched.Image = ((System.Drawing.Image)(resources.GetObject("picUnpitched.Image")));
             this.picUnpitched.Location = new System.Drawing.Point(269, 451);
             this.picUnpitched.Name = "picUnpitched";
             this.picUnpitched.Size = new System.Drawing.Size(64, 54);
@@ -1729,7 +1701,7 @@ namespace MagmaRokOn
             this.chkAuthorDTA.Checked = true;
             this.chkAuthorDTA.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAuthorDTA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkAuthorDTA.ForeColor = System.Drawing.Color.White;
+            this.chkAuthorDTA.ForeColor = System.Drawing.Color.Black;
             this.chkAuthorDTA.Location = new System.Drawing.Point(469, 330);
             this.chkAuthorDTA.Name = "chkAuthorDTA";
             this.chkAuthorDTA.Size = new System.Drawing.Size(147, 17);
@@ -1757,6 +1729,7 @@ namespace MagmaRokOn
             // 
             this.picDIYStems.BackColor = System.Drawing.Color.Transparent;
             this.picDIYStems.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDIYStems.Image = ((System.Drawing.Image)(resources.GetObject("picDIYStems.Image")));
             this.picDIYStems.Location = new System.Drawing.Point(206, 376);
             this.picDIYStems.Name = "picDIYStems";
             this.picDIYStems.Size = new System.Drawing.Size(64, 54);
@@ -1784,6 +1757,7 @@ namespace MagmaRokOn
             // 
             this.picCAT.BackColor = System.Drawing.Color.Transparent;
             this.picCAT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCAT.Image = ((System.Drawing.Image)(resources.GetObject("picCAT.Image")));
             this.picCAT.Location = new System.Drawing.Point(143, 451);
             this.picCAT.Name = "picCAT";
             this.picCAT.Size = new System.Drawing.Size(64, 54);
@@ -1836,39 +1810,41 @@ namespace MagmaRokOn
             this.clearThumbnailTool,
             this.useDefaultRB3ImageToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(202, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(183, 70);
             // 
             // selectThumbnail
             // 
-            this.selectThumbnail.BackColor = System.Drawing.Color.Black;
-            this.selectThumbnail.ForeColor = System.Drawing.Color.LightGray;
+            this.selectThumbnail.BackColor = System.Drawing.Color.Gainsboro;
+            this.selectThumbnail.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectThumbnail.ForeColor = System.Drawing.Color.Black;
             this.selectThumbnail.Name = "selectThumbnail";
-            this.selectThumbnail.Size = new System.Drawing.Size(201, 22);
+            this.selectThumbnail.Size = new System.Drawing.Size(182, 22);
             this.selectThumbnail.Text = "Select thumbnail";
             this.selectThumbnail.Click += new System.EventHandler(this.selectThumbnail_Click);
             // 
             // clearThumbnailTool
             // 
-            this.clearThumbnailTool.BackColor = System.Drawing.Color.Black;
-            this.clearThumbnailTool.ForeColor = System.Drawing.Color.LightGray;
+            this.clearThumbnailTool.BackColor = System.Drawing.Color.Gainsboro;
+            this.clearThumbnailTool.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearThumbnailTool.ForeColor = System.Drawing.Color.Black;
             this.clearThumbnailTool.Name = "clearThumbnailTool";
-            this.clearThumbnailTool.Size = new System.Drawing.Size(201, 22);
+            this.clearThumbnailTool.Size = new System.Drawing.Size(182, 22);
             this.clearThumbnailTool.Text = "Use album art";
             this.clearThumbnailTool.Click += new System.EventHandler(this.clearToolStripMenuItem1_Click);
             // 
             // useDefaultRB3ImageToolStripMenuItem
             // 
-            this.useDefaultRB3ImageToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.useDefaultRB3ImageToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.useDefaultRB3ImageToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.useDefaultRB3ImageToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.useDefaultRB3ImageToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.useDefaultRB3ImageToolStripMenuItem.Name = "useDefaultRB3ImageToolStripMenuItem";
-            this.useDefaultRB3ImageToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.useDefaultRB3ImageToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.useDefaultRB3ImageToolStripMenuItem.Text = "Use default RB3 image";
             this.useDefaultRB3ImageToolStripMenuItem.Click += new System.EventHandler(this.useDefaultRB3ImageToolStripMenuItem_Click);
             // 
             // btnDispDLC
             // 
-            this.btnDispDLC.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDispDLC.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnDispDLC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnDispDLC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDispDLC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDispDLC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1883,8 +1859,7 @@ namespace MagmaRokOn
             // 
             // btnDescDefault
             // 
-            this.btnDescDefault.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDescDefault.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnDescDefault.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnDescDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDescDefault.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDescDefault.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1899,8 +1874,7 @@ namespace MagmaRokOn
             // 
             // btnDispDefault
             // 
-            this.btnDispDefault.BackColor = System.Drawing.Color.Black;
-            this.btnDispDefault.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnDispDefault.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnDispDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDispDefault.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDispDefault.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1917,12 +1891,12 @@ namespace MagmaRokOn
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(413, 452);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 13);
+            this.label2.Size = new System.Drawing.Size(133, 13);
             this.label2.TabIndex = 132;
             this.label2.Text = "PACKAGE DESCRIPTION";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1931,12 +1905,12 @@ namespace MagmaRokOn
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(413, 371);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 131;
             this.label1.Text = "PACKAGE TITLE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1985,6 +1959,7 @@ namespace MagmaRokOn
             // 
             this.picXOnly.BackColor = System.Drawing.Color.Transparent;
             this.picXOnly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picXOnly.Image = ((System.Drawing.Image)(resources.GetObject("picXOnly.Image")));
             this.picXOnly.Location = new System.Drawing.Point(206, 451);
             this.picXOnly.Name = "picXOnly";
             this.picXOnly.Size = new System.Drawing.Size(64, 54);
@@ -2037,11 +2012,11 @@ namespace MagmaRokOn
             this.chkMaster.Checked = true;
             this.chkMaster.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkMaster.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkMaster.ForeColor = System.Drawing.Color.LightGray;
+            this.chkMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMaster.ForeColor = System.Drawing.Color.Black;
             this.chkMaster.Location = new System.Drawing.Point(29, 53);
             this.chkMaster.Name = "chkMaster";
-            this.chkMaster.Size = new System.Drawing.Size(81, 17);
+            this.chkMaster.Size = new System.Drawing.Size(77, 17);
             this.chkMaster.TabIndex = 121;
             this.chkMaster.Text = "MASTER?";
             this.ToolTip.SetToolTip(this.chkMaster, "Uncheck if the song is a cover, otherwise leave it checked (original song)");
@@ -2091,6 +2066,7 @@ namespace MagmaRokOn
             // 
             this.picConvert.BackColor = System.Drawing.Color.Transparent;
             this.picConvert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picConvert.Image = ((System.Drawing.Image)(resources.GetObject("picConvert.Image")));
             this.picConvert.Location = new System.Drawing.Point(332, 376);
             this.picConvert.Name = "picConvert";
             this.picConvert.Size = new System.Drawing.Size(64, 54);
@@ -2104,6 +2080,7 @@ namespace MagmaRokOn
             // 
             this.picMultitrack.BackColor = System.Drawing.Color.Transparent;
             this.picMultitrack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMultitrack.Image = ((System.Drawing.Image)(resources.GetObject("picMultitrack.Image")));
             this.picMultitrack.Location = new System.Drawing.Point(79, 376);
             this.picMultitrack.Name = "picMultitrack";
             this.picMultitrack.Size = new System.Drawing.Size(64, 54);
@@ -2117,6 +2094,7 @@ namespace MagmaRokOn
             // 
             this.picKaraoke.BackColor = System.Drawing.Color.Transparent;
             this.picKaraoke.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picKaraoke.Image = ((System.Drawing.Image)(resources.GetObject("picKaraoke.Image")));
             this.picKaraoke.Location = new System.Drawing.Point(15, 376);
             this.picKaraoke.Name = "picKaraoke";
             this.picKaraoke.Size = new System.Drawing.Size(64, 54);
@@ -2169,6 +2147,7 @@ namespace MagmaRokOn
             // 
             this.pic2xBass.BackColor = System.Drawing.Color.Transparent;
             this.pic2xBass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic2xBass.Image = ((System.Drawing.Image)(resources.GetObject("pic2xBass.Image")));
             this.pic2xBass.Location = new System.Drawing.Point(269, 376);
             this.pic2xBass.Name = "pic2xBass";
             this.pic2xBass.Size = new System.Drawing.Size(64, 54);
@@ -2182,6 +2161,7 @@ namespace MagmaRokOn
             // 
             this.picRhythmBass.BackColor = System.Drawing.Color.Transparent;
             this.picRhythmBass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRhythmBass.Image = ((System.Drawing.Image)(resources.GetObject("picRhythmBass.Image")));
             this.picRhythmBass.Location = new System.Drawing.Point(79, 451);
             this.picRhythmBass.Name = "picRhythmBass";
             this.picRhythmBass.Size = new System.Drawing.Size(64, 54);
@@ -2195,6 +2175,7 @@ namespace MagmaRokOn
             // 
             this.picRhythmKeys.BackColor = System.Drawing.Color.Transparent;
             this.picRhythmKeys.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRhythmKeys.Image = ((System.Drawing.Image)(resources.GetObject("picRhythmKeys.Image")));
             this.picRhythmKeys.Location = new System.Drawing.Point(15, 451);
             this.picRhythmKeys.Name = "picRhythmKeys";
             this.picRhythmKeys.Size = new System.Drawing.Size(64, 54);
@@ -2221,8 +2202,8 @@ namespace MagmaRokOn
             // LabelReRecording
             // 
             this.LabelReRecording.BackColor = System.Drawing.Color.Transparent;
-            this.LabelReRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelReRecording.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelReRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelReRecording.ForeColor = System.Drawing.Color.Black;
             this.LabelReRecording.Location = new System.Drawing.Point(247, 169);
             this.LabelReRecording.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelReRecording.Name = "LabelReRecording";
@@ -2254,7 +2235,7 @@ namespace MagmaRokOn
             this.numericReRecord.Tag = "Information - Year Released";
             this.ToolTip.SetToolTip(this.numericReRecord, "Use this to set the re-recording date");
             this.numericReRecord.Value = new decimal(new int[] {
-            2025,
+            2026,
             0,
             0,
             0});
@@ -2265,11 +2246,11 @@ namespace MagmaRokOn
             this.CheckBoxLangJapanese.AutoSize = true;
             this.CheckBoxLangJapanese.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxLangJapanese.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxLangJapanese.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxLangJapanese.ForeColor = System.Drawing.Color.White;
+            this.CheckBoxLangJapanese.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxLangJapanese.ForeColor = System.Drawing.Color.Black;
             this.CheckBoxLangJapanese.Location = new System.Drawing.Point(265, 292);
             this.CheckBoxLangJapanese.Name = "CheckBoxLangJapanese";
-            this.CheckBoxLangJapanese.Size = new System.Drawing.Size(80, 17);
+            this.CheckBoxLangJapanese.Size = new System.Drawing.Size(72, 17);
             this.CheckBoxLangJapanese.TabIndex = 18;
             this.CheckBoxLangJapanese.Text = "Japanese";
             this.ToolTip.SetToolTip(this.CheckBoxLangJapanese, "Click here to set the song\'s language to Japanese");
@@ -2281,11 +2262,11 @@ namespace MagmaRokOn
             this.CheckBoxLangGerman.AutoSize = true;
             this.CheckBoxLangGerman.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxLangGerman.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxLangGerman.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxLangGerman.ForeColor = System.Drawing.Color.White;
+            this.CheckBoxLangGerman.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxLangGerman.ForeColor = System.Drawing.Color.Black;
             this.CheckBoxLangGerman.Location = new System.Drawing.Point(352, 270);
             this.CheckBoxLangGerman.Name = "CheckBoxLangGerman";
-            this.CheckBoxLangGerman.Size = new System.Drawing.Size(69, 17);
+            this.CheckBoxLangGerman.Size = new System.Drawing.Size(63, 17);
             this.CheckBoxLangGerman.TabIndex = 15;
             this.CheckBoxLangGerman.Text = "German";
             this.ToolTip.SetToolTip(this.CheckBoxLangGerman, "Click here to set the song\'s language to German");
@@ -2294,8 +2275,7 @@ namespace MagmaRokOn
             // 
             // ButtonAlbumArt
             // 
-            this.ButtonAlbumArt.BackColor = System.Drawing.Color.Black;
-            this.ButtonAlbumArt.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_small;
+            this.ButtonAlbumArt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonAlbumArt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonAlbumArt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAlbumArt.FlatAppearance.BorderSize = 0;
@@ -2315,8 +2295,8 @@ namespace MagmaRokOn
             // LabelAlbumName
             // 
             this.LabelAlbumName.BackColor = System.Drawing.Color.Transparent;
-            this.LabelAlbumName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelAlbumName.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelAlbumName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAlbumName.ForeColor = System.Drawing.Color.Black;
             this.LabelAlbumName.Location = new System.Drawing.Point(70, 96);
             this.LabelAlbumName.Name = "LabelAlbumName";
             this.LabelAlbumName.Size = new System.Drawing.Size(96, 13);
@@ -2341,8 +2321,7 @@ namespace MagmaRokOn
             // 
             // ButtonClearAlbumArt
             // 
-            this.ButtonClearAlbumArt.BackColor = System.Drawing.Color.Black;
-            this.ButtonClearAlbumArt.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_small;
+            this.ButtonClearAlbumArt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonClearAlbumArt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonClearAlbumArt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonClearAlbumArt.FlatAppearance.BorderSize = 0;
@@ -2403,8 +2382,8 @@ namespace MagmaRokOn
             // LabelTrackNumber
             // 
             this.LabelTrackNumber.BackColor = System.Drawing.Color.Transparent;
-            this.LabelTrackNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTrackNumber.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelTrackNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTrackNumber.ForeColor = System.Drawing.Color.Black;
             this.LabelTrackNumber.Location = new System.Drawing.Point(40, 125);
             this.LabelTrackNumber.Name = "LabelTrackNumber";
             this.LabelTrackNumber.Size = new System.Drawing.Size(126, 13);
@@ -2415,8 +2394,8 @@ namespace MagmaRokOn
             // LabelLanguages
             // 
             this.LabelLanguages.BackColor = System.Drawing.Color.Transparent;
-            this.LabelLanguages.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelLanguages.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelLanguages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelLanguages.ForeColor = System.Drawing.Color.Black;
             this.LabelLanguages.Location = new System.Drawing.Point(40, 270);
             this.LabelLanguages.Name = "LabelLanguages";
             this.LabelLanguages.Size = new System.Drawing.Size(126, 13);
@@ -2429,11 +2408,11 @@ namespace MagmaRokOn
             this.CheckBoxLangItalian.AutoSize = true;
             this.CheckBoxLangItalian.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxLangItalian.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxLangItalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxLangItalian.ForeColor = System.Drawing.Color.White;
+            this.CheckBoxLangItalian.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxLangItalian.ForeColor = System.Drawing.Color.Black;
             this.CheckBoxLangItalian.Location = new System.Drawing.Point(171, 292);
             this.CheckBoxLangItalian.Name = "CheckBoxLangItalian";
-            this.CheckBoxLangItalian.Size = new System.Drawing.Size(61, 17);
+            this.CheckBoxLangItalian.Size = new System.Drawing.Size(54, 17);
             this.CheckBoxLangItalian.TabIndex = 14;
             this.CheckBoxLangItalian.Text = "Italian";
             this.ToolTip.SetToolTip(this.CheckBoxLangItalian, "Click here to set the song\'s language to Italian");
@@ -2447,11 +2426,11 @@ namespace MagmaRokOn
             this.CheckBoxLangEnglish.Checked = true;
             this.CheckBoxLangEnglish.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckBoxLangEnglish.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxLangEnglish.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxLangEnglish.ForeColor = System.Drawing.Color.White;
+            this.CheckBoxLangEnglish.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxLangEnglish.ForeColor = System.Drawing.Color.Black;
             this.CheckBoxLangEnglish.Location = new System.Drawing.Point(171, 270);
             this.CheckBoxLangEnglish.Name = "CheckBoxLangEnglish";
-            this.CheckBoxLangEnglish.Size = new System.Drawing.Size(67, 17);
+            this.CheckBoxLangEnglish.Size = new System.Drawing.Size(60, 17);
             this.CheckBoxLangEnglish.TabIndex = 13;
             this.CheckBoxLangEnglish.Text = "English";
             this.ToolTip.SetToolTip(this.CheckBoxLangEnglish, "Click here to set the song\'s language to English");
@@ -2463,11 +2442,11 @@ namespace MagmaRokOn
             this.CheckBoxLangFrench.AutoSize = true;
             this.CheckBoxLangFrench.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxLangFrench.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxLangFrench.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxLangFrench.ForeColor = System.Drawing.Color.White;
+            this.CheckBoxLangFrench.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxLangFrench.ForeColor = System.Drawing.Color.Black;
             this.CheckBoxLangFrench.Location = new System.Drawing.Point(265, 270);
             this.CheckBoxLangFrench.Name = "CheckBoxLangFrench";
-            this.CheckBoxLangFrench.Size = new System.Drawing.Size(64, 17);
+            this.CheckBoxLangFrench.Size = new System.Drawing.Size(59, 17);
             this.CheckBoxLangFrench.TabIndex = 16;
             this.CheckBoxLangFrench.Text = "French";
             this.ToolTip.SetToolTip(this.CheckBoxLangFrench, "Click here to set the song\'s language to French");
@@ -2479,11 +2458,11 @@ namespace MagmaRokOn
             this.CheckBoxLangSpanish.AutoSize = true;
             this.CheckBoxLangSpanish.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxLangSpanish.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxLangSpanish.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxLangSpanish.ForeColor = System.Drawing.Color.White;
+            this.CheckBoxLangSpanish.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxLangSpanish.ForeColor = System.Drawing.Color.Black;
             this.CheckBoxLangSpanish.Location = new System.Drawing.Point(352, 292);
             this.CheckBoxLangSpanish.Name = "CheckBoxLangSpanish";
-            this.CheckBoxLangSpanish.Size = new System.Drawing.Size(71, 17);
+            this.CheckBoxLangSpanish.Size = new System.Drawing.Size(64, 17);
             this.CheckBoxLangSpanish.TabIndex = 17;
             this.CheckBoxLangSpanish.Text = "Spanish";
             this.ToolTip.SetToolTip(this.CheckBoxLangSpanish, "Click here to set the song\'s language to Spanish");
@@ -2493,8 +2472,8 @@ namespace MagmaRokOn
             // LabelAuthor
             // 
             this.LabelAuthor.BackColor = System.Drawing.Color.Transparent;
-            this.LabelAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelAuthor.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAuthor.ForeColor = System.Drawing.Color.Black;
             this.LabelAuthor.Location = new System.Drawing.Point(40, 332);
             this.LabelAuthor.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelAuthor.Name = "LabelAuthor";
@@ -2533,8 +2512,8 @@ namespace MagmaRokOn
             // LabelGenre
             // 
             this.LabelGenre.BackColor = System.Drawing.Color.Transparent;
-            this.LabelGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGenre.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelGenre.ForeColor = System.Drawing.Color.Black;
             this.LabelGenre.Location = new System.Drawing.Point(40, 202);
             this.LabelGenre.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelGenre.Name = "LabelGenre";
@@ -2546,8 +2525,8 @@ namespace MagmaRokOn
             // LabelSubgenre
             // 
             this.LabelSubgenre.BackColor = System.Drawing.Color.Transparent;
-            this.LabelSubgenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSubgenre.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelSubgenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSubgenre.ForeColor = System.Drawing.Color.Black;
             this.LabelSubgenre.Location = new System.Drawing.Point(40, 231);
             this.LabelSubgenre.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelSubgenre.Name = "LabelSubgenre";
@@ -2577,8 +2556,8 @@ namespace MagmaRokOn
             // LabelSongName
             // 
             this.LabelSongName.BackColor = System.Drawing.Color.Transparent;
-            this.LabelSongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSongName.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelSongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSongName.ForeColor = System.Drawing.Color.Black;
             this.LabelSongName.Location = new System.Drawing.Point(40, 24);
             this.LabelSongName.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelSongName.Name = "LabelSongName";
@@ -2616,8 +2595,8 @@ namespace MagmaRokOn
             // LabelArtist
             // 
             this.LabelArtist.BackColor = System.Drawing.Color.Transparent;
-            this.LabelArtist.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelArtist.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelArtist.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelArtist.ForeColor = System.Drawing.Color.Black;
             this.LabelArtist.Location = new System.Drawing.Point(101, 54);
             this.LabelArtist.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelArtist.Name = "LabelArtist";
@@ -2641,8 +2620,8 @@ namespace MagmaRokOn
             // LabelYearReleased
             // 
             this.LabelYearReleased.BackColor = System.Drawing.Color.Transparent;
-            this.LabelYearReleased.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelYearReleased.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelYearReleased.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelYearReleased.ForeColor = System.Drawing.Color.Black;
             this.LabelYearReleased.Location = new System.Drawing.Point(-3, 169);
             this.LabelYearReleased.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelYearReleased.Name = "LabelYearReleased";
@@ -2672,7 +2651,7 @@ namespace MagmaRokOn
             this.NumericUpDownYear.Tag = "Information - Year Released";
             this.ToolTip.SetToolTip(this.NumericUpDownYear, "Use this to set the original release date");
             this.NumericUpDownYear.Value = new decimal(new int[] {
-            2025,
+            2026,
             0,
             0,
             0});
@@ -2704,33 +2683,32 @@ namespace MagmaRokOn
             this.useDefaultArt,
             this.visitAlbumArtRepository});
             this.contextMenuStrip4.Name = "contextMenuStrip4";
-            this.contextMenuStrip4.Size = new System.Drawing.Size(224, 48);
+            this.contextMenuStrip4.Size = new System.Drawing.Size(199, 70);
             // 
             // useDefaultArt
             // 
-            this.useDefaultArt.BackColor = System.Drawing.Color.Black;
-            this.useDefaultArt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.useDefaultArt.ForeColor = System.Drawing.Color.LightGray;
+            this.useDefaultArt.BackColor = System.Drawing.Color.Gainsboro;
+            this.useDefaultArt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.useDefaultArt.ForeColor = System.Drawing.Color.Black;
             this.useDefaultArt.Name = "useDefaultArt";
-            this.useDefaultArt.Size = new System.Drawing.Size(223, 22);
+            this.useDefaultArt.Size = new System.Drawing.Size(198, 22);
             this.useDefaultArt.Text = "Use default art";
             this.useDefaultArt.Click += new System.EventHandler(this.useDefaultArtToolStripMenuItem_Click);
             // 
             // visitAlbumArtRepository
             // 
-            this.visitAlbumArtRepository.BackColor = System.Drawing.Color.Black;
-            this.visitAlbumArtRepository.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.visitAlbumArtRepository.ForeColor = System.Drawing.Color.LightGray;
+            this.visitAlbumArtRepository.BackColor = System.Drawing.Color.Gainsboro;
+            this.visitAlbumArtRepository.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.visitAlbumArtRepository.ForeColor = System.Drawing.Color.Black;
             this.visitAlbumArtRepository.Name = "visitAlbumArtRepository";
-            this.visitAlbumArtRepository.Size = new System.Drawing.Size(223, 22);
+            this.visitAlbumArtRepository.Size = new System.Drawing.Size(198, 22);
             this.visitAlbumArtRepository.Text = "Visit Album Art Repository";
             this.visitAlbumArtRepository.Click += new System.EventHandler(this.visitAlbumArtRepositoryToolStripMenuItem_Click);
             // 
             // TabPageAudio
             // 
             this.TabPageAudio.AllowDrop = true;
-            this.TabPageAudio.BackColor = System.Drawing.Color.Black;
-            this.TabPageAudio.BackgroundImage = global::MagmaRokOn.Properties.Resources.bg3;
+            this.TabPageAudio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.TabPageAudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TabPageAudio.Controls.Add(this.cboEncodingQuality);
             this.TabPageAudio.Controls.Add(this.prevEndMilliseconds);
@@ -2739,11 +2717,9 @@ namespace MagmaRokOn
             this.TabPageAudio.Controls.Add(this.LabelEndPreview);
             this.TabPageAudio.Controls.Add(this.label5);
             this.TabPageAudio.Controls.Add(this.label6);
-            this.TabPageAudio.Controls.Add(this.picSpectrum);
             this.TabPageAudio.Controls.Add(this.btnPlay);
             this.TabPageAudio.Controls.Add(this.numericMilliseconds);
             this.TabPageAudio.Controls.Add(this.ZeroCrowd);
-            this.TabPageAudio.Controls.Add(this.picHelpCrowd);
             this.TabPageAudio.Controls.Add(this.numericCrowd);
             this.TabPageAudio.Controls.Add(this.LabelCrowdPan);
             this.TabPageAudio.Controls.Add(this.ZeroBacking);
@@ -2843,6 +2819,8 @@ namespace MagmaRokOn
             this.TabPageAudio.Controls.Add(this.LabelLength);
             this.TabPageAudio.Controls.Add(this.LabelPreviewSeparator);
             this.TabPageAudio.Controls.Add(this.label3);
+            this.TabPageAudio.Controls.Add(this.picSpectrum);
+            this.TabPageAudio.Controls.Add(this.picHelpCrowd);
             this.TabPageAudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabPageAudio.Location = new System.Drawing.Point(4, 25);
             this.TabPageAudio.Name = "TabPageAudio";
@@ -2851,6 +2829,30 @@ namespace MagmaRokOn
             this.TabPageAudio.Text = "Audio";
             this.TabPageAudio.DragDrop += new System.Windows.Forms.DragEventHandler(this.HandleDragDrop);
             this.TabPageAudio.DragEnter += new System.Windows.Forms.DragEventHandler(this.HandleDragEnter);
+            // 
+            // cboEncodingQuality
+            // 
+            this.cboEncodingQuality.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboEncodingQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEncodingQuality.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEncodingQuality.FormattingEnabled = true;
+            this.cboEncodingQuality.Items.AddRange(new object[] {
+            "1 (lowest)",
+            "2",
+            "3 (default)",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10 (highest)"});
+            this.cboEncodingQuality.Location = new System.Drawing.Point(405, 506);
+            this.cboEncodingQuality.Name = "cboEncodingQuality";
+            this.cboEncodingQuality.Size = new System.Drawing.Size(103, 23);
+            this.cboEncodingQuality.TabIndex = 172;
+            this.ToolTip.SetToolTip(this.cboEncodingQuality, "Select audio quality");
+            this.cboEncodingQuality.SelectedIndexChanged += new System.EventHandler(this.cboEncodingQuality_SelectedIndexChanged);
             // 
             // prevEndMilliseconds
             // 
@@ -2976,7 +2978,7 @@ namespace MagmaRokOn
             // 
             this.LabelEndPreview.AutoSize = true;
             this.LabelEndPreview.BackColor = System.Drawing.Color.Transparent;
-            this.LabelEndPreview.ForeColor = System.Drawing.Color.White;
+            this.LabelEndPreview.ForeColor = System.Drawing.Color.Black;
             this.LabelEndPreview.Location = new System.Drawing.Point(95, 511);
             this.LabelEndPreview.Name = "LabelEndPreview";
             this.LabelEndPreview.Size = new System.Drawing.Size(70, 13);
@@ -3008,22 +3010,9 @@ namespace MagmaRokOn
             this.label6.Text = ":";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // picSpectrum
-            // 
-            this.picSpectrum.BackColor = System.Drawing.Color.Transparent;
-            this.picSpectrum.Location = new System.Drawing.Point(405, 471);
-            this.picSpectrum.Name = "picSpectrum";
-            this.picSpectrum.Size = new System.Drawing.Size(82, 34);
-            this.picSpectrum.TabIndex = 165;
-            this.picSpectrum.TabStop = false;
-            this.ToolTip.SetToolTip(this.picSpectrum, "Click to change");
-            this.picSpectrum.Visible = false;
-            this.picSpectrum.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSpectrum_MouseClick);
-            // 
             // btnPlay
             // 
-            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(73)))), ((int)(((byte)(84)))));
-            this.btnPlay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.BackgroundImage")));
+            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.FlatAppearance.BorderSize = 0;
@@ -3060,7 +3049,7 @@ namespace MagmaRokOn
             // 
             // ZeroCrowd
             // 
-            this.ZeroCrowd.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroCrowd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroCrowd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroCrowd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroCrowd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3073,19 +3062,6 @@ namespace MagmaRokOn
             this.ZeroCrowd.UseVisualStyleBackColor = false;
             this.ZeroCrowd.Visible = false;
             this.ZeroCrowd.Click += new System.EventHandler(this.ZeroCrowd_Click);
-            // 
-            // picHelpCrowd
-            // 
-            this.picHelpCrowd.BackColor = System.Drawing.Color.Transparent;
-            this.picHelpCrowd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHelpCrowd.Location = new System.Drawing.Point(512, 436);
-            this.picHelpCrowd.Name = "picHelpCrowd";
-            this.picHelpCrowd.Size = new System.Drawing.Size(25, 25);
-            this.picHelpCrowd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHelpCrowd.TabIndex = 158;
-            this.picHelpCrowd.TabStop = false;
-            this.ToolTip.SetToolTip(this.picHelpCrowd, "Click for help with Crowd Audio");
-            this.picHelpCrowd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
             // 
             // numericCrowd
             // 
@@ -3127,7 +3103,7 @@ namespace MagmaRokOn
             // 
             this.LabelCrowdPan.AutoSize = true;
             this.LabelCrowdPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelCrowdPan.ForeColor = System.Drawing.Color.White;
+            this.LabelCrowdPan.ForeColor = System.Drawing.Color.Black;
             this.LabelCrowdPan.Location = new System.Drawing.Point(564, 440);
             this.LabelCrowdPan.Name = "LabelCrowdPan";
             this.LabelCrowdPan.Size = new System.Drawing.Size(38, 13);
@@ -3137,7 +3113,7 @@ namespace MagmaRokOn
             // 
             // ZeroBacking
             // 
-            this.ZeroBacking.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroBacking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroBacking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroBacking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroBacking.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3153,7 +3129,7 @@ namespace MagmaRokOn
             // 
             // ZeroVocals
             // 
-            this.ZeroVocals.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroVocals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroVocals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroVocals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroVocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3169,7 +3145,7 @@ namespace MagmaRokOn
             // 
             // ZeroKeys
             // 
-            this.ZeroKeys.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroKeys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroKeys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroKeys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3185,7 +3161,7 @@ namespace MagmaRokOn
             // 
             // ZeroGuitar
             // 
-            this.ZeroGuitar.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroGuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroGuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroGuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3201,7 +3177,7 @@ namespace MagmaRokOn
             // 
             // ZeroBass
             // 
-            this.ZeroBass.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroBass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroBass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroBass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroBass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3217,7 +3193,7 @@ namespace MagmaRokOn
             // 
             // ZeroDrumKick
             // 
-            this.ZeroDrumKick.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroDrumKick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroDrumKick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroDrumKick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroDrumKick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3233,7 +3209,7 @@ namespace MagmaRokOn
             // 
             // ZeroDrumSnare
             // 
-            this.ZeroDrumSnare.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroDrumSnare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroDrumSnare.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroDrumSnare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroDrumSnare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3249,7 +3225,7 @@ namespace MagmaRokOn
             // 
             // ZeroDrumKit
             // 
-            this.ZeroDrumKit.BackColor = System.Drawing.Color.Transparent;
+            this.ZeroDrumKit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ZeroDrumKit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZeroDrumKit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ZeroDrumKit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3330,11 +3306,11 @@ namespace MagmaRokOn
             // 
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Location = new System.Drawing.Point(638, 10);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(86, 13);
+            this.label30.Size = new System.Drawing.Size(84, 13);
             this.label30.TabIndex = 141;
             this.label30.Text = "ATTENUATION";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3343,11 +3319,11 @@ namespace MagmaRokOn
             // 
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(568, 10);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(31, 13);
+            this.label29.Size = new System.Drawing.Size(29, 13);
             this.label29.TabIndex = 140;
             this.label29.Text = "PAN";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3604,7 +3580,7 @@ namespace MagmaRokOn
             // 
             this.LabelBackingPan.AutoSize = true;
             this.LabelBackingPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBackingPan.ForeColor = System.Drawing.Color.White;
+            this.LabelBackingPan.ForeColor = System.Drawing.Color.Black;
             this.LabelBackingPan.Location = new System.Drawing.Point(564, 402);
             this.LabelBackingPan.Name = "LabelBackingPan";
             this.LabelBackingPan.Size = new System.Drawing.Size(38, 13);
@@ -3644,7 +3620,7 @@ namespace MagmaRokOn
             // 
             this.LabelVocalPan.AutoSize = true;
             this.LabelVocalPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelVocalPan.ForeColor = System.Drawing.Color.White;
+            this.LabelVocalPan.ForeColor = System.Drawing.Color.Black;
             this.LabelVocalPan.Location = new System.Drawing.Point(564, 279);
             this.LabelVocalPan.Name = "LabelVocalPan";
             this.LabelVocalPan.Size = new System.Drawing.Size(38, 13);
@@ -3684,7 +3660,7 @@ namespace MagmaRokOn
             // 
             this.LabelKeysPan.AutoSize = true;
             this.LabelKeysPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelKeysPan.ForeColor = System.Drawing.Color.White;
+            this.LabelKeysPan.ForeColor = System.Drawing.Color.Black;
             this.LabelKeysPan.Location = new System.Drawing.Point(564, 240);
             this.LabelKeysPan.Name = "LabelKeysPan";
             this.LabelKeysPan.Size = new System.Drawing.Size(38, 13);
@@ -3724,7 +3700,7 @@ namespace MagmaRokOn
             // 
             this.LabelGuitarPan.AutoSize = true;
             this.LabelGuitarPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelGuitarPan.ForeColor = System.Drawing.Color.White;
+            this.LabelGuitarPan.ForeColor = System.Drawing.Color.Black;
             this.LabelGuitarPan.Location = new System.Drawing.Point(564, 202);
             this.LabelGuitarPan.Name = "LabelGuitarPan";
             this.LabelGuitarPan.Size = new System.Drawing.Size(38, 13);
@@ -3764,7 +3740,7 @@ namespace MagmaRokOn
             // 
             this.LabelBassPan.AutoSize = true;
             this.LabelBassPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBassPan.ForeColor = System.Drawing.Color.White;
+            this.LabelBassPan.ForeColor = System.Drawing.Color.Black;
             this.LabelBassPan.Location = new System.Drawing.Point(564, 162);
             this.LabelBassPan.Name = "LabelBassPan";
             this.LabelBassPan.Size = new System.Drawing.Size(38, 13);
@@ -3804,7 +3780,7 @@ namespace MagmaRokOn
             // 
             this.LabelDrumSnarePan.AutoSize = true;
             this.LabelDrumSnarePan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumSnarePan.ForeColor = System.Drawing.Color.White;
+            this.LabelDrumSnarePan.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumSnarePan.Location = new System.Drawing.Point(564, 94);
             this.LabelDrumSnarePan.Name = "LabelDrumSnarePan";
             this.LabelDrumSnarePan.Size = new System.Drawing.Size(38, 13);
@@ -3817,7 +3793,7 @@ namespace MagmaRokOn
             // 
             this.LabelDrumKickPan.AutoSize = true;
             this.LabelDrumKickPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumKickPan.ForeColor = System.Drawing.Color.White;
+            this.LabelDrumKickPan.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumKickPan.Location = new System.Drawing.Point(564, 123);
             this.LabelDrumKickPan.Name = "LabelDrumKickPan";
             this.LabelDrumKickPan.Size = new System.Drawing.Size(38, 13);
@@ -3830,7 +3806,7 @@ namespace MagmaRokOn
             // 
             this.LabelDrumKitPan.AutoSize = true;
             this.LabelDrumKitPan.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumKitPan.ForeColor = System.Drawing.Color.White;
+            this.LabelDrumKitPan.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumKitPan.Location = new System.Drawing.Point(564, 65);
             this.LabelDrumKitPan.Name = "LabelDrumKitPan";
             this.LabelDrumKitPan.Size = new System.Drawing.Size(38, 13);
@@ -3925,8 +3901,7 @@ namespace MagmaRokOn
             // 
             // ButtonBacking
             // 
-            this.ButtonBacking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
-            this.ButtonBacking.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonBacking.BackgroundImage")));
+            this.ButtonBacking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonBacking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonBacking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonBacking.FlatAppearance.BorderSize = 0;
@@ -3986,164 +3961,179 @@ namespace MagmaRokOn
             this.convertVocalsStemToDryvox,
             this.selectAudioFile});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(252, 352);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(225, 352);
             this.contextMenuStrip2.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip2_Opening);
             // 
             // clearToolStripMenuItem
             // 
-            this.clearToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.clearToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.clearToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.clearToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
-            this.copyToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.copyToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.copyToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.copyToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.copyToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
-            this.pasteToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.pasteToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.pasteToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.pasteToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pasteToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(248, 6);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(221, 6);
             // 
             // Mono44SilenceToolStripMenuItem
             // 
-            this.Mono44SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.Mono44SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.Mono44SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.Mono44SilenceToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mono44SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.Mono44SilenceToolStripMenuItem.Name = "Mono44SilenceToolStripMenuItem";
-            this.Mono44SilenceToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.Mono44SilenceToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.Mono44SilenceToolStripMenuItem.Text = "44.1 kHz mono silence";
             this.Mono44SilenceToolStripMenuItem.Click += new System.EventHandler(this.Mono44SilenceToolStripMenuItem_Click);
             // 
             // Stereo44SilenceToolStripMenuItem
             // 
-            this.Stereo44SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.Stereo44SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.Stereo44SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.Stereo44SilenceToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stereo44SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.Stereo44SilenceToolStripMenuItem.Name = "Stereo44SilenceToolStripMenuItem";
-            this.Stereo44SilenceToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.Stereo44SilenceToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.Stereo44SilenceToolStripMenuItem.Text = "44.1 kHz stereo silence";
             this.Stereo44SilenceToolStripMenuItem.Click += new System.EventHandler(this.Stereo44SilenceToolStripMenuItem_Click);
             // 
             // Mono48SilenceToolStripMenuItem
             // 
-            this.Mono48SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.Mono48SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.Mono48SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.Mono48SilenceToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mono48SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.Mono48SilenceToolStripMenuItem.Name = "Mono48SilenceToolStripMenuItem";
-            this.Mono48SilenceToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.Mono48SilenceToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.Mono48SilenceToolStripMenuItem.Text = "48 kHz mono silence";
             this.Mono48SilenceToolStripMenuItem.Click += new System.EventHandler(this.Mono48SilenceToolStripMenuItem_Click);
             // 
             // Stereo48SilenceToolStripMenuItem
             // 
-            this.Stereo48SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.Stereo48SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.Stereo48SilenceToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.Stereo48SilenceToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stereo48SilenceToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.Stereo48SilenceToolStripMenuItem.Name = "Stereo48SilenceToolStripMenuItem";
-            this.Stereo48SilenceToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.Stereo48SilenceToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.Stereo48SilenceToolStripMenuItem.Text = "48 kHz stereo silence";
             this.Stereo48SilenceToolStripMenuItem.Click += new System.EventHandler(this.Stereo48SilenceToolStripMenuItem_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(248, 6);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(221, 6);
             // 
             // Mono44Silence24
             // 
-            this.Mono44Silence24.BackColor = System.Drawing.Color.Black;
-            this.Mono44Silence24.ForeColor = System.Drawing.Color.LightGray;
+            this.Mono44Silence24.BackColor = System.Drawing.Color.Gainsboro;
+            this.Mono44Silence24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mono44Silence24.ForeColor = System.Drawing.Color.Black;
             this.Mono44Silence24.Name = "Mono44Silence24";
-            this.Mono44Silence24.Size = new System.Drawing.Size(251, 22);
+            this.Mono44Silence24.Size = new System.Drawing.Size(224, 22);
             this.Mono44Silence24.Text = "44.1 kHz mono silence (24-bit)";
             this.Mono44Silence24.Click += new System.EventHandler(this.Mono44Silence24_Click);
             // 
             // Stereo44Silence24
             // 
-            this.Stereo44Silence24.BackColor = System.Drawing.Color.Black;
-            this.Stereo44Silence24.ForeColor = System.Drawing.Color.LightGray;
+            this.Stereo44Silence24.BackColor = System.Drawing.Color.Gainsboro;
+            this.Stereo44Silence24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stereo44Silence24.ForeColor = System.Drawing.Color.Black;
             this.Stereo44Silence24.Name = "Stereo44Silence24";
-            this.Stereo44Silence24.Size = new System.Drawing.Size(251, 22);
+            this.Stereo44Silence24.Size = new System.Drawing.Size(224, 22);
             this.Stereo44Silence24.Text = "44.1 kHz stereo silence (24-bit)";
             this.Stereo44Silence24.Click += new System.EventHandler(this.Stereo44Silence24_Click);
             // 
             // Mono48Silence24
             // 
-            this.Mono48Silence24.BackColor = System.Drawing.Color.Black;
-            this.Mono48Silence24.ForeColor = System.Drawing.Color.LightGray;
+            this.Mono48Silence24.BackColor = System.Drawing.Color.Gainsboro;
+            this.Mono48Silence24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mono48Silence24.ForeColor = System.Drawing.Color.Black;
             this.Mono48Silence24.Name = "Mono48Silence24";
-            this.Mono48Silence24.Size = new System.Drawing.Size(251, 22);
+            this.Mono48Silence24.Size = new System.Drawing.Size(224, 22);
             this.Mono48Silence24.Text = "48 kHz mono silence (24-bit)";
             this.Mono48Silence24.Click += new System.EventHandler(this.Mono48Silence24_Click);
             // 
             // Stereo48Silence24
             // 
-            this.Stereo48Silence24.BackColor = System.Drawing.Color.Black;
-            this.Stereo48Silence24.ForeColor = System.Drawing.Color.LightGray;
+            this.Stereo48Silence24.BackColor = System.Drawing.Color.Gainsboro;
+            this.Stereo48Silence24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stereo48Silence24.ForeColor = System.Drawing.Color.Black;
             this.Stereo48Silence24.Name = "Stereo48Silence24";
-            this.Stereo48Silence24.Size = new System.Drawing.Size(251, 22);
+            this.Stereo48Silence24.Size = new System.Drawing.Size(224, 22);
             this.Stereo48Silence24.Text = "48 kHz stereo silence (24-bit)";
             this.Stereo48Silence24.Click += new System.EventHandler(this.Stereo48Silence24_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(248, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(221, 6);
             // 
             // blankDryvoxFileToolStripMenuItem
             // 
-            this.blankDryvoxFileToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.blankDryvoxFileToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.blankDryvoxFileToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.blankDryvoxFileToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blankDryvoxFileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.blankDryvoxFileToolStripMenuItem.Name = "blankDryvoxFileToolStripMenuItem";
-            this.blankDryvoxFileToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.blankDryvoxFileToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.blankDryvoxFileToolStripMenuItem.Text = "Blank dryvox";
             this.blankDryvoxFileToolStripMenuItem.Click += new System.EventHandler(this.blankDryvoxFileToolStripMenuItem_Click);
             // 
             // copyLeadDryVocalsHere
             // 
-            this.copyLeadDryVocalsHere.BackColor = System.Drawing.Color.Black;
-            this.copyLeadDryVocalsHere.ForeColor = System.Drawing.Color.LightGray;
+            this.copyLeadDryVocalsHere.BackColor = System.Drawing.Color.Gainsboro;
+            this.copyLeadDryVocalsHere.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.copyLeadDryVocalsHere.ForeColor = System.Drawing.Color.Black;
             this.copyLeadDryVocalsHere.Name = "copyLeadDryVocalsHere";
-            this.copyLeadDryVocalsHere.Size = new System.Drawing.Size(251, 22);
+            this.copyLeadDryVocalsHere.Size = new System.Drawing.Size(224, 22);
             this.copyLeadDryVocalsHere.Text = "Copy lead dry vocals here";
             this.copyLeadDryVocalsHere.Click += new System.EventHandler(this.copyLeadDryVocalsHere_Click);
             // 
             // convertVocalsStemToDryvox
             // 
-            this.convertVocalsStemToDryvox.BackColor = System.Drawing.Color.Black;
-            this.convertVocalsStemToDryvox.ForeColor = System.Drawing.Color.LightGray;
+            this.convertVocalsStemToDryvox.BackColor = System.Drawing.Color.Gainsboro;
+            this.convertVocalsStemToDryvox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.convertVocalsStemToDryvox.ForeColor = System.Drawing.Color.Black;
             this.convertVocalsStemToDryvox.Name = "convertVocalsStemToDryvox";
-            this.convertVocalsStemToDryvox.Size = new System.Drawing.Size(251, 22);
+            this.convertVocalsStemToDryvox.Size = new System.Drawing.Size(224, 22);
             this.convertVocalsStemToDryvox.Text = "Convert vocals stem to dryvox";
             this.convertVocalsStemToDryvox.Click += new System.EventHandler(this.convertVocalsStemToDryvox_Click);
             // 
             // selectAudioFile
             // 
-            this.selectAudioFile.BackColor = System.Drawing.Color.Black;
-            this.selectAudioFile.ForeColor = System.Drawing.Color.LightGray;
+            this.selectAudioFile.BackColor = System.Drawing.Color.Gainsboro;
+            this.selectAudioFile.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectAudioFile.ForeColor = System.Drawing.Color.Black;
             this.selectAudioFile.Name = "selectAudioFile";
-            this.selectAudioFile.Size = new System.Drawing.Size(251, 22);
+            this.selectAudioFile.Size = new System.Drawing.Size(224, 22);
             this.selectAudioFile.Text = "Select audio file...";
             this.selectAudioFile.Click += new System.EventHandler(this.selectAudioFile_Click);
             // 
             // LabelBacking
             // 
             this.LabelBacking.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBacking.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelBacking.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelBacking.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelBacking.ForeColor = System.Drawing.Color.Black;
             this.LabelBacking.Location = new System.Drawing.Point(35, 404);
             this.LabelBacking.Name = "LabelBacking";
             this.LabelBacking.Size = new System.Drawing.Size(126, 13);
@@ -4183,7 +4173,7 @@ namespace MagmaRokOn
             // LabelDryVocalsHarmony3
             // 
             this.LabelDryVocalsHarmony3.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDryVocalsHarmony3.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelDryVocalsHarmony3.ForeColor = System.Drawing.Color.Black;
             this.LabelDryVocalsHarmony3.Location = new System.Drawing.Point(35, 366);
             this.LabelDryVocalsHarmony3.Name = "LabelDryVocalsHarmony3";
             this.LabelDryVocalsHarmony3.Size = new System.Drawing.Size(126, 13);
@@ -4193,8 +4183,7 @@ namespace MagmaRokOn
             // 
             // ButtonDryVocalsHarmony3
             // 
-            this.ButtonDryVocalsHarmony3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(75)))), ((int)(((byte)(88)))));
-            this.ButtonDryVocalsHarmony3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDryVocalsHarmony3.BackgroundImage")));
+            this.ButtonDryVocalsHarmony3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonDryVocalsHarmony3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonDryVocalsHarmony3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonDryVocalsHarmony3.FlatAppearance.BorderSize = 0;
@@ -4248,7 +4237,7 @@ namespace MagmaRokOn
             // LabelDryVocalsHarmony2
             // 
             this.LabelDryVocalsHarmony2.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDryVocalsHarmony2.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelDryVocalsHarmony2.ForeColor = System.Drawing.Color.Black;
             this.LabelDryVocalsHarmony2.Location = new System.Drawing.Point(35, 337);
             this.LabelDryVocalsHarmony2.Name = "LabelDryVocalsHarmony2";
             this.LabelDryVocalsHarmony2.Size = new System.Drawing.Size(126, 13);
@@ -4258,8 +4247,7 @@ namespace MagmaRokOn
             // 
             // ButtonDryVocalsHarmony2
             // 
-            this.ButtonDryVocalsHarmony2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(73)))), ((int)(((byte)(84)))));
-            this.ButtonDryVocalsHarmony2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDryVocalsHarmony2.BackgroundImage")));
+            this.ButtonDryVocalsHarmony2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonDryVocalsHarmony2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonDryVocalsHarmony2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonDryVocalsHarmony2.FlatAppearance.BorderSize = 0;
@@ -4278,8 +4266,7 @@ namespace MagmaRokOn
             // 
             // ButtonDryVocals
             // 
-            this.ButtonDryVocals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(74)))), ((int)(((byte)(85)))));
-            this.ButtonDryVocals.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDryVocals.BackgroundImage")));
+            this.ButtonDryVocals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonDryVocals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonDryVocals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonDryVocals.FlatAppearance.BorderSize = 0;
@@ -4339,7 +4326,7 @@ namespace MagmaRokOn
             // LabelDryVocals
             // 
             this.LabelDryVocals.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDryVocals.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelDryVocals.ForeColor = System.Drawing.Color.Black;
             this.LabelDryVocals.Location = new System.Drawing.Point(7, 305);
             this.LabelDryVocals.Name = "LabelDryVocals";
             this.LabelDryVocals.Size = new System.Drawing.Size(154, 17);
@@ -4349,8 +4336,7 @@ namespace MagmaRokOn
             // 
             // ButtonVocals
             // 
-            this.ButtonVocals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(71)))), ((int)(((byte)(83)))));
-            this.ButtonVocals.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonVocals.BackgroundImage")));
+            this.ButtonVocals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonVocals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonVocals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonVocals.FlatAppearance.BorderSize = 0;
@@ -4390,8 +4376,8 @@ namespace MagmaRokOn
             // LabelVocals
             // 
             this.LabelVocals.BackColor = System.Drawing.Color.Transparent;
-            this.LabelVocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelVocals.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelVocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelVocals.ForeColor = System.Drawing.Color.Black;
             this.LabelVocals.Location = new System.Drawing.Point(35, 280);
             this.LabelVocals.Name = "LabelVocals";
             this.LabelVocals.Size = new System.Drawing.Size(126, 13);
@@ -4416,8 +4402,7 @@ namespace MagmaRokOn
             // 
             // ButtonKeys
             // 
-            this.ButtonKeys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(55)))), ((int)(((byte)(63)))));
-            this.ButtonKeys.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonKeys.BackgroundImage")));
+            this.ButtonKeys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonKeys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonKeys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonKeys.FlatAppearance.BorderSize = 0;
@@ -4457,8 +4442,8 @@ namespace MagmaRokOn
             // LabelKeys
             // 
             this.LabelKeys.BackColor = System.Drawing.Color.Transparent;
-            this.LabelKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelKeys.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelKeys.ForeColor = System.Drawing.Color.Black;
             this.LabelKeys.Location = new System.Drawing.Point(35, 240);
             this.LabelKeys.Name = "LabelKeys";
             this.LabelKeys.Size = new System.Drawing.Size(126, 13);
@@ -4481,8 +4466,7 @@ namespace MagmaRokOn
             // 
             // ButtonGuitar
             // 
-            this.ButtonGuitar.BackColor = System.Drawing.Color.Black;
-            this.ButtonGuitar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonGuitar.BackgroundImage")));
+            this.ButtonGuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonGuitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonGuitar.FlatAppearance.BorderSize = 0;
@@ -4522,8 +4506,8 @@ namespace MagmaRokOn
             // LabelGuitar
             // 
             this.LabelGuitar.BackColor = System.Drawing.Color.Transparent;
-            this.LabelGuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGuitar.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelGuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelGuitar.ForeColor = System.Drawing.Color.Black;
             this.LabelGuitar.Location = new System.Drawing.Point(35, 201);
             this.LabelGuitar.Name = "LabelGuitar";
             this.LabelGuitar.Size = new System.Drawing.Size(126, 13);
@@ -4548,8 +4532,7 @@ namespace MagmaRokOn
             // 
             // ButtonBass
             // 
-            this.ButtonBass.BackColor = System.Drawing.Color.Black;
-            this.ButtonBass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonBass.BackgroundImage")));
+            this.ButtonBass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonBass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonBass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonBass.FlatAppearance.BorderSize = 0;
@@ -4589,8 +4572,8 @@ namespace MagmaRokOn
             // LabelBass
             // 
             this.LabelBass.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelBass.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelBass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelBass.ForeColor = System.Drawing.Color.Black;
             this.LabelBass.Location = new System.Drawing.Point(35, 164);
             this.LabelBass.Name = "LabelBass";
             this.LabelBass.Size = new System.Drawing.Size(126, 13);
@@ -4636,7 +4619,8 @@ namespace MagmaRokOn
             // LabelDrumSnare
             // 
             this.LabelDrumSnare.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumSnare.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelDrumSnare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDrumSnare.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumSnare.Location = new System.Drawing.Point(35, 94);
             this.LabelDrumSnare.Name = "LabelDrumSnare";
             this.LabelDrumSnare.Size = new System.Drawing.Size(126, 13);
@@ -4647,7 +4631,8 @@ namespace MagmaRokOn
             // LabelDrumKick
             // 
             this.LabelDrumKick.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumKick.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelDrumKick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDrumKick.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumKick.Location = new System.Drawing.Point(35, 123);
             this.LabelDrumKick.Name = "LabelDrumKick";
             this.LabelDrumKick.Size = new System.Drawing.Size(126, 13);
@@ -4658,7 +4643,8 @@ namespace MagmaRokOn
             // LabelDrumKit
             // 
             this.LabelDrumKit.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumKit.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelDrumKit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDrumKit.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumKit.Location = new System.Drawing.Point(35, 65);
             this.LabelDrumKit.Name = "LabelDrumKit";
             this.LabelDrumKit.Size = new System.Drawing.Size(126, 13);
@@ -4668,8 +4654,7 @@ namespace MagmaRokOn
             // 
             // ButtonDrumSnare
             // 
-            this.ButtonDrumSnare.BackColor = System.Drawing.Color.Black;
-            this.ButtonDrumSnare.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDrumSnare.BackgroundImage")));
+            this.ButtonDrumSnare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonDrumSnare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonDrumSnare.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonDrumSnare.FlatAppearance.BorderSize = 0;
@@ -4708,8 +4693,7 @@ namespace MagmaRokOn
             // 
             // ButtonDrumKick
             // 
-            this.ButtonDrumKick.BackColor = System.Drawing.Color.Black;
-            this.ButtonDrumKick.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDrumKick.BackgroundImage")));
+            this.ButtonDrumKick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonDrumKick.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonDrumKick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonDrumKick.FlatAppearance.BorderSize = 0;
@@ -4748,8 +4732,7 @@ namespace MagmaRokOn
             // 
             // ButtonDrumKit
             // 
-            this.ButtonDrumKit.BackColor = System.Drawing.Color.Black;
-            this.ButtonDrumKit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonDrumKit.BackgroundImage")));
+            this.ButtonDrumKit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonDrumKit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonDrumKit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonDrumKit.FlatAppearance.BorderSize = 0;
@@ -4769,8 +4752,8 @@ namespace MagmaRokOn
             // LabelDrums
             // 
             this.LabelDrums.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrums.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDrums.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelDrums.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDrums.ForeColor = System.Drawing.Color.Black;
             this.LabelDrums.Location = new System.Drawing.Point(35, 36);
             this.LabelDrums.Name = "LabelDrums";
             this.LabelDrums.Size = new System.Drawing.Size(126, 13);
@@ -4815,8 +4798,7 @@ namespace MagmaRokOn
             // 
             // btnCrowd
             // 
-            this.btnCrowd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(54)))), ((int)(((byte)(61)))));
-            this.btnCrowd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCrowd.BackgroundImage")));
+            this.btnCrowd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnCrowd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCrowd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrowd.FlatAppearance.BorderSize = 0;
@@ -4857,11 +4839,11 @@ namespace MagmaRokOn
             // 
             this.LabelCrowd.AutoSize = true;
             this.LabelCrowd.BackColor = System.Drawing.Color.Transparent;
-            this.LabelCrowd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCrowd.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelCrowd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCrowd.ForeColor = System.Drawing.Color.Black;
             this.LabelCrowd.Location = new System.Drawing.Point(110, 442);
             this.LabelCrowd.Name = "LabelCrowd";
-            this.LabelCrowd.Size = new System.Drawing.Size(51, 13);
+            this.LabelCrowd.Size = new System.Drawing.Size(49, 13);
             this.LabelCrowd.TabIndex = 68;
             this.LabelCrowd.Text = "CROWD";
             this.LabelCrowd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4883,7 +4865,7 @@ namespace MagmaRokOn
             // 
             this.LabelEncodingQuality.AutoSize = true;
             this.LabelEncodingQuality.BackColor = System.Drawing.Color.Transparent;
-            this.LabelEncodingQuality.ForeColor = System.Drawing.Color.White;
+            this.LabelEncodingQuality.ForeColor = System.Drawing.Color.Black;
             this.LabelEncodingQuality.Location = new System.Drawing.Point(332, 512);
             this.LabelEncodingQuality.Name = "LabelEncodingQuality";
             this.LabelEncodingQuality.Size = new System.Drawing.Size(72, 13);
@@ -4897,7 +4879,7 @@ namespace MagmaRokOn
             this.groupDrumMix.Controls.Add(this.chkDrumsMix);
             this.groupDrumMix.Controls.Add(this.lblDrumMix);
             this.groupDrumMix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupDrumMix.ForeColor = System.Drawing.Color.White;
+            this.groupDrumMix.ForeColor = System.Drawing.Color.Black;
             this.groupDrumMix.Location = new System.Drawing.Point(544, 470);
             this.groupDrumMix.Name = "groupDrumMix";
             this.groupDrumMix.Size = new System.Drawing.Size(191, 61);
@@ -4911,6 +4893,7 @@ namespace MagmaRokOn
             this.chkDrumsMix.Checked = true;
             this.chkDrumsMix.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkDrumsMix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkDrumsMix.ForeColor = System.Drawing.Color.Black;
             this.chkDrumsMix.Location = new System.Drawing.Point(102, 42);
             this.chkDrumsMix.Name = "chkDrumsMix";
             this.chkDrumsMix.Size = new System.Drawing.Size(83, 17);
@@ -4924,8 +4907,8 @@ namespace MagmaRokOn
             // 
             this.lblDrumMix.BackColor = System.Drawing.Color.Transparent;
             this.lblDrumMix.Cursor = System.Windows.Forms.Cursors.No;
-            this.lblDrumMix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDrumMix.ForeColor = System.Drawing.Color.White;
+            this.lblDrumMix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrumMix.ForeColor = System.Drawing.Color.Black;
             this.lblDrumMix.Location = new System.Drawing.Point(6, 21);
             this.lblDrumMix.Name = "lblDrumMix";
             this.lblDrumMix.Size = new System.Drawing.Size(179, 13);
@@ -5037,7 +5020,7 @@ namespace MagmaRokOn
             // 
             this.LabelStartPreview.AutoSize = true;
             this.LabelStartPreview.BackColor = System.Drawing.Color.Transparent;
-            this.LabelStartPreview.ForeColor = System.Drawing.Color.White;
+            this.LabelStartPreview.ForeColor = System.Drawing.Color.Black;
             this.LabelStartPreview.Location = new System.Drawing.Point(92, 483);
             this.LabelStartPreview.Name = "LabelStartPreview";
             this.LabelStartPreview.Size = new System.Drawing.Size(73, 13);
@@ -5048,12 +5031,12 @@ namespace MagmaRokOn
             // LabelSongLength
             // 
             this.LabelSongLength.BackColor = System.Drawing.Color.Transparent;
-            this.LabelSongLength.ForeColor = System.Drawing.Color.White;
+            this.LabelSongLength.ForeColor = System.Drawing.Color.Black;
             this.LabelSongLength.Location = new System.Drawing.Point(14, 507);
             this.LabelSongLength.Name = "LabelSongLength";
             this.LabelSongLength.Size = new System.Drawing.Size(68, 21);
             this.LabelSongLength.TabIndex = 27;
-            this.LabelSongLength.Text = "9:88";
+            this.LabelSongLength.Text = "0:00";
             this.LabelSongLength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ToolTip.SetToolTip(this.LabelSongLength, "This is the length of your song");
             // 
@@ -5061,7 +5044,7 @@ namespace MagmaRokOn
             // 
             this.LabelLength.AutoSize = true;
             this.LabelLength.BackColor = System.Drawing.Color.Transparent;
-            this.LabelLength.ForeColor = System.Drawing.Color.White;
+            this.LabelLength.ForeColor = System.Drawing.Color.Black;
             this.LabelLength.Location = new System.Drawing.Point(13, 483);
             this.LabelLength.Name = "LabelLength";
             this.LabelLength.Size = new System.Drawing.Size(71, 13);
@@ -5093,16 +5076,40 @@ namespace MagmaRokOn
             this.label3.Text = ":";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // picSpectrum
+            // 
+            this.picSpectrum.BackColor = System.Drawing.Color.Transparent;
+            this.picSpectrum.Location = new System.Drawing.Point(405, 471);
+            this.picSpectrum.Name = "picSpectrum";
+            this.picSpectrum.Size = new System.Drawing.Size(82, 34);
+            this.picSpectrum.TabIndex = 165;
+            this.picSpectrum.TabStop = false;
+            this.ToolTip.SetToolTip(this.picSpectrum, "Click to change");
+            this.picSpectrum.Visible = false;
+            this.picSpectrum.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSpectrum_MouseClick);
+            // 
+            // picHelpCrowd
+            // 
+            this.picHelpCrowd.BackColor = System.Drawing.Color.Transparent;
+            this.picHelpCrowd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHelpCrowd.Image = ((System.Drawing.Image)(resources.GetObject("picHelpCrowd.Image")));
+            this.picHelpCrowd.Location = new System.Drawing.Point(512, 436);
+            this.picHelpCrowd.Name = "picHelpCrowd";
+            this.picHelpCrowd.Size = new System.Drawing.Size(25, 25);
+            this.picHelpCrowd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHelpCrowd.TabIndex = 158;
+            this.picHelpCrowd.TabStop = false;
+            this.ToolTip.SetToolTip(this.picHelpCrowd, "Click for help with Crowd Audio");
+            this.picHelpCrowd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
+            // 
             // TabPageGameData
             // 
             this.TabPageGameData.AllowDrop = true;
-            this.TabPageGameData.BackColor = System.Drawing.Color.Black;
-            this.TabPageGameData.BackgroundImage = global::MagmaRokOn.Properties.Resources.bg3;
+            this.TabPageGameData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.TabPageGameData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TabPageGameData.Controls.Add(this.cboBandFail);
             this.TabPageGameData.Controls.Add(this.LabelBandFail);
             this.TabPageGameData.Controls.Add(this.cboTonality);
-            this.TabPageGameData.Controls.Add(this.picHelpSolos);
             this.TabPageGameData.Controls.Add(this.chkSoloVocals);
             this.TabPageGameData.Controls.Add(this.chkSoloKeys);
             this.TabPageGameData.Controls.Add(this.chkSoloBass);
@@ -5113,22 +5120,18 @@ namespace MagmaRokOn
             this.TabPageGameData.Controls.Add(this.btnTester);
             this.TabPageGameData.Controls.Add(this.ButtonBrowseForMIDI);
             this.TabPageGameData.Controls.Add(this.groupBox2);
-            this.TabPageGameData.Controls.Add(this.picHelpMuteVol);
             this.TabPageGameData.Controls.Add(this.LabelMuteVolume);
             this.TabPageGameData.Controls.Add(this.numericMuteVol);
             this.TabPageGameData.Controls.Add(this.LabelMuteVolumeVocals);
             this.TabPageGameData.Controls.Add(this.numericVocalMute);
             this.TabPageGameData.Controls.Add(this.groupBox1);
             this.TabPageGameData.Controls.Add(this.groupID);
-            this.TabPageGameData.Controls.Add(this.picDrumSFX);
-            this.TabPageGameData.Controls.Add(this.picHelpTuningCents);
             this.TabPageGameData.Controls.Add(this.LabelTuningCents);
             this.TabPageGameData.Controls.Add(this.numericTuningCents);
             this.TabPageGameData.Controls.Add(this.ComboDrumSFX);
             this.TabPageGameData.Controls.Add(this.LabelDrumKitSFX);
             this.TabPageGameData.Controls.Add(this.ComboHopo);
             this.TabPageGameData.Controls.Add(this.LabelHopoThreshold);
-            this.TabPageGameData.Controls.Add(this.picHelpGuitarTuning);
             this.TabPageGameData.Controls.Add(this.BassTuning4);
             this.TabPageGameData.Controls.Add(this.BassTuning3);
             this.TabPageGameData.Controls.Add(this.BassTuning2);
@@ -5143,7 +5146,6 @@ namespace MagmaRokOn
             this.TabPageGameData.Controls.Add(this.LabelGuitarTuning);
             this.TabPageGameData.Controls.Add(this.ComboRating);
             this.TabPageGameData.Controls.Add(this.LabelSongRating);
-            this.TabPageGameData.Controls.Add(this.picHelpTonicNote);
             this.TabPageGameData.Controls.Add(this.chkTonicNote);
             this.TabPageGameData.Controls.Add(this.ComboTonicNote);
             this.TabPageGameData.Controls.Add(this.NumericGuidePitchAttenuation);
@@ -5163,6 +5165,12 @@ namespace MagmaRokOn
             this.TabPageGameData.Controls.Add(this.GroupBoxDifficulty);
             this.TabPageGameData.Controls.Add(this.ButtonExportMIDI);
             this.TabPageGameData.Controls.Add(this.chkTonality);
+            this.TabPageGameData.Controls.Add(this.picHelpSolos);
+            this.TabPageGameData.Controls.Add(this.picHelpMuteVol);
+            this.TabPageGameData.Controls.Add(this.picDrumSFX);
+            this.TabPageGameData.Controls.Add(this.picHelpTuningCents);
+            this.TabPageGameData.Controls.Add(this.picHelpGuitarTuning);
+            this.TabPageGameData.Controls.Add(this.picHelpTonicNote);
             this.TabPageGameData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabPageGameData.Location = new System.Drawing.Point(4, 25);
             this.TabPageGameData.Name = "TabPageGameData";
@@ -5199,8 +5207,8 @@ namespace MagmaRokOn
             // LabelBandFail
             // 
             this.LabelBandFail.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBandFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelBandFail.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelBandFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelBandFail.ForeColor = System.Drawing.Color.Black;
             this.LabelBandFail.Location = new System.Drawing.Point(14, 168);
             this.LabelBandFail.Name = "LabelBandFail";
             this.LabelBandFail.Size = new System.Drawing.Size(168, 15);
@@ -5227,29 +5235,16 @@ namespace MagmaRokOn
             this.ToolTip.SetToolTip(this.cboTonality, "Click to change the song tonality. Click on the question mark for help on how to " +
         "use");
             // 
-            // picHelpSolos
-            // 
-            this.picHelpSolos.BackColor = System.Drawing.Color.Transparent;
-            this.picHelpSolos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHelpSolos.Location = new System.Drawing.Point(414, 436);
-            this.picHelpSolos.Name = "picHelpSolos";
-            this.picHelpSolos.Size = new System.Drawing.Size(25, 25);
-            this.picHelpSolos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHelpSolos.TabIndex = 169;
-            this.picHelpSolos.TabStop = false;
-            this.ToolTip.SetToolTip(this.picHelpSolos, "Click for help with Instrument Solos");
-            this.picHelpSolos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
-            // 
             // chkSoloVocals
             // 
             this.chkSoloVocals.AutoSize = true;
             this.chkSoloVocals.BackColor = System.Drawing.Color.Transparent;
             this.chkSoloVocals.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkSoloVocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkSoloVocals.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkSoloVocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSoloVocals.ForeColor = System.Drawing.Color.Black;
             this.chkSoloVocals.Location = new System.Drawing.Point(261, 453);
             this.chkSoloVocals.Name = "chkSoloVocals";
-            this.chkSoloVocals.Size = new System.Drawing.Size(147, 17);
+            this.chkSoloVocals.Size = new System.Drawing.Size(134, 17);
             this.chkSoloVocals.TabIndex = 168;
             this.chkSoloVocals.Text = "VOCAL PERCUSSION";
             this.ToolTip.SetToolTip(this.chkSoloVocals, "Check if song has vocal percussion solo");
@@ -5262,11 +5257,11 @@ namespace MagmaRokOn
             this.chkSoloKeys.BackColor = System.Drawing.Color.Transparent;
             this.chkSoloKeys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkSoloKeys.Enabled = false;
-            this.chkSoloKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkSoloKeys.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkSoloKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSoloKeys.ForeColor = System.Drawing.Color.Black;
             this.chkSoloKeys.Location = new System.Drawing.Point(186, 453);
             this.chkSoloKeys.Name = "chkSoloKeys";
-            this.chkSoloKeys.Size = new System.Drawing.Size(58, 17);
+            this.chkSoloKeys.Size = new System.Drawing.Size(54, 17);
             this.chkSoloKeys.TabIndex = 167;
             this.chkSoloKeys.Text = "KEYS";
             this.ToolTip.SetToolTip(this.chkSoloKeys, "Check if song has keys solo");
@@ -5278,11 +5273,11 @@ namespace MagmaRokOn
             this.chkSoloBass.AutoSize = true;
             this.chkSoloBass.BackColor = System.Drawing.Color.Transparent;
             this.chkSoloBass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkSoloBass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkSoloBass.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkSoloBass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSoloBass.ForeColor = System.Drawing.Color.Black;
             this.chkSoloBass.Location = new System.Drawing.Point(336, 434);
             this.chkSoloBass.Name = "chkSoloBass";
-            this.chkSoloBass.Size = new System.Drawing.Size(58, 17);
+            this.chkSoloBass.Size = new System.Drawing.Size(54, 17);
             this.chkSoloBass.TabIndex = 166;
             this.chkSoloBass.Text = "BASS";
             this.ToolTip.SetToolTip(this.chkSoloBass, "Check if song has bass solo");
@@ -5294,11 +5289,11 @@ namespace MagmaRokOn
             this.chkSoloGuitar.AutoSize = true;
             this.chkSoloGuitar.BackColor = System.Drawing.Color.Transparent;
             this.chkSoloGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkSoloGuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkSoloGuitar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkSoloGuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSoloGuitar.ForeColor = System.Drawing.Color.Black;
             this.chkSoloGuitar.Location = new System.Drawing.Point(261, 434);
             this.chkSoloGuitar.Name = "chkSoloGuitar";
-            this.chkSoloGuitar.Size = new System.Drawing.Size(69, 17);
+            this.chkSoloGuitar.Size = new System.Drawing.Size(67, 17);
             this.chkSoloGuitar.TabIndex = 165;
             this.chkSoloGuitar.Text = "GUITAR";
             this.ToolTip.SetToolTip(this.chkSoloGuitar, "Check if song has guitar solo");
@@ -5310,11 +5305,11 @@ namespace MagmaRokOn
             this.chkSoloDrums.AutoSize = true;
             this.chkSoloDrums.BackColor = System.Drawing.Color.Transparent;
             this.chkSoloDrums.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkSoloDrums.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkSoloDrums.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkSoloDrums.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSoloDrums.ForeColor = System.Drawing.Color.Black;
             this.chkSoloDrums.Location = new System.Drawing.Point(186, 434);
             this.chkSoloDrums.Name = "chkSoloDrums";
-            this.chkSoloDrums.Size = new System.Drawing.Size(69, 17);
+            this.chkSoloDrums.Size = new System.Drawing.Size(66, 17);
             this.chkSoloDrums.TabIndex = 164;
             this.chkSoloDrums.Text = "DRUMS";
             this.ToolTip.SetToolTip(this.chkSoloDrums, "Check if song has drums solo");
@@ -5324,8 +5319,8 @@ namespace MagmaRokOn
             // LabelSolos
             // 
             this.LabelSolos.BackColor = System.Drawing.Color.Transparent;
-            this.LabelSolos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelSolos.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelSolos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSolos.ForeColor = System.Drawing.Color.Black;
             this.LabelSolos.Location = new System.Drawing.Point(71, 445);
             this.LabelSolos.Name = "LabelSolos";
             this.LabelSolos.Size = new System.Drawing.Size(109, 13);
@@ -5335,8 +5330,7 @@ namespace MagmaRokOn
             // 
             // btnCleaner
             // 
-            this.btnCleaner.BackColor = System.Drawing.Color.Black;
-            this.btnCleaner.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnCleaner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnCleaner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCleaner.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCleaner.Enabled = false;
@@ -5355,8 +5349,7 @@ namespace MagmaRokOn
             // 
             // btnTester
             // 
-            this.btnTester.BackColor = System.Drawing.Color.Black;
-            this.btnTester.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnTester.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnTester.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTester.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTester.FlatAppearance.BorderSize = 0;
@@ -5374,8 +5367,7 @@ namespace MagmaRokOn
             // 
             // ButtonBrowseForMIDI
             // 
-            this.ButtonBrowseForMIDI.BackColor = System.Drawing.Color.Black;
-            this.ButtonBrowseForMIDI.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_small;
+            this.ButtonBrowseForMIDI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonBrowseForMIDI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonBrowseForMIDI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonBrowseForMIDI.FlatAppearance.BorderSize = 0;
@@ -5393,7 +5385,7 @@ namespace MagmaRokOn
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.groupBox2.Controls.Add(this.chkTempo);
             this.groupBox2.Controls.Add(this.chkKeysAnim);
             this.groupBox2.Controls.Add(this.chkAutoKeys);
@@ -5410,11 +5402,11 @@ namespace MagmaRokOn
             this.chkTempo.Checked = true;
             this.chkTempo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkTempo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.chkTempo.ForeColor = System.Drawing.Color.White;
+            this.chkTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTempo.ForeColor = System.Drawing.Color.Black;
             this.chkTempo.Location = new System.Drawing.Point(12, 9);
             this.chkTempo.Name = "chkTempo";
-            this.chkTempo.Size = new System.Drawing.Size(143, 19);
+            this.chkTempo.Size = new System.Drawing.Size(127, 17);
             this.chkTempo.TabIndex = 138;
             this.chkTempo.Text = "Check for tempo map";
             this.ToolTip.SetToolTip(this.chkTempo, "Uncheck if you don\'t want me to check for a tempo map");
@@ -5427,11 +5419,11 @@ namespace MagmaRokOn
             this.chkKeysAnim.BackColor = System.Drawing.Color.Transparent;
             this.chkKeysAnim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkKeysAnim.Enabled = false;
-            this.chkKeysAnim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.chkKeysAnim.ForeColor = System.Drawing.Color.White;
+            this.chkKeysAnim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkKeysAnim.ForeColor = System.Drawing.Color.Black;
             this.chkKeysAnim.Location = new System.Drawing.Point(12, 58);
             this.chkKeysAnim.Name = "chkKeysAnim";
-            this.chkKeysAnim.Size = new System.Drawing.Size(197, 19);
+            this.chkKeysAnim.Size = new System.Drawing.Size(174, 17);
             this.chkKeysAnim.TabIndex = 137;
             this.chkKeysAnim.Text = " Auto-generate keys animations";
             this.ToolTip.SetToolTip(this.chkKeysAnim, "Check to generate simple keys animations based on the 5 lane expert chart");
@@ -5444,39 +5436,26 @@ namespace MagmaRokOn
             this.chkAutoKeys.BackColor = System.Drawing.Color.Transparent;
             this.chkAutoKeys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkAutoKeys.Enabled = false;
-            this.chkAutoKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.chkAutoKeys.ForeColor = System.Drawing.Color.White;
+            this.chkAutoKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAutoKeys.ForeColor = System.Drawing.Color.Black;
             this.chkAutoKeys.Location = new System.Drawing.Point(12, 33);
             this.chkAutoKeys.Name = "chkAutoKeys";
-            this.chkAutoKeys.Size = new System.Drawing.Size(187, 19);
+            this.chkAutoKeys.Size = new System.Drawing.Size(167, 17);
             this.chkAutoKeys.TabIndex = 136;
             this.chkAutoKeys.Text = " Auto-generate \'fake\' pro-keys";
             this.ToolTip.SetToolTip(this.chkAutoKeys, "Check to generate fake pro keys tracks based on the 5 lane expert chart");
             this.chkAutoKeys.UseVisualStyleBackColor = false;
             this.chkAutoKeys.CheckedChanged += new System.EventHandler(this.chkAutoKeys_CheckedChanged);
             // 
-            // picHelpMuteVol
-            // 
-            this.picHelpMuteVol.BackColor = System.Drawing.Color.Transparent;
-            this.picHelpMuteVol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHelpMuteVol.Location = new System.Drawing.Point(441, 344);
-            this.picHelpMuteVol.Name = "picHelpMuteVol";
-            this.picHelpMuteVol.Size = new System.Drawing.Size(25, 25);
-            this.picHelpMuteVol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHelpMuteVol.TabIndex = 135;
-            this.picHelpMuteVol.TabStop = false;
-            this.ToolTip.SetToolTip(this.picHelpMuteVol, "Click for help with Vocals Mute Volume and Mute Volume");
-            this.picHelpMuteVol.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
-            // 
             // LabelMuteVolume
             // 
             this.LabelMuteVolume.AutoSize = true;
             this.LabelMuteVolume.BackColor = System.Drawing.Color.Transparent;
-            this.LabelMuteVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelMuteVolume.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelMuteVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMuteVolume.ForeColor = System.Drawing.Color.Black;
             this.LabelMuteVolume.Location = new System.Drawing.Point(290, 347);
             this.LabelMuteVolume.Name = "LabelMuteVolume";
-            this.LabelMuteVolume.Size = new System.Drawing.Size(93, 13);
+            this.LabelMuteVolume.Size = new System.Drawing.Size(86, 13);
             this.LabelMuteVolume.TabIndex = 134;
             this.LabelMuteVolume.Text = "MUTE VOLUME";
             this.LabelMuteVolume.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -5518,8 +5497,8 @@ namespace MagmaRokOn
             // LabelMuteVolumeVocals
             // 
             this.LabelMuteVolumeVocals.BackColor = System.Drawing.Color.Transparent;
-            this.LabelMuteVolumeVocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelMuteVolumeVocals.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelMuteVolumeVocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMuteVolumeVocals.ForeColor = System.Drawing.Color.Black;
             this.LabelMuteVolumeVocals.Location = new System.Drawing.Point(30, 347);
             this.LabelMuteVolumeVocals.Name = "LabelMuteVolumeVocals";
             this.LabelMuteVolumeVocals.Size = new System.Drawing.Size(150, 13);
@@ -5566,7 +5545,7 @@ namespace MagmaRokOn
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.numVersion);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(676, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(56, 59);
@@ -5609,7 +5588,7 @@ namespace MagmaRokOn
             this.groupID.BackColor = System.Drawing.Color.Transparent;
             this.groupID.Controls.Add(this.btnID);
             this.groupID.Controls.Add(this.txtSongID);
-            this.groupID.ForeColor = System.Drawing.Color.White;
+            this.groupID.ForeColor = System.Drawing.Color.Black;
             this.groupID.Location = new System.Drawing.Point(509, 12);
             this.groupID.Name = "groupID";
             this.groupID.Size = new System.Drawing.Size(161, 59);
@@ -5619,8 +5598,7 @@ namespace MagmaRokOn
             // 
             // btnID
             // 
-            this.btnID.BackColor = System.Drawing.Color.Black;
-            this.btnID.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_small;
+            this.btnID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnID.FlatAppearance.BorderSize = 0;
@@ -5651,41 +5629,15 @@ namespace MagmaRokOn
         "imit");
             this.txtSongID.TextChanged += new System.EventHandler(this.txtSongID_TextChanged);
             // 
-            // picDrumSFX
-            // 
-            this.picDrumSFX.BackColor = System.Drawing.Color.Transparent;
-            this.picDrumSFX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDrumSFX.Location = new System.Drawing.Point(441, 400);
-            this.picDrumSFX.Name = "picDrumSFX";
-            this.picDrumSFX.Size = new System.Drawing.Size(25, 25);
-            this.picDrumSFX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDrumSFX.TabIndex = 123;
-            this.picDrumSFX.TabStop = false;
-            this.ToolTip.SetToolTip(this.picDrumSFX, "Click for help with Drum Kit SFX");
-            this.picDrumSFX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
-            // 
-            // picHelpTuningCents
-            // 
-            this.picHelpTuningCents.BackColor = System.Drawing.Color.Transparent;
-            this.picHelpTuningCents.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHelpTuningCents.Location = new System.Drawing.Point(441, 284);
-            this.picHelpTuningCents.Name = "picHelpTuningCents";
-            this.picHelpTuningCents.Size = new System.Drawing.Size(25, 25);
-            this.picHelpTuningCents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHelpTuningCents.TabIndex = 122;
-            this.picHelpTuningCents.TabStop = false;
-            this.ToolTip.SetToolTip(this.picHelpTuningCents, "Click for help using Tuning Cents Offset");
-            this.picHelpTuningCents.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
-            // 
             // LabelTuningCents
             // 
             this.LabelTuningCents.AutoSize = true;
             this.LabelTuningCents.BackColor = System.Drawing.Color.Transparent;
-            this.LabelTuningCents.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelTuningCents.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelTuningCents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTuningCents.ForeColor = System.Drawing.Color.Black;
             this.LabelTuningCents.Location = new System.Drawing.Point(291, 289);
             this.LabelTuningCents.Name = "LabelTuningCents";
-            this.LabelTuningCents.Size = new System.Drawing.Size(92, 13);
+            this.LabelTuningCents.Size = new System.Drawing.Size(88, 13);
             this.LabelTuningCents.TabIndex = 120;
             this.LabelTuningCents.Text = "TUNING CENTS";
             this.LabelTuningCents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -5745,8 +5697,8 @@ namespace MagmaRokOn
             // LabelDrumKitSFX
             // 
             this.LabelDrumKitSFX.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumKitSFX.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelDrumKitSFX.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelDrumKitSFX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDrumKitSFX.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumKitSFX.Location = new System.Drawing.Point(72, 406);
             this.LabelDrumKitSFX.Name = "LabelDrumKitSFX";
             this.LabelDrumKitSFX.Size = new System.Drawing.Size(108, 13);
@@ -5777,27 +5729,14 @@ namespace MagmaRokOn
             // LabelHopoThreshold
             // 
             this.LabelHopoThreshold.BackColor = System.Drawing.Color.Transparent;
-            this.LabelHopoThreshold.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelHopoThreshold.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelHopoThreshold.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelHopoThreshold.ForeColor = System.Drawing.Color.Black;
             this.LabelHopoThreshold.Location = new System.Drawing.Point(14, 139);
             this.LabelHopoThreshold.Name = "LabelHopoThreshold";
             this.LabelHopoThreshold.Size = new System.Drawing.Size(168, 15);
             this.LabelHopoThreshold.TabIndex = 116;
             this.LabelHopoThreshold.Text = "HOPO THRESHOLD";
             this.LabelHopoThreshold.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // picHelpGuitarTuning
-            // 
-            this.picHelpGuitarTuning.BackColor = System.Drawing.Color.Transparent;
-            this.picHelpGuitarTuning.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHelpGuitarTuning.Location = new System.Drawing.Point(393, 481);
-            this.picHelpGuitarTuning.Name = "picHelpGuitarTuning";
-            this.picHelpGuitarTuning.Size = new System.Drawing.Size(25, 25);
-            this.picHelpGuitarTuning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHelpGuitarTuning.TabIndex = 114;
-            this.picHelpGuitarTuning.TabStop = false;
-            this.ToolTip.SetToolTip(this.picHelpGuitarTuning, "Click for help with Pro Guitar / Bass Tuning");
-            this.picHelpGuitarTuning.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
             // 
             // BassTuning4
             // 
@@ -5952,8 +5891,8 @@ namespace MagmaRokOn
             // LabelBassTuning
             // 
             this.LabelBassTuning.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBassTuning.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelBassTuning.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelBassTuning.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelBassTuning.ForeColor = System.Drawing.Color.Black;
             this.LabelBassTuning.Location = new System.Drawing.Point(69, 513);
             this.LabelBassTuning.Name = "LabelBassTuning";
             this.LabelBassTuning.Size = new System.Drawing.Size(111, 13);
@@ -5964,8 +5903,8 @@ namespace MagmaRokOn
             // LabelGuitarTuning
             // 
             this.LabelGuitarTuning.BackColor = System.Drawing.Color.Transparent;
-            this.LabelGuitarTuning.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelGuitarTuning.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelGuitarTuning.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelGuitarTuning.ForeColor = System.Drawing.Color.Black;
             this.LabelGuitarTuning.Location = new System.Drawing.Point(69, 485);
             this.LabelGuitarTuning.Name = "LabelGuitarTuning";
             this.LabelGuitarTuning.Size = new System.Drawing.Size(111, 13);
@@ -5996,8 +5935,8 @@ namespace MagmaRokOn
             // LabelSongRating
             // 
             this.LabelSongRating.BackColor = System.Drawing.Color.Transparent;
-            this.LabelSongRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelSongRating.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelSongRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSongRating.ForeColor = System.Drawing.Color.Black;
             this.LabelSongRating.Location = new System.Drawing.Point(69, 380);
             this.LabelSongRating.Name = "LabelSongRating";
             this.LabelSongRating.Size = new System.Drawing.Size(111, 13);
@@ -6005,25 +5944,12 @@ namespace MagmaRokOn
             this.LabelSongRating.Text = "SONG RATING";
             this.LabelSongRating.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // picHelpTonicNote
-            // 
-            this.picHelpTonicNote.BackColor = System.Drawing.Color.Transparent;
-            this.picHelpTonicNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHelpTonicNote.Location = new System.Drawing.Point(441, 315);
-            this.picHelpTonicNote.Name = "picHelpTonicNote";
-            this.picHelpTonicNote.Size = new System.Drawing.Size(25, 25);
-            this.picHelpTonicNote.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHelpTonicNote.TabIndex = 109;
-            this.picHelpTonicNote.TabStop = false;
-            this.ToolTip.SetToolTip(this.picHelpTonicNote, "Click for help with Vocal Tonic Note and Song Tonality");
-            this.picHelpTonicNote.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
-            // 
             // chkTonicNote
             // 
             this.chkTonicNote.BackColor = System.Drawing.Color.Transparent;
             this.chkTonicNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkTonicNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkTonicNote.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkTonicNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTonicNote.ForeColor = System.Drawing.Color.Black;
             this.chkTonicNote.Location = new System.Drawing.Point(40, 318);
             this.chkTonicNote.Name = "chkTonicNote";
             this.chkTonicNote.Size = new System.Drawing.Size(140, 17);
@@ -6097,8 +6023,8 @@ namespace MagmaRokOn
             // LabelVocalGuidePitch
             // 
             this.LabelVocalGuidePitch.BackColor = System.Drawing.Color.Transparent;
-            this.LabelVocalGuidePitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelVocalGuidePitch.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelVocalGuidePitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelVocalGuidePitch.ForeColor = System.Drawing.Color.Black;
             this.LabelVocalGuidePitch.Location = new System.Drawing.Point(12, 289);
             this.LabelVocalGuidePitch.Name = "LabelVocalGuidePitch";
             this.LabelVocalGuidePitch.Size = new System.Drawing.Size(168, 13);
@@ -6124,8 +6050,8 @@ namespace MagmaRokOn
             // LabelAutogenTheme
             // 
             this.LabelAutogenTheme.BackColor = System.Drawing.Color.Transparent;
-            this.LabelAutogenTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelAutogenTheme.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelAutogenTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAutogenTheme.ForeColor = System.Drawing.Color.Black;
             this.LabelAutogenTheme.Location = new System.Drawing.Point(10, 44);
             this.LabelAutogenTheme.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
             this.LabelAutogenTheme.Name = "LabelAutogenTheme";
@@ -6143,9 +6069,7 @@ namespace MagmaRokOn
             this.ComboAnimationSpeed.FormattingEnabled = true;
             this.ComboAnimationSpeed.Items.AddRange(new object[] {
             "Slow (under 100bpm) - 16",
-            "Custom (Medium Slow) - 24",
             "Medium (100-160bpm) - 32",
-            "Custom (Medium Fast) - 48",
             "Fast (over 160bpm) - 64"});
             this.ComboAnimationSpeed.Location = new System.Drawing.Point(186, 109);
             this.ComboAnimationSpeed.Name = "ComboAnimationSpeed";
@@ -6158,8 +6082,8 @@ namespace MagmaRokOn
             // LabelAnimationSpeed
             // 
             this.LabelAnimationSpeed.BackColor = System.Drawing.Color.Transparent;
-            this.LabelAnimationSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelAnimationSpeed.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelAnimationSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAnimationSpeed.ForeColor = System.Drawing.Color.Black;
             this.LabelAnimationSpeed.Location = new System.Drawing.Point(14, 111);
             this.LabelAnimationSpeed.Name = "LabelAnimationSpeed";
             this.LabelAnimationSpeed.Size = new System.Drawing.Size(168, 15);
@@ -6170,8 +6094,8 @@ namespace MagmaRokOn
             // LabelMIDI
             // 
             this.LabelMIDI.BackColor = System.Drawing.Color.Transparent;
-            this.LabelMIDI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelMIDI.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelMIDI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMIDI.ForeColor = System.Drawing.Color.Black;
             this.LabelMIDI.Location = new System.Drawing.Point(12, 18);
             this.LabelMIDI.Name = "LabelMIDI";
             this.LabelMIDI.Size = new System.Drawing.Size(168, 15);
@@ -6248,8 +6172,8 @@ namespace MagmaRokOn
             // LabelVocalScroll
             // 
             this.LabelVocalScroll.BackColor = System.Drawing.Color.Transparent;
-            this.LabelVocalScroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelVocalScroll.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelVocalScroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelVocalScroll.ForeColor = System.Drawing.Color.Black;
             this.LabelVocalScroll.Location = new System.Drawing.Point(14, 256);
             this.LabelVocalScroll.Name = "LabelVocalScroll";
             this.LabelVocalScroll.Size = new System.Drawing.Size(168, 13);
@@ -6260,8 +6184,8 @@ namespace MagmaRokOn
             // LabelPercussion
             // 
             this.LabelPercussion.BackColor = System.Drawing.Color.Transparent;
-            this.LabelPercussion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelPercussion.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelPercussion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPercussion.ForeColor = System.Drawing.Color.Black;
             this.LabelPercussion.Location = new System.Drawing.Point(14, 227);
             this.LabelPercussion.Name = "LabelPercussion";
             this.LabelPercussion.Size = new System.Drawing.Size(168, 13);
@@ -6272,8 +6196,8 @@ namespace MagmaRokOn
             // LabelVocalGender
             // 
             this.LabelVocalGender.BackColor = System.Drawing.Color.Transparent;
-            this.LabelVocalGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.LabelVocalGender.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelVocalGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelVocalGender.ForeColor = System.Drawing.Color.Black;
             this.LabelVocalGender.Location = new System.Drawing.Point(14, 199);
             this.LabelVocalGender.Name = "LabelVocalGender";
             this.LabelVocalGender.Size = new System.Drawing.Size(168, 13);
@@ -6283,7 +6207,7 @@ namespace MagmaRokOn
             // 
             // GroupBoxDifficulty
             // 
-            this.GroupBoxDifficulty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.GroupBoxDifficulty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.GroupBoxDifficulty.Controls.Add(this.lblBandDiff);
             this.GroupBoxDifficulty.Controls.Add(this.scrollBand);
             this.GroupBoxDifficulty.Controls.Add(this.lblProKeysDiff);
@@ -6378,7 +6302,7 @@ namespace MagmaRokOn
             this.GroupBoxDifficulty.Controls.Add(this.LabelDrumDifficulty);
             this.GroupBoxDifficulty.Controls.Add(this.LabelBandDifficulty);
             this.GroupBoxDifficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxDifficulty.ForeColor = System.Drawing.Color.White;
+            this.GroupBoxDifficulty.ForeColor = System.Drawing.Color.Black;
             this.GroupBoxDifficulty.Location = new System.Drawing.Point(472, 77);
             this.GroupBoxDifficulty.Name = "GroupBoxDifficulty";
             this.GroupBoxDifficulty.Size = new System.Drawing.Size(260, 357);
@@ -6467,7 +6391,7 @@ namespace MagmaRokOn
             this.lblVocalsDiff.Name = "lblVocalsDiff";
             this.lblVocalsDiff.Size = new System.Drawing.Size(30, 16);
             this.lblVocalsDiff.TabIndex = 135;
-            this.lblVocalsDiff.Text = "0";
+            this.lblVocalsDiff.Text = "1";
             this.lblVocalsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ToolTip.SetToolTip(this.lblVocalsDiff, "Vocals Difficulty");
             // 
@@ -6480,6 +6404,7 @@ namespace MagmaRokOn
             this.scrollVocals.Name = "scrollVocals";
             this.scrollVocals.Size = new System.Drawing.Size(105, 16);
             this.scrollVocals.TabIndex = 134;
+            this.scrollVocals.Value = 1;
             this.scrollVocals.ValueChanged += new System.EventHandler(this.scrollVocals_ValueChanged);
             // 
             // lblProGuitarDiff
@@ -6514,7 +6439,7 @@ namespace MagmaRokOn
             this.lblGuitarDiff.Name = "lblGuitarDiff";
             this.lblGuitarDiff.Size = new System.Drawing.Size(30, 16);
             this.lblGuitarDiff.TabIndex = 131;
-            this.lblGuitarDiff.Text = "0";
+            this.lblGuitarDiff.Text = "1";
             this.lblGuitarDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ToolTip.SetToolTip(this.lblGuitarDiff, "Guitar Difficulty");
             // 
@@ -6527,6 +6452,7 @@ namespace MagmaRokOn
             this.scrollGuitar.Name = "scrollGuitar";
             this.scrollGuitar.Size = new System.Drawing.Size(105, 16);
             this.scrollGuitar.TabIndex = 130;
+            this.scrollGuitar.Value = 1;
             this.scrollGuitar.ValueChanged += new System.EventHandler(this.scrollGuitar_ValueChanged);
             // 
             // lblProBassDiff
@@ -6561,7 +6487,7 @@ namespace MagmaRokOn
             this.lblBassDiff.Name = "lblBassDiff";
             this.lblBassDiff.Size = new System.Drawing.Size(30, 16);
             this.lblBassDiff.TabIndex = 127;
-            this.lblBassDiff.Text = "0";
+            this.lblBassDiff.Text = "1";
             this.lblBassDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ToolTip.SetToolTip(this.lblBassDiff, "Bass Difficulty");
             // 
@@ -6574,6 +6500,7 @@ namespace MagmaRokOn
             this.scrollBass.Name = "scrollBass";
             this.scrollBass.Size = new System.Drawing.Size(105, 16);
             this.scrollBass.TabIndex = 126;
+            this.scrollBass.Value = 1;
             this.scrollBass.ValueChanged += new System.EventHandler(this.scrollBass_ValueChanged);
             // 
             // lblDrumsDiff
@@ -6584,7 +6511,7 @@ namespace MagmaRokOn
             this.lblDrumsDiff.Name = "lblDrumsDiff";
             this.lblDrumsDiff.Size = new System.Drawing.Size(30, 16);
             this.lblDrumsDiff.TabIndex = 125;
-            this.lblDrumsDiff.Text = "0";
+            this.lblDrumsDiff.Text = "1";
             this.lblDrumsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ToolTip.SetToolTip(this.lblDrumsDiff, "Drums Difficulty");
             // 
@@ -6597,11 +6524,13 @@ namespace MagmaRokOn
             this.scrollDrums.Name = "scrollDrums";
             this.scrollDrums.Size = new System.Drawing.Size(105, 16);
             this.scrollDrums.TabIndex = 124;
+            this.scrollDrums.Value = 1;
             this.scrollDrums.ValueChanged += new System.EventHandler(this.scrollDrums_ValueChanged);
             // 
             // PictureBandDifficulty6
             // 
             this.PictureBandDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBandDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureBandDifficulty6.Image")));
             this.PictureBandDifficulty6.Location = new System.Drawing.Point(178, 315);
             this.PictureBandDifficulty6.Name = "PictureBandDifficulty6";
             this.PictureBandDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -6617,6 +6546,7 @@ namespace MagmaRokOn
             // 
             this.PictureProKeysDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProKeysDifficulty6.Enabled = false;
+            this.PictureProKeysDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureProKeysDifficulty6.Image")));
             this.PictureProKeysDifficulty6.Location = new System.Drawing.Point(178, 278);
             this.PictureProKeysDifficulty6.Name = "PictureProKeysDifficulty6";
             this.PictureProKeysDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -6631,6 +6561,7 @@ namespace MagmaRokOn
             // PictureBandDifficulty5
             // 
             this.PictureBandDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBandDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureBandDifficulty5.Image")));
             this.PictureBandDifficulty5.Location = new System.Drawing.Point(164, 315);
             this.PictureBandDifficulty5.Name = "PictureBandDifficulty5";
             this.PictureBandDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -6646,6 +6577,7 @@ namespace MagmaRokOn
             // 
             this.PictureKeysDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureKeysDifficulty6.Enabled = false;
+            this.PictureKeysDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureKeysDifficulty6.Image")));
             this.PictureKeysDifficulty6.Location = new System.Drawing.Point(178, 240);
             this.PictureKeysDifficulty6.Name = "PictureKeysDifficulty6";
             this.PictureKeysDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -6660,6 +6592,7 @@ namespace MagmaRokOn
             // PictureBandDifficulty4
             // 
             this.PictureBandDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBandDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureBandDifficulty4.Image")));
             this.PictureBandDifficulty4.Location = new System.Drawing.Point(150, 315);
             this.PictureBandDifficulty4.Name = "PictureBandDifficulty4";
             this.PictureBandDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -6675,6 +6608,7 @@ namespace MagmaRokOn
             // 
             this.PictureProKeysDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProKeysDifficulty5.Enabled = false;
+            this.PictureProKeysDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureProKeysDifficulty5.Image")));
             this.PictureProKeysDifficulty5.Location = new System.Drawing.Point(164, 278);
             this.PictureProKeysDifficulty5.Name = "PictureProKeysDifficulty5";
             this.PictureProKeysDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -6689,6 +6623,7 @@ namespace MagmaRokOn
             // PictureBandDifficulty3
             // 
             this.PictureBandDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBandDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBandDifficulty3.Image")));
             this.PictureBandDifficulty3.Location = new System.Drawing.Point(136, 315);
             this.PictureBandDifficulty3.Name = "PictureBandDifficulty3";
             this.PictureBandDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -6704,6 +6639,7 @@ namespace MagmaRokOn
             // 
             this.PictureProKeysDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProKeysDifficulty4.Enabled = false;
+            this.PictureProKeysDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureProKeysDifficulty4.Image")));
             this.PictureProKeysDifficulty4.Location = new System.Drawing.Point(150, 278);
             this.PictureProKeysDifficulty4.Name = "PictureProKeysDifficulty4";
             this.PictureProKeysDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -6718,6 +6654,7 @@ namespace MagmaRokOn
             // PictureBandDifficulty2
             // 
             this.PictureBandDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBandDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBandDifficulty2.Image")));
             this.PictureBandDifficulty2.Location = new System.Drawing.Point(122, 315);
             this.PictureBandDifficulty2.Name = "PictureBandDifficulty2";
             this.PictureBandDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -6732,6 +6669,7 @@ namespace MagmaRokOn
             // PictureBandDifficulty7
             // 
             this.PictureBandDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBandDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureBandDifficulty7.Image")));
             this.PictureBandDifficulty7.Location = new System.Drawing.Point(196, 315);
             this.PictureBandDifficulty7.Name = "PictureBandDifficulty7";
             this.PictureBandDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -6747,6 +6685,7 @@ namespace MagmaRokOn
             // 
             this.PictureKeysDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureKeysDifficulty5.Enabled = false;
+            this.PictureKeysDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureKeysDifficulty5.Image")));
             this.PictureKeysDifficulty5.Location = new System.Drawing.Point(164, 240);
             this.PictureKeysDifficulty5.Name = "PictureKeysDifficulty5";
             this.PictureKeysDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -6761,6 +6700,7 @@ namespace MagmaRokOn
             // PictureBandDifficulty1
             // 
             this.PictureBandDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBandDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBandDifficulty1.Image")));
             this.PictureBandDifficulty1.Location = new System.Drawing.Point(104, 315);
             this.PictureBandDifficulty1.Name = "PictureBandDifficulty1";
             this.PictureBandDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -6776,6 +6716,7 @@ namespace MagmaRokOn
             // 
             this.PictureProKeysDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProKeysDifficulty3.Enabled = false;
+            this.PictureProKeysDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureProKeysDifficulty3.Image")));
             this.PictureProKeysDifficulty3.Location = new System.Drawing.Point(136, 278);
             this.PictureProKeysDifficulty3.Name = "PictureProKeysDifficulty3";
             this.PictureProKeysDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -6791,6 +6732,7 @@ namespace MagmaRokOn
             // 
             this.PictureVocalDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureVocalDifficulty6.Enabled = false;
+            this.PictureVocalDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureVocalDifficulty6.Image")));
             this.PictureVocalDifficulty6.Location = new System.Drawing.Point(178, 203);
             this.PictureVocalDifficulty6.Name = "PictureVocalDifficulty6";
             this.PictureVocalDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -6806,6 +6748,7 @@ namespace MagmaRokOn
             // 
             this.PictureProKeysDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProKeysDifficulty2.Enabled = false;
+            this.PictureProKeysDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureProKeysDifficulty2.Image")));
             this.PictureProKeysDifficulty2.Location = new System.Drawing.Point(122, 278);
             this.PictureProKeysDifficulty2.Name = "PictureProKeysDifficulty2";
             this.PictureProKeysDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -6821,6 +6764,7 @@ namespace MagmaRokOn
             // 
             this.PictureKeysDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureKeysDifficulty4.Enabled = false;
+            this.PictureKeysDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureKeysDifficulty4.Image")));
             this.PictureKeysDifficulty4.Location = new System.Drawing.Point(150, 240);
             this.PictureKeysDifficulty4.Name = "PictureKeysDifficulty4";
             this.PictureKeysDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -6836,6 +6780,7 @@ namespace MagmaRokOn
             // 
             this.PictureProKeysDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProKeysDifficulty7.Enabled = false;
+            this.PictureProKeysDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureProKeysDifficulty7.Image")));
             this.PictureProKeysDifficulty7.Location = new System.Drawing.Point(196, 278);
             this.PictureProKeysDifficulty7.Name = "PictureProKeysDifficulty7";
             this.PictureProKeysDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -6851,6 +6796,7 @@ namespace MagmaRokOn
             // 
             this.PictureVocalDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureVocalDifficulty5.Enabled = false;
+            this.PictureVocalDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureVocalDifficulty5.Image")));
             this.PictureVocalDifficulty5.Location = new System.Drawing.Point(164, 203);
             this.PictureVocalDifficulty5.Name = "PictureVocalDifficulty5";
             this.PictureVocalDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -6866,6 +6812,7 @@ namespace MagmaRokOn
             // 
             this.PictureProKeysDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProKeysDifficulty1.Enabled = false;
+            this.PictureProKeysDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureProKeysDifficulty1.Image")));
             this.PictureProKeysDifficulty1.Location = new System.Drawing.Point(104, 278);
             this.PictureProKeysDifficulty1.Name = "PictureProKeysDifficulty1";
             this.PictureProKeysDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -6881,6 +6828,7 @@ namespace MagmaRokOn
             // 
             this.PictureKeysDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureKeysDifficulty3.Enabled = false;
+            this.PictureKeysDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureKeysDifficulty3.Image")));
             this.PictureKeysDifficulty3.Location = new System.Drawing.Point(136, 240);
             this.PictureKeysDifficulty3.Name = "PictureKeysDifficulty3";
             this.PictureKeysDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -6896,6 +6844,7 @@ namespace MagmaRokOn
             // 
             this.PictureProGuitarDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProGuitarDifficulty6.Enabled = false;
+            this.PictureProGuitarDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureProGuitarDifficulty6.Image")));
             this.PictureProGuitarDifficulty6.Location = new System.Drawing.Point(178, 166);
             this.PictureProGuitarDifficulty6.Name = "PictureProGuitarDifficulty6";
             this.PictureProGuitarDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -6911,6 +6860,7 @@ namespace MagmaRokOn
             // 
             this.PictureKeysDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureKeysDifficulty2.Enabled = false;
+            this.PictureKeysDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureKeysDifficulty2.Image")));
             this.PictureKeysDifficulty2.Location = new System.Drawing.Point(122, 240);
             this.PictureKeysDifficulty2.Name = "PictureKeysDifficulty2";
             this.PictureKeysDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -6926,6 +6876,7 @@ namespace MagmaRokOn
             // 
             this.PictureVocalDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureVocalDifficulty4.Enabled = false;
+            this.PictureVocalDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureVocalDifficulty4.Image")));
             this.PictureVocalDifficulty4.Location = new System.Drawing.Point(150, 203);
             this.PictureVocalDifficulty4.Name = "PictureVocalDifficulty4";
             this.PictureVocalDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -6941,6 +6892,7 @@ namespace MagmaRokOn
             // 
             this.PictureKeysDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureKeysDifficulty7.Enabled = false;
+            this.PictureKeysDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureKeysDifficulty7.Image")));
             this.PictureKeysDifficulty7.Location = new System.Drawing.Point(196, 240);
             this.PictureKeysDifficulty7.Name = "PictureKeysDifficulty7";
             this.PictureKeysDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -6956,6 +6908,7 @@ namespace MagmaRokOn
             // 
             this.PictureGuitarDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureGuitarDifficulty6.Enabled = false;
+            this.PictureGuitarDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureGuitarDifficulty6.Image")));
             this.PictureGuitarDifficulty6.Location = new System.Drawing.Point(178, 129);
             this.PictureGuitarDifficulty6.Name = "PictureGuitarDifficulty6";
             this.PictureGuitarDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -6971,6 +6924,7 @@ namespace MagmaRokOn
             // 
             this.PictureKeysDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureKeysDifficulty1.Enabled = false;
+            this.PictureKeysDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureKeysDifficulty1.Image")));
             this.PictureKeysDifficulty1.Location = new System.Drawing.Point(104, 240);
             this.PictureKeysDifficulty1.Name = "PictureKeysDifficulty1";
             this.PictureKeysDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -6986,6 +6940,7 @@ namespace MagmaRokOn
             // 
             this.PictureVocalDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureVocalDifficulty3.Enabled = false;
+            this.PictureVocalDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureVocalDifficulty3.Image")));
             this.PictureVocalDifficulty3.Location = new System.Drawing.Point(136, 203);
             this.PictureVocalDifficulty3.Name = "PictureVocalDifficulty3";
             this.PictureVocalDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -7001,6 +6956,7 @@ namespace MagmaRokOn
             // 
             this.PictureProGuitarDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProGuitarDifficulty5.Enabled = false;
+            this.PictureProGuitarDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureProGuitarDifficulty5.Image")));
             this.PictureProGuitarDifficulty5.Location = new System.Drawing.Point(164, 166);
             this.PictureProGuitarDifficulty5.Name = "PictureProGuitarDifficulty5";
             this.PictureProGuitarDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -7016,6 +6972,7 @@ namespace MagmaRokOn
             // 
             this.PictureVocalDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureVocalDifficulty2.Enabled = false;
+            this.PictureVocalDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureVocalDifficulty2.Image")));
             this.PictureVocalDifficulty2.Location = new System.Drawing.Point(122, 203);
             this.PictureVocalDifficulty2.Name = "PictureVocalDifficulty2";
             this.PictureVocalDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -7031,6 +6988,7 @@ namespace MagmaRokOn
             // 
             this.PictureProBassDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProBassDifficulty6.Enabled = false;
+            this.PictureProBassDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureProBassDifficulty6.Image")));
             this.PictureProBassDifficulty6.Location = new System.Drawing.Point(178, 92);
             this.PictureProBassDifficulty6.Name = "PictureProBassDifficulty6";
             this.PictureProBassDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -7046,6 +7004,7 @@ namespace MagmaRokOn
             // 
             this.PictureVocalDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureVocalDifficulty7.Enabled = false;
+            this.PictureVocalDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureVocalDifficulty7.Image")));
             this.PictureVocalDifficulty7.Location = new System.Drawing.Point(196, 203);
             this.PictureVocalDifficulty7.Name = "PictureVocalDifficulty7";
             this.PictureVocalDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -7061,6 +7020,7 @@ namespace MagmaRokOn
             // 
             this.PictureProGuitarDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProGuitarDifficulty4.Enabled = false;
+            this.PictureProGuitarDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureProGuitarDifficulty4.Image")));
             this.PictureProGuitarDifficulty4.Location = new System.Drawing.Point(150, 166);
             this.PictureProGuitarDifficulty4.Name = "PictureProGuitarDifficulty4";
             this.PictureProGuitarDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -7076,6 +7036,7 @@ namespace MagmaRokOn
             // 
             this.PictureVocalDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureVocalDifficulty1.Enabled = false;
+            this.PictureVocalDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureVocalDifficulty1.Image")));
             this.PictureVocalDifficulty1.Location = new System.Drawing.Point(104, 203);
             this.PictureVocalDifficulty1.Name = "PictureVocalDifficulty1";
             this.PictureVocalDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -7091,6 +7052,7 @@ namespace MagmaRokOn
             // 
             this.PictureGuitarDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureGuitarDifficulty5.Enabled = false;
+            this.PictureGuitarDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureGuitarDifficulty5.Image")));
             this.PictureGuitarDifficulty5.Location = new System.Drawing.Point(164, 129);
             this.PictureGuitarDifficulty5.Name = "PictureGuitarDifficulty5";
             this.PictureGuitarDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -7106,6 +7068,7 @@ namespace MagmaRokOn
             // 
             this.PictureProGuitarDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProGuitarDifficulty3.Enabled = false;
+            this.PictureProGuitarDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureProGuitarDifficulty3.Image")));
             this.PictureProGuitarDifficulty3.Location = new System.Drawing.Point(136, 166);
             this.PictureProGuitarDifficulty3.Name = "PictureProGuitarDifficulty3";
             this.PictureProGuitarDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -7121,6 +7084,7 @@ namespace MagmaRokOn
             // 
             this.PictureProBassDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProBassDifficulty5.Enabled = false;
+            this.PictureProBassDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureProBassDifficulty5.Image")));
             this.PictureProBassDifficulty5.Location = new System.Drawing.Point(164, 92);
             this.PictureProBassDifficulty5.Name = "PictureProBassDifficulty5";
             this.PictureProBassDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -7136,6 +7100,7 @@ namespace MagmaRokOn
             // 
             this.PictureProGuitarDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProGuitarDifficulty2.Enabled = false;
+            this.PictureProGuitarDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureProGuitarDifficulty2.Image")));
             this.PictureProGuitarDifficulty2.Location = new System.Drawing.Point(122, 166);
             this.PictureProGuitarDifficulty2.Name = "PictureProGuitarDifficulty2";
             this.PictureProGuitarDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -7151,6 +7116,7 @@ namespace MagmaRokOn
             // 
             this.PictureGuitarDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureGuitarDifficulty4.Enabled = false;
+            this.PictureGuitarDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureGuitarDifficulty4.Image")));
             this.PictureGuitarDifficulty4.Location = new System.Drawing.Point(150, 129);
             this.PictureGuitarDifficulty4.Name = "PictureGuitarDifficulty4";
             this.PictureGuitarDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -7166,6 +7132,7 @@ namespace MagmaRokOn
             // 
             this.PictureProGuitarDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProGuitarDifficulty7.Enabled = false;
+            this.PictureProGuitarDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureProGuitarDifficulty7.Image")));
             this.PictureProGuitarDifficulty7.Location = new System.Drawing.Point(196, 166);
             this.PictureProGuitarDifficulty7.Name = "PictureProGuitarDifficulty7";
             this.PictureProGuitarDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -7181,6 +7148,7 @@ namespace MagmaRokOn
             // 
             this.PictureProGuitarDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProGuitarDifficulty1.Enabled = false;
+            this.PictureProGuitarDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureProGuitarDifficulty1.Image")));
             this.PictureProGuitarDifficulty1.Location = new System.Drawing.Point(104, 166);
             this.PictureProGuitarDifficulty1.Name = "PictureProGuitarDifficulty1";
             this.PictureProGuitarDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -7196,6 +7164,7 @@ namespace MagmaRokOn
             // 
             this.PictureBassDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBassDifficulty6.Enabled = false;
+            this.PictureBassDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureBassDifficulty6.Image")));
             this.PictureBassDifficulty6.Location = new System.Drawing.Point(178, 55);
             this.PictureBassDifficulty6.Name = "PictureBassDifficulty6";
             this.PictureBassDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -7211,6 +7180,7 @@ namespace MagmaRokOn
             // 
             this.PictureGuitarDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureGuitarDifficulty3.Enabled = false;
+            this.PictureGuitarDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureGuitarDifficulty3.Image")));
             this.PictureGuitarDifficulty3.Location = new System.Drawing.Point(136, 129);
             this.PictureGuitarDifficulty3.Name = "PictureGuitarDifficulty3";
             this.PictureGuitarDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -7226,6 +7196,7 @@ namespace MagmaRokOn
             // 
             this.PictureProBassDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProBassDifficulty4.Enabled = false;
+            this.PictureProBassDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureProBassDifficulty4.Image")));
             this.PictureProBassDifficulty4.Location = new System.Drawing.Point(150, 92);
             this.PictureProBassDifficulty4.Name = "PictureProBassDifficulty4";
             this.PictureProBassDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -7241,6 +7212,7 @@ namespace MagmaRokOn
             // 
             this.PictureGuitarDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureGuitarDifficulty2.Enabled = false;
+            this.PictureGuitarDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureGuitarDifficulty2.Image")));
             this.PictureGuitarDifficulty2.Location = new System.Drawing.Point(122, 129);
             this.PictureGuitarDifficulty2.Name = "PictureGuitarDifficulty2";
             this.PictureGuitarDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -7256,6 +7228,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty6.Enabled = false;
+            this.PictureDrumDifficulty6.Image = ((System.Drawing.Image)(resources.GetObject("PictureDrumDifficulty6.Image")));
             this.PictureDrumDifficulty6.Location = new System.Drawing.Point(178, 17);
             this.PictureDrumDifficulty6.Name = "PictureDrumDifficulty6";
             this.PictureDrumDifficulty6.Size = new System.Drawing.Size(14, 13);
@@ -7271,6 +7244,7 @@ namespace MagmaRokOn
             // 
             this.PictureGuitarDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureGuitarDifficulty7.Enabled = false;
+            this.PictureGuitarDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureGuitarDifficulty7.Image")));
             this.PictureGuitarDifficulty7.Location = new System.Drawing.Point(196, 129);
             this.PictureGuitarDifficulty7.Name = "PictureGuitarDifficulty7";
             this.PictureGuitarDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -7286,6 +7260,7 @@ namespace MagmaRokOn
             // 
             this.PictureGuitarDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureGuitarDifficulty1.Enabled = false;
+            this.PictureGuitarDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureGuitarDifficulty1.Image")));
             this.PictureGuitarDifficulty1.Location = new System.Drawing.Point(104, 129);
             this.PictureGuitarDifficulty1.Name = "PictureGuitarDifficulty1";
             this.PictureGuitarDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -7301,6 +7276,7 @@ namespace MagmaRokOn
             // 
             this.PictureProBassDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProBassDifficulty3.Enabled = false;
+            this.PictureProBassDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureProBassDifficulty3.Image")));
             this.PictureProBassDifficulty3.Location = new System.Drawing.Point(136, 92);
             this.PictureProBassDifficulty3.Name = "PictureProBassDifficulty3";
             this.PictureProBassDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -7316,6 +7292,7 @@ namespace MagmaRokOn
             // 
             this.PictureBassDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBassDifficulty5.Enabled = false;
+            this.PictureBassDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureBassDifficulty5.Image")));
             this.PictureBassDifficulty5.Location = new System.Drawing.Point(164, 55);
             this.PictureBassDifficulty5.Name = "PictureBassDifficulty5";
             this.PictureBassDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -7331,6 +7308,7 @@ namespace MagmaRokOn
             // 
             this.PictureProBassDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProBassDifficulty2.Enabled = false;
+            this.PictureProBassDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureProBassDifficulty2.Image")));
             this.PictureProBassDifficulty2.Location = new System.Drawing.Point(122, 92);
             this.PictureProBassDifficulty2.Name = "PictureProBassDifficulty2";
             this.PictureProBassDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -7346,6 +7324,7 @@ namespace MagmaRokOn
             // 
             this.PictureBassDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBassDifficulty4.Enabled = false;
+            this.PictureBassDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureBassDifficulty4.Image")));
             this.PictureBassDifficulty4.Location = new System.Drawing.Point(150, 55);
             this.PictureBassDifficulty4.Name = "PictureBassDifficulty4";
             this.PictureBassDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -7361,6 +7340,7 @@ namespace MagmaRokOn
             // 
             this.PictureProBassDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProBassDifficulty7.Enabled = false;
+            this.PictureProBassDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureProBassDifficulty7.Image")));
             this.PictureProBassDifficulty7.Location = new System.Drawing.Point(196, 92);
             this.PictureProBassDifficulty7.Name = "PictureProBassDifficulty7";
             this.PictureProBassDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -7376,6 +7356,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty5.Enabled = false;
+            this.PictureDrumDifficulty5.Image = ((System.Drawing.Image)(resources.GetObject("PictureDrumDifficulty5.Image")));
             this.PictureDrumDifficulty5.Location = new System.Drawing.Point(164, 17);
             this.PictureDrumDifficulty5.Name = "PictureDrumDifficulty5";
             this.PictureDrumDifficulty5.Size = new System.Drawing.Size(14, 13);
@@ -7391,6 +7372,7 @@ namespace MagmaRokOn
             // 
             this.PictureProBassDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureProBassDifficulty1.Enabled = false;
+            this.PictureProBassDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureProBassDifficulty1.Image")));
             this.PictureProBassDifficulty1.Location = new System.Drawing.Point(104, 92);
             this.PictureProBassDifficulty1.Name = "PictureProBassDifficulty1";
             this.PictureProBassDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -7406,6 +7388,7 @@ namespace MagmaRokOn
             // 
             this.PictureBassDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBassDifficulty3.Enabled = false;
+            this.PictureBassDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBassDifficulty3.Image")));
             this.PictureBassDifficulty3.Location = new System.Drawing.Point(136, 55);
             this.PictureBassDifficulty3.Name = "PictureBassDifficulty3";
             this.PictureBassDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -7435,6 +7418,7 @@ namespace MagmaRokOn
             // 
             this.PictureBassDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBassDifficulty2.Enabled = false;
+            this.PictureBassDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBassDifficulty2.Image")));
             this.PictureBassDifficulty2.Location = new System.Drawing.Point(122, 55);
             this.PictureBassDifficulty2.Name = "PictureBassDifficulty2";
             this.PictureBassDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -7450,6 +7434,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty4.Enabled = false;
+            this.PictureDrumDifficulty4.Image = ((System.Drawing.Image)(resources.GetObject("PictureDrumDifficulty4.Image")));
             this.PictureDrumDifficulty4.Location = new System.Drawing.Point(150, 17);
             this.PictureDrumDifficulty4.Name = "PictureDrumDifficulty4";
             this.PictureDrumDifficulty4.Size = new System.Drawing.Size(14, 13);
@@ -7465,6 +7450,7 @@ namespace MagmaRokOn
             // 
             this.PictureBassDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBassDifficulty7.Enabled = false;
+            this.PictureBassDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureBassDifficulty7.Image")));
             this.PictureBassDifficulty7.Location = new System.Drawing.Point(196, 55);
             this.PictureBassDifficulty7.Name = "PictureBassDifficulty7";
             this.PictureBassDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -7479,7 +7465,7 @@ namespace MagmaRokOn
             // LabelProGuitar
             // 
             this.LabelProGuitar.BackColor = System.Drawing.Color.Transparent;
-            this.LabelProGuitar.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelProGuitar.ForeColor = System.Drawing.Color.Black;
             this.LabelProGuitar.Location = new System.Drawing.Point(30, 164);
             this.LabelProGuitar.Name = "LabelProGuitar";
             this.LabelProGuitar.Size = new System.Drawing.Size(68, 15);
@@ -7491,6 +7477,7 @@ namespace MagmaRokOn
             // 
             this.PictureBassDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBassDifficulty1.Enabled = false;
+            this.PictureBassDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBassDifficulty1.Image")));
             this.PictureBassDifficulty1.Location = new System.Drawing.Point(104, 55);
             this.PictureBassDifficulty1.Name = "PictureBassDifficulty1";
             this.PictureBassDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -7506,6 +7493,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty3.Enabled = false;
+            this.PictureDrumDifficulty3.Image = ((System.Drawing.Image)(resources.GetObject("PictureDrumDifficulty3.Image")));
             this.PictureDrumDifficulty3.Location = new System.Drawing.Point(136, 17);
             this.PictureDrumDifficulty3.Name = "PictureDrumDifficulty3";
             this.PictureDrumDifficulty3.Size = new System.Drawing.Size(14, 13);
@@ -7521,6 +7509,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty2.Enabled = false;
+            this.PictureDrumDifficulty2.Image = ((System.Drawing.Image)(resources.GetObject("PictureDrumDifficulty2.Image")));
             this.PictureDrumDifficulty2.Location = new System.Drawing.Point(122, 17);
             this.PictureDrumDifficulty2.Name = "PictureDrumDifficulty2";
             this.PictureDrumDifficulty2.Size = new System.Drawing.Size(14, 13);
@@ -7550,6 +7539,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty7.Enabled = false;
+            this.PictureDrumDifficulty7.Image = ((System.Drawing.Image)(resources.GetObject("PictureDrumDifficulty7.Image")));
             this.PictureDrumDifficulty7.Location = new System.Drawing.Point(196, 17);
             this.PictureDrumDifficulty7.Name = "PictureDrumDifficulty7";
             this.PictureDrumDifficulty7.Size = new System.Drawing.Size(13, 13);
@@ -7564,7 +7554,7 @@ namespace MagmaRokOn
             // LabelProBass
             // 
             this.LabelProBass.BackColor = System.Drawing.Color.Transparent;
-            this.LabelProBass.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelProBass.ForeColor = System.Drawing.Color.Black;
             this.LabelProBass.Location = new System.Drawing.Point(30, 90);
             this.LabelProBass.Name = "LabelProBass";
             this.LabelProBass.Size = new System.Drawing.Size(68, 15);
@@ -7576,6 +7566,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty1.Enabled = false;
+            this.PictureDrumDifficulty1.Image = ((System.Drawing.Image)(resources.GetObject("PictureDrumDifficulty1.Image")));
             this.PictureDrumDifficulty1.Location = new System.Drawing.Point(104, 17);
             this.PictureDrumDifficulty1.Name = "PictureDrumDifficulty1";
             this.PictureDrumDifficulty1.Size = new System.Drawing.Size(14, 13);
@@ -7604,7 +7595,7 @@ namespace MagmaRokOn
             // LabelProKeysDifficulty
             // 
             this.LabelProKeysDifficulty.BackColor = System.Drawing.Color.Transparent;
-            this.LabelProKeysDifficulty.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelProKeysDifficulty.ForeColor = System.Drawing.Color.Black;
             this.LabelProKeysDifficulty.Location = new System.Drawing.Point(30, 276);
             this.LabelProKeysDifficulty.Name = "LabelProKeysDifficulty";
             this.LabelProKeysDifficulty.Size = new System.Drawing.Size(68, 15);
@@ -7615,7 +7606,7 @@ namespace MagmaRokOn
             // LabelKeysDifficulty
             // 
             this.LabelKeysDifficulty.BackColor = System.Drawing.Color.Transparent;
-            this.LabelKeysDifficulty.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelKeysDifficulty.ForeColor = System.Drawing.Color.Black;
             this.LabelKeysDifficulty.Location = new System.Drawing.Point(30, 238);
             this.LabelKeysDifficulty.Name = "LabelKeysDifficulty";
             this.LabelKeysDifficulty.Size = new System.Drawing.Size(68, 15);
@@ -7626,7 +7617,7 @@ namespace MagmaRokOn
             // LabelVocalDifficulty
             // 
             this.LabelVocalDifficulty.BackColor = System.Drawing.Color.Transparent;
-            this.LabelVocalDifficulty.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelVocalDifficulty.ForeColor = System.Drawing.Color.Black;
             this.LabelVocalDifficulty.Location = new System.Drawing.Point(30, 201);
             this.LabelVocalDifficulty.Name = "LabelVocalDifficulty";
             this.LabelVocalDifficulty.Size = new System.Drawing.Size(68, 15);
@@ -7637,7 +7628,7 @@ namespace MagmaRokOn
             // LabelGuitarDifficulty
             // 
             this.LabelGuitarDifficulty.BackColor = System.Drawing.Color.Transparent;
-            this.LabelGuitarDifficulty.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelGuitarDifficulty.ForeColor = System.Drawing.Color.Black;
             this.LabelGuitarDifficulty.Location = new System.Drawing.Point(30, 127);
             this.LabelGuitarDifficulty.Name = "LabelGuitarDifficulty";
             this.LabelGuitarDifficulty.Size = new System.Drawing.Size(68, 15);
@@ -7648,7 +7639,7 @@ namespace MagmaRokOn
             // LabelBassDifficulty
             // 
             this.LabelBassDifficulty.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBassDifficulty.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelBassDifficulty.ForeColor = System.Drawing.Color.Black;
             this.LabelBassDifficulty.Location = new System.Drawing.Point(30, 53);
             this.LabelBassDifficulty.Name = "LabelBassDifficulty";
             this.LabelBassDifficulty.Size = new System.Drawing.Size(68, 15);
@@ -7659,7 +7650,7 @@ namespace MagmaRokOn
             // LabelDrumDifficulty
             // 
             this.LabelDrumDifficulty.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDrumDifficulty.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelDrumDifficulty.ForeColor = System.Drawing.Color.Black;
             this.LabelDrumDifficulty.Location = new System.Drawing.Point(30, 15);
             this.LabelDrumDifficulty.Name = "LabelDrumDifficulty";
             this.LabelDrumDifficulty.Size = new System.Drawing.Size(68, 15);
@@ -7670,7 +7661,7 @@ namespace MagmaRokOn
             // LabelBandDifficulty
             // 
             this.LabelBandDifficulty.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBandDifficulty.ForeColor = System.Drawing.Color.IndianRed;
+            this.LabelBandDifficulty.ForeColor = System.Drawing.Color.Black;
             this.LabelBandDifficulty.Location = new System.Drawing.Point(30, 313);
             this.LabelBandDifficulty.Name = "LabelBandDifficulty";
             this.LabelBandDifficulty.Size = new System.Drawing.Size(68, 15);
@@ -7680,8 +7671,7 @@ namespace MagmaRokOn
             // 
             // ButtonExportMIDI
             // 
-            this.ButtonExportMIDI.BackColor = System.Drawing.Color.Black;
-            this.ButtonExportMIDI.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.ButtonExportMIDI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonExportMIDI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonExportMIDI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonExportMIDI.Enabled = false;
@@ -7702,8 +7692,8 @@ namespace MagmaRokOn
             // 
             this.chkTonality.BackColor = System.Drawing.Color.Transparent;
             this.chkTonality.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkTonality.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.chkTonality.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkTonality.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTonality.ForeColor = System.Drawing.Color.Black;
             this.chkTonality.Location = new System.Drawing.Point(276, 318);
             this.chkTonality.Name = "chkTonality";
             this.chkTonality.Size = new System.Drawing.Size(92, 17);
@@ -7713,32 +7703,117 @@ namespace MagmaRokOn
             this.chkTonality.UseVisualStyleBackColor = false;
             this.chkTonality.CheckedChanged += new System.EventHandler(this.chkTonality_CheckedChanged);
             // 
+            // picHelpSolos
+            // 
+            this.picHelpSolos.BackColor = System.Drawing.Color.Transparent;
+            this.picHelpSolos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHelpSolos.Image = ((System.Drawing.Image)(resources.GetObject("picHelpSolos.Image")));
+            this.picHelpSolos.Location = new System.Drawing.Point(414, 436);
+            this.picHelpSolos.Name = "picHelpSolos";
+            this.picHelpSolos.Size = new System.Drawing.Size(25, 25);
+            this.picHelpSolos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHelpSolos.TabIndex = 169;
+            this.picHelpSolos.TabStop = false;
+            this.ToolTip.SetToolTip(this.picHelpSolos, "Click for help with Instrument Solos");
+            this.picHelpSolos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
+            // 
+            // picHelpMuteVol
+            // 
+            this.picHelpMuteVol.BackColor = System.Drawing.Color.Transparent;
+            this.picHelpMuteVol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHelpMuteVol.Image = ((System.Drawing.Image)(resources.GetObject("picHelpMuteVol.Image")));
+            this.picHelpMuteVol.Location = new System.Drawing.Point(441, 344);
+            this.picHelpMuteVol.Name = "picHelpMuteVol";
+            this.picHelpMuteVol.Size = new System.Drawing.Size(25, 25);
+            this.picHelpMuteVol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHelpMuteVol.TabIndex = 135;
+            this.picHelpMuteVol.TabStop = false;
+            this.ToolTip.SetToolTip(this.picHelpMuteVol, "Click for help with Vocals Mute Volume and Mute Volume");
+            this.picHelpMuteVol.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
+            // 
+            // picDrumSFX
+            // 
+            this.picDrumSFX.BackColor = System.Drawing.Color.Transparent;
+            this.picDrumSFX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDrumSFX.Image = ((System.Drawing.Image)(resources.GetObject("picDrumSFX.Image")));
+            this.picDrumSFX.Location = new System.Drawing.Point(441, 400);
+            this.picDrumSFX.Name = "picDrumSFX";
+            this.picDrumSFX.Size = new System.Drawing.Size(25, 25);
+            this.picDrumSFX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDrumSFX.TabIndex = 123;
+            this.picDrumSFX.TabStop = false;
+            this.ToolTip.SetToolTip(this.picDrumSFX, "Click for help with Drum Kit SFX");
+            this.picDrumSFX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
+            // 
+            // picHelpTuningCents
+            // 
+            this.picHelpTuningCents.BackColor = System.Drawing.Color.Transparent;
+            this.picHelpTuningCents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHelpTuningCents.Image = ((System.Drawing.Image)(resources.GetObject("picHelpTuningCents.Image")));
+            this.picHelpTuningCents.Location = new System.Drawing.Point(441, 284);
+            this.picHelpTuningCents.Name = "picHelpTuningCents";
+            this.picHelpTuningCents.Size = new System.Drawing.Size(25, 25);
+            this.picHelpTuningCents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHelpTuningCents.TabIndex = 122;
+            this.picHelpTuningCents.TabStop = false;
+            this.ToolTip.SetToolTip(this.picHelpTuningCents, "Click for help using Tuning Cents Offset");
+            this.picHelpTuningCents.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
+            // 
+            // picHelpGuitarTuning
+            // 
+            this.picHelpGuitarTuning.BackColor = System.Drawing.Color.Transparent;
+            this.picHelpGuitarTuning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHelpGuitarTuning.Image = ((System.Drawing.Image)(resources.GetObject("picHelpGuitarTuning.Image")));
+            this.picHelpGuitarTuning.Location = new System.Drawing.Point(393, 481);
+            this.picHelpGuitarTuning.Name = "picHelpGuitarTuning";
+            this.picHelpGuitarTuning.Size = new System.Drawing.Size(25, 25);
+            this.picHelpGuitarTuning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHelpGuitarTuning.TabIndex = 114;
+            this.picHelpGuitarTuning.TabStop = false;
+            this.ToolTip.SetToolTip(this.picHelpGuitarTuning, "Click for help with Pro Guitar / Bass Tuning");
+            this.picHelpGuitarTuning.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
+            // 
+            // picHelpTonicNote
+            // 
+            this.picHelpTonicNote.BackColor = System.Drawing.Color.Transparent;
+            this.picHelpTonicNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHelpTonicNote.Image = ((System.Drawing.Image)(resources.GetObject("picHelpTonicNote.Image")));
+            this.picHelpTonicNote.Location = new System.Drawing.Point(441, 315);
+            this.picHelpTonicNote.Name = "picHelpTonicNote";
+            this.picHelpTonicNote.Size = new System.Drawing.Size(25, 25);
+            this.picHelpTonicNote.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHelpTonicNote.TabIndex = 109;
+            this.picHelpTonicNote.TabStop = false;
+            this.ToolTip.SetToolTip(this.picHelpTonicNote, "Click for help with Vocal Tonic Note and Song Tonality");
+            this.picHelpTonicNote.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picHelp_MouseClick);
+            // 
             // contextMenuStrip3
             // 
-            this.contextMenuStrip3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.contextMenuStrip3.BackColor = System.Drawing.Color.Gainsboro;
+            this.contextMenuStrip3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadTemplateToolStripMenuItem,
             this.saveCurrentListAsTemplateToolStripMenuItem});
             this.contextMenuStrip3.Name = "contextMenuStrip3";
-            this.contextMenuStrip3.Size = new System.Drawing.Size(239, 48);
+            this.contextMenuStrip3.Size = new System.Drawing.Size(212, 48);
             // 
             // loadTemplateToolStripMenuItem
             // 
-            this.loadTemplateToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.loadTemplateToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.loadTemplateToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.loadTemplateToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.loadTemplateToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadTemplateToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.loadTemplateToolStripMenuItem.Name = "loadTemplateToolStripMenuItem";
-            this.loadTemplateToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.loadTemplateToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.loadTemplateToolStripMenuItem.Text = "Load existing template";
             this.loadTemplateToolStripMenuItem.Click += new System.EventHandler(this.loadTemplateToolStripMenuItem_Click);
             // 
             // saveCurrentListAsTemplateToolStripMenuItem
             // 
-            this.saveCurrentListAsTemplateToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.saveCurrentListAsTemplateToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.saveCurrentListAsTemplateToolStripMenuItem.ForeColor = System.Drawing.Color.LightGray;
+            this.saveCurrentListAsTemplateToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.saveCurrentListAsTemplateToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveCurrentListAsTemplateToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.saveCurrentListAsTemplateToolStripMenuItem.Name = "saveCurrentListAsTemplateToolStripMenuItem";
-            this.saveCurrentListAsTemplateToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.saveCurrentListAsTemplateToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.saveCurrentListAsTemplateToolStripMenuItem.Text = "Save current list as template";
             this.saveCurrentListAsTemplateToolStripMenuItem.Click += new System.EventHandler(this.saveCurrentListAsTemplateToolStripMenuItem_Click);
             // 
@@ -7746,10 +7821,9 @@ namespace MagmaRokOn
             // 
             this.PanelFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelFooter.BackgroundImage = global::MagmaRokOn.Properties.Resources.footer;
+            this.PanelFooter.BackColor = System.Drawing.Color.Gainsboro;
             this.PanelFooter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PanelFooter.Controls.Add(this.ButtonBuildTo);
-            this.PanelFooter.Controls.Add(this.pictureBox9);
             this.PanelFooter.Controls.Add(this.LabelBuildTo);
             this.PanelFooter.Controls.Add(this.ButtonBuildSong);
             this.PanelFooter.Controls.Add(this.TextBoxBuildDestination);
@@ -7761,8 +7835,7 @@ namespace MagmaRokOn
             // ButtonBuildTo
             // 
             this.ButtonBuildTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonBuildTo.BackColor = System.Drawing.Color.Black;
-            this.ButtonBuildTo.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_small;
+            this.ButtonBuildTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonBuildTo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonBuildTo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonBuildTo.FlatAppearance.BorderSize = 0;
@@ -7779,25 +7852,15 @@ namespace MagmaRokOn
             this.ButtonBuildTo.UseVisualStyleBackColor = false;
             this.ButtonBuildTo.Click += new System.EventHandler(this.ButtonBuildTo_Click);
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::MagmaRokOn.Properties.Resources.footer_divider;
-            this.pictureBox9.Location = new System.Drawing.Point(901, -4);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(3, 35);
-            this.pictureBox9.TabIndex = 65;
-            this.pictureBox9.TabStop = false;
-            // 
             // LabelBuildTo
             // 
             this.LabelBuildTo.AutoSize = true;
             this.LabelBuildTo.BackColor = System.Drawing.Color.Transparent;
-            this.LabelBuildTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelBuildTo.ForeColor = System.Drawing.Color.LightGray;
+            this.LabelBuildTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelBuildTo.ForeColor = System.Drawing.Color.Black;
             this.LabelBuildTo.Location = new System.Drawing.Point(7, 11);
             this.LabelBuildTo.Name = "LabelBuildTo";
-            this.LabelBuildTo.Size = new System.Drawing.Size(61, 13);
+            this.LabelBuildTo.Size = new System.Drawing.Size(51, 13);
             this.LabelBuildTo.TabIndex = 13;
             this.LabelBuildTo.Tag = "LabelBuildToTooltip";
             this.LabelBuildTo.Text = "File Path:";
@@ -7806,8 +7869,7 @@ namespace MagmaRokOn
             // ButtonBuildSong
             // 
             this.ButtonBuildSong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonBuildSong.BackColor = System.Drawing.Color.Black;
-            this.ButtonBuildSong.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.ButtonBuildSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.ButtonBuildSong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonBuildSong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonBuildSong.FlatAppearance.BorderSize = 0;
@@ -7854,7 +7916,7 @@ namespace MagmaRokOn
             // 
             // ButtonGameDataTab
             // 
-            this.ButtonGameDataTab.BackColor = System.Drawing.Color.Black;
+            this.ButtonGameDataTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ButtonGameDataTab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonGameDataTab.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.ButtonGameDataTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -7874,7 +7936,7 @@ namespace MagmaRokOn
             // 
             // ButtonAudioTab
             // 
-            this.ButtonAudioTab.BackColor = System.Drawing.Color.Black;
+            this.ButtonAudioTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ButtonAudioTab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAudioTab.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.ButtonAudioTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -7894,7 +7956,7 @@ namespace MagmaRokOn
             // 
             // ButtonInformationTab
             // 
-            this.ButtonInformationTab.BackColor = System.Drawing.Color.Black;
+            this.ButtonInformationTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ButtonInformationTab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonInformationTab.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.ButtonInformationTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -7912,34 +7974,23 @@ namespace MagmaRokOn
             this.ButtonInformationTab.MouseEnter += new System.EventHandler(this.TabHover);
             this.ButtonInformationTab.MouseLeave += new System.EventHandler(this.TabEndHover);
             // 
-            // picTemplate
+            // picDone
             // 
-            this.picTemplate.ContextMenuStrip = this.contextMenuStrip3;
-            this.picTemplate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picTemplate.Location = new System.Drawing.Point(4, 67);
-            this.picTemplate.Name = "picTemplate";
-            this.picTemplate.Size = new System.Drawing.Size(26, 25);
-            this.picTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTemplate.TabIndex = 1;
-            this.picTemplate.TabStop = false;
-            this.ToolTip.SetToolTip(this.picTemplate, "Click to view template options");
-            this.picTemplate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picTemplate_MouseClick);
-            // 
-            // picImportant
-            // 
-            this.picImportant.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picImportant.Location = new System.Drawing.Point(128, 66);
-            this.picImportant.Name = "picImportant";
-            this.picImportant.Size = new System.Drawing.Size(25, 25);
-            this.picImportant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImportant.TabIndex = 2;
-            this.picImportant.TabStop = false;
-            this.ToolTip.SetToolTip(this.picImportant, "Click to mark item as REQUIRED");
-            this.picImportant.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picImportant_MouseClick);
+            this.picDone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDone.Image = ((System.Drawing.Image)(resources.GetObject("picDone.Image")));
+            this.picDone.Location = new System.Drawing.Point(172, 66);
+            this.picDone.Name = "picDone";
+            this.picDone.Size = new System.Drawing.Size(25, 25);
+            this.picDone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDone.TabIndex = 4;
+            this.picDone.TabStop = false;
+            this.ToolTip.SetToolTip(this.picDone, "Click to mark item as COMPLETED");
+            this.picDone.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picDone_MouseClick);
             // 
             // picRemove
             // 
             this.picRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRemove.Image = ((System.Drawing.Image)(resources.GetObject("picRemove.Image")));
             this.picRemove.Location = new System.Drawing.Point(216, 66);
             this.picRemove.Name = "picRemove";
             this.picRemove.Size = new System.Drawing.Size(25, 25);
@@ -7949,17 +8000,32 @@ namespace MagmaRokOn
             this.ToolTip.SetToolTip(this.picRemove, "Click to REMOVE item");
             this.picRemove.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picRemove_MouseClick);
             // 
-            // picDone
+            // picImportant
             // 
-            this.picDone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDone.Location = new System.Drawing.Point(172, 66);
-            this.picDone.Name = "picDone";
-            this.picDone.Size = new System.Drawing.Size(25, 25);
-            this.picDone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDone.TabIndex = 4;
-            this.picDone.TabStop = false;
-            this.ToolTip.SetToolTip(this.picDone, "Click to mark item as COMPLETED");
-            this.picDone.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picDone_MouseClick);
+            this.picImportant.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picImportant.Image = ((System.Drawing.Image)(resources.GetObject("picImportant.Image")));
+            this.picImportant.Location = new System.Drawing.Point(128, 66);
+            this.picImportant.Name = "picImportant";
+            this.picImportant.Size = new System.Drawing.Size(25, 25);
+            this.picImportant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImportant.TabIndex = 2;
+            this.picImportant.TabStop = false;
+            this.ToolTip.SetToolTip(this.picImportant, "Click to mark item as REQUIRED");
+            this.picImportant.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picImportant_MouseClick);
+            // 
+            // picTemplate
+            // 
+            this.picTemplate.ContextMenuStrip = this.contextMenuStrip3;
+            this.picTemplate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picTemplate.Image = ((System.Drawing.Image)(resources.GetObject("picTemplate.Image")));
+            this.picTemplate.Location = new System.Drawing.Point(4, 67);
+            this.picTemplate.Name = "picTemplate";
+            this.picTemplate.Size = new System.Drawing.Size(26, 25);
+            this.picTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTemplate.TabIndex = 1;
+            this.picTemplate.TabStop = false;
+            this.ToolTip.SetToolTip(this.picTemplate, "Click to view template options");
+            this.picTemplate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picTemplate_MouseClick);
             // 
             // picWii
             // 
@@ -7974,30 +8040,17 @@ namespace MagmaRokOn
             this.picWii.Visible = false;
             this.picWii.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picWii_MouseClick);
             // 
-            // PictureBoxMagmaLogoTop
-            // 
-            this.PictureBoxMagmaLogoTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PictureBoxMagmaLogoTop.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBoxMagmaLogoTop.BackgroundImage = global::MagmaRokOn.Properties.Resources.header_fire;
-            this.PictureBoxMagmaLogoTop.Image = global::MagmaRokOn.Properties.Resources.magma_logo_sized;
-            this.PictureBoxMagmaLogoTop.Location = new System.Drawing.Point(786, 11);
-            this.PictureBoxMagmaLogoTop.Margin = new System.Windows.Forms.Padding(0);
-            this.PictureBoxMagmaLogoTop.Name = "PictureBoxMagmaLogoTop";
-            this.PictureBoxMagmaLogoTop.Size = new System.Drawing.Size(220, 42);
-            this.PictureBoxMagmaLogoTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PictureBoxMagmaLogoTop.TabIndex = 102;
-            this.PictureBoxMagmaLogoTop.TabStop = false;
-            // 
             // PanelHeader
             // 
             this.PanelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelHeader.BackgroundImage = global::MagmaRokOn.Properties.Resources.header_fire;
+            this.PanelHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.PanelHeader.Controls.Add(this.picWii);
             this.PanelHeader.Controls.Add(this.picChecklist);
             this.PanelHeader.Controls.Add(this.ButtonGameDataTab);
             this.PanelHeader.Controls.Add(this.ButtonAudioTab);
             this.PanelHeader.Controls.Add(this.ButtonInformationTab);
+            this.PanelHeader.ForeColor = System.Drawing.Color.Gainsboro;
             this.PanelHeader.Location = new System.Drawing.Point(-1, 3);
             this.PanelHeader.Name = "PanelHeader";
             this.PanelHeader.Size = new System.Drawing.Size(1018, 50);
@@ -8007,9 +8060,10 @@ namespace MagmaRokOn
             // 
             this.picChecklist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picChecklist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picChecklist.Location = new System.Drawing.Point(740, 8);
+            this.picChecklist.Image = ((System.Drawing.Image)(resources.GetObject("picChecklist.Image")));
+            this.picChecklist.Location = new System.Drawing.Point(734, 8);
             this.picChecklist.Name = "picChecklist";
-            this.picChecklist.Size = new System.Drawing.Size(26, 40);
+            this.picChecklist.Size = new System.Drawing.Size(32, 48);
             this.picChecklist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picChecklist.TabIndex = 32;
             this.picChecklist.TabStop = false;
@@ -8017,9 +8071,9 @@ namespace MagmaRokOn
             // 
             // todo1
             // 
-            this.todo1.BackColor = System.Drawing.Color.Black;
+            this.todo1.BackColor = System.Drawing.Color.White;
             this.todo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo1.ForeColor = System.Drawing.Color.White;
+            this.todo1.ForeColor = System.Drawing.Color.Black;
             this.todo1.Location = new System.Drawing.Point(34, 103);
             this.todo1.MaxLength = 74;
             this.todo1.Name = "todo1";
@@ -8033,9 +8087,9 @@ namespace MagmaRokOn
             // 
             // list1
             // 
-            this.list1.BackColor = System.Drawing.Color.Black;
+            this.list1.BackColor = System.Drawing.Color.White;
             this.list1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list1.ForeColor = System.Drawing.Color.White;
+            this.list1.ForeColor = System.Drawing.Color.Black;
             this.list1.Location = new System.Drawing.Point(7, 103);
             this.list1.MaxLength = 74;
             this.list1.Name = "list1";
@@ -8048,9 +8102,9 @@ namespace MagmaRokOn
             // 
             // todo2
             // 
-            this.todo2.BackColor = System.Drawing.Color.Black;
+            this.todo2.BackColor = System.Drawing.Color.White;
             this.todo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo2.ForeColor = System.Drawing.Color.White;
+            this.todo2.ForeColor = System.Drawing.Color.Black;
             this.todo2.Location = new System.Drawing.Point(34, 129);
             this.todo2.MaxLength = 74;
             this.todo2.Name = "todo2";
@@ -8064,9 +8118,9 @@ namespace MagmaRokOn
             // 
             // list2
             // 
-            this.list2.BackColor = System.Drawing.Color.Black;
+            this.list2.BackColor = System.Drawing.Color.White;
             this.list2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list2.ForeColor = System.Drawing.Color.White;
+            this.list2.ForeColor = System.Drawing.Color.Black;
             this.list2.Location = new System.Drawing.Point(7, 129);
             this.list2.MaxLength = 74;
             this.list2.Name = "list2";
@@ -8079,9 +8133,9 @@ namespace MagmaRokOn
             // 
             // todo3
             // 
-            this.todo3.BackColor = System.Drawing.Color.Black;
+            this.todo3.BackColor = System.Drawing.Color.White;
             this.todo3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo3.ForeColor = System.Drawing.Color.White;
+            this.todo3.ForeColor = System.Drawing.Color.Black;
             this.todo3.Location = new System.Drawing.Point(34, 155);
             this.todo3.MaxLength = 74;
             this.todo3.Name = "todo3";
@@ -8095,9 +8149,9 @@ namespace MagmaRokOn
             // 
             // list3
             // 
-            this.list3.BackColor = System.Drawing.Color.Black;
+            this.list3.BackColor = System.Drawing.Color.White;
             this.list3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list3.ForeColor = System.Drawing.Color.White;
+            this.list3.ForeColor = System.Drawing.Color.Black;
             this.list3.Location = new System.Drawing.Point(7, 155);
             this.list3.MaxLength = 74;
             this.list3.Name = "list3";
@@ -8110,9 +8164,9 @@ namespace MagmaRokOn
             // 
             // todo4
             // 
-            this.todo4.BackColor = System.Drawing.Color.Black;
+            this.todo4.BackColor = System.Drawing.Color.White;
             this.todo4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo4.ForeColor = System.Drawing.Color.White;
+            this.todo4.ForeColor = System.Drawing.Color.Black;
             this.todo4.Location = new System.Drawing.Point(34, 181);
             this.todo4.MaxLength = 74;
             this.todo4.Name = "todo4";
@@ -8126,9 +8180,9 @@ namespace MagmaRokOn
             // 
             // list4
             // 
-            this.list4.BackColor = System.Drawing.Color.Black;
+            this.list4.BackColor = System.Drawing.Color.White;
             this.list4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list4.ForeColor = System.Drawing.Color.White;
+            this.list4.ForeColor = System.Drawing.Color.Black;
             this.list4.Location = new System.Drawing.Point(7, 181);
             this.list4.MaxLength = 74;
             this.list4.Name = "list4";
@@ -8141,9 +8195,9 @@ namespace MagmaRokOn
             // 
             // todo5
             // 
-            this.todo5.BackColor = System.Drawing.Color.Black;
+            this.todo5.BackColor = System.Drawing.Color.White;
             this.todo5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo5.ForeColor = System.Drawing.Color.White;
+            this.todo5.ForeColor = System.Drawing.Color.Black;
             this.todo5.Location = new System.Drawing.Point(34, 207);
             this.todo5.MaxLength = 74;
             this.todo5.Name = "todo5";
@@ -8157,9 +8211,9 @@ namespace MagmaRokOn
             // 
             // list5
             // 
-            this.list5.BackColor = System.Drawing.Color.Black;
+            this.list5.BackColor = System.Drawing.Color.White;
             this.list5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list5.ForeColor = System.Drawing.Color.White;
+            this.list5.ForeColor = System.Drawing.Color.Black;
             this.list5.Location = new System.Drawing.Point(7, 207);
             this.list5.MaxLength = 74;
             this.list5.Name = "list5";
@@ -8172,9 +8226,9 @@ namespace MagmaRokOn
             // 
             // todo6
             // 
-            this.todo6.BackColor = System.Drawing.Color.Black;
+            this.todo6.BackColor = System.Drawing.Color.White;
             this.todo6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo6.ForeColor = System.Drawing.Color.White;
+            this.todo6.ForeColor = System.Drawing.Color.Black;
             this.todo6.Location = new System.Drawing.Point(34, 233);
             this.todo6.MaxLength = 74;
             this.todo6.Name = "todo6";
@@ -8188,9 +8242,9 @@ namespace MagmaRokOn
             // 
             // list6
             // 
-            this.list6.BackColor = System.Drawing.Color.Black;
+            this.list6.BackColor = System.Drawing.Color.White;
             this.list6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list6.ForeColor = System.Drawing.Color.White;
+            this.list6.ForeColor = System.Drawing.Color.Black;
             this.list6.Location = new System.Drawing.Point(7, 233);
             this.list6.MaxLength = 74;
             this.list6.Name = "list6";
@@ -8203,9 +8257,9 @@ namespace MagmaRokOn
             // 
             // todo7
             // 
-            this.todo7.BackColor = System.Drawing.Color.Black;
+            this.todo7.BackColor = System.Drawing.Color.White;
             this.todo7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo7.ForeColor = System.Drawing.Color.White;
+            this.todo7.ForeColor = System.Drawing.Color.Black;
             this.todo7.Location = new System.Drawing.Point(34, 259);
             this.todo7.MaxLength = 74;
             this.todo7.Name = "todo7";
@@ -8219,9 +8273,9 @@ namespace MagmaRokOn
             // 
             // list7
             // 
-            this.list7.BackColor = System.Drawing.Color.Black;
+            this.list7.BackColor = System.Drawing.Color.White;
             this.list7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list7.ForeColor = System.Drawing.Color.White;
+            this.list7.ForeColor = System.Drawing.Color.Black;
             this.list7.Location = new System.Drawing.Point(7, 259);
             this.list7.MaxLength = 74;
             this.list7.Name = "list7";
@@ -8234,9 +8288,9 @@ namespace MagmaRokOn
             // 
             // todo8
             // 
-            this.todo8.BackColor = System.Drawing.Color.Black;
+            this.todo8.BackColor = System.Drawing.Color.White;
             this.todo8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo8.ForeColor = System.Drawing.Color.White;
+            this.todo8.ForeColor = System.Drawing.Color.Black;
             this.todo8.Location = new System.Drawing.Point(34, 285);
             this.todo8.MaxLength = 74;
             this.todo8.Name = "todo8";
@@ -8250,9 +8304,9 @@ namespace MagmaRokOn
             // 
             // list8
             // 
-            this.list8.BackColor = System.Drawing.Color.Black;
+            this.list8.BackColor = System.Drawing.Color.White;
             this.list8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list8.ForeColor = System.Drawing.Color.White;
+            this.list8.ForeColor = System.Drawing.Color.Black;
             this.list8.Location = new System.Drawing.Point(7, 285);
             this.list8.MaxLength = 74;
             this.list8.Name = "list8";
@@ -8265,9 +8319,9 @@ namespace MagmaRokOn
             // 
             // todo9
             // 
-            this.todo9.BackColor = System.Drawing.Color.Black;
+            this.todo9.BackColor = System.Drawing.Color.White;
             this.todo9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo9.ForeColor = System.Drawing.Color.White;
+            this.todo9.ForeColor = System.Drawing.Color.Black;
             this.todo9.Location = new System.Drawing.Point(34, 311);
             this.todo9.MaxLength = 74;
             this.todo9.Name = "todo9";
@@ -8281,9 +8335,9 @@ namespace MagmaRokOn
             // 
             // list9
             // 
-            this.list9.BackColor = System.Drawing.Color.Black;
+            this.list9.BackColor = System.Drawing.Color.White;
             this.list9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list9.ForeColor = System.Drawing.Color.White;
+            this.list9.ForeColor = System.Drawing.Color.Black;
             this.list9.Location = new System.Drawing.Point(7, 311);
             this.list9.MaxLength = 74;
             this.list9.Name = "list9";
@@ -8296,9 +8350,9 @@ namespace MagmaRokOn
             // 
             // todo10
             // 
-            this.todo10.BackColor = System.Drawing.Color.Black;
+            this.todo10.BackColor = System.Drawing.Color.White;
             this.todo10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo10.ForeColor = System.Drawing.Color.White;
+            this.todo10.ForeColor = System.Drawing.Color.Black;
             this.todo10.Location = new System.Drawing.Point(34, 337);
             this.todo10.MaxLength = 74;
             this.todo10.Name = "todo10";
@@ -8312,9 +8366,9 @@ namespace MagmaRokOn
             // 
             // list10
             // 
-            this.list10.BackColor = System.Drawing.Color.Black;
+            this.list10.BackColor = System.Drawing.Color.White;
             this.list10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list10.ForeColor = System.Drawing.Color.White;
+            this.list10.ForeColor = System.Drawing.Color.Black;
             this.list10.Location = new System.Drawing.Point(7, 337);
             this.list10.MaxLength = 74;
             this.list10.Name = "list10";
@@ -8327,9 +8381,9 @@ namespace MagmaRokOn
             // 
             // todo11
             // 
-            this.todo11.BackColor = System.Drawing.Color.Black;
+            this.todo11.BackColor = System.Drawing.Color.White;
             this.todo11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo11.ForeColor = System.Drawing.Color.White;
+            this.todo11.ForeColor = System.Drawing.Color.Black;
             this.todo11.Location = new System.Drawing.Point(34, 363);
             this.todo11.MaxLength = 74;
             this.todo11.Name = "todo11";
@@ -8343,9 +8397,9 @@ namespace MagmaRokOn
             // 
             // list11
             // 
-            this.list11.BackColor = System.Drawing.Color.Black;
+            this.list11.BackColor = System.Drawing.Color.White;
             this.list11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list11.ForeColor = System.Drawing.Color.White;
+            this.list11.ForeColor = System.Drawing.Color.Black;
             this.list11.Location = new System.Drawing.Point(7, 363);
             this.list11.MaxLength = 74;
             this.list11.Name = "list11";
@@ -8358,9 +8412,9 @@ namespace MagmaRokOn
             // 
             // todo12
             // 
-            this.todo12.BackColor = System.Drawing.Color.Black;
+            this.todo12.BackColor = System.Drawing.Color.White;
             this.todo12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo12.ForeColor = System.Drawing.Color.White;
+            this.todo12.ForeColor = System.Drawing.Color.Black;
             this.todo12.Location = new System.Drawing.Point(34, 389);
             this.todo12.MaxLength = 74;
             this.todo12.Name = "todo12";
@@ -8374,9 +8428,9 @@ namespace MagmaRokOn
             // 
             // list12
             // 
-            this.list12.BackColor = System.Drawing.Color.Black;
+            this.list12.BackColor = System.Drawing.Color.White;
             this.list12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list12.ForeColor = System.Drawing.Color.White;
+            this.list12.ForeColor = System.Drawing.Color.Black;
             this.list12.Location = new System.Drawing.Point(7, 389);
             this.list12.MaxLength = 74;
             this.list12.Name = "list12";
@@ -8389,9 +8443,9 @@ namespace MagmaRokOn
             // 
             // todo13
             // 
-            this.todo13.BackColor = System.Drawing.Color.Black;
+            this.todo13.BackColor = System.Drawing.Color.White;
             this.todo13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo13.ForeColor = System.Drawing.Color.White;
+            this.todo13.ForeColor = System.Drawing.Color.Black;
             this.todo13.Location = new System.Drawing.Point(34, 415);
             this.todo13.MaxLength = 74;
             this.todo13.Name = "todo13";
@@ -8405,9 +8459,9 @@ namespace MagmaRokOn
             // 
             // list13
             // 
-            this.list13.BackColor = System.Drawing.Color.Black;
+            this.list13.BackColor = System.Drawing.Color.White;
             this.list13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list13.ForeColor = System.Drawing.Color.White;
+            this.list13.ForeColor = System.Drawing.Color.Black;
             this.list13.Location = new System.Drawing.Point(7, 415);
             this.list13.MaxLength = 74;
             this.list13.Name = "list13";
@@ -8420,9 +8474,9 @@ namespace MagmaRokOn
             // 
             // todo14
             // 
-            this.todo14.BackColor = System.Drawing.Color.Black;
+            this.todo14.BackColor = System.Drawing.Color.White;
             this.todo14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo14.ForeColor = System.Drawing.Color.White;
+            this.todo14.ForeColor = System.Drawing.Color.Black;
             this.todo14.Location = new System.Drawing.Point(34, 441);
             this.todo14.MaxLength = 74;
             this.todo14.Name = "todo14";
@@ -8436,9 +8490,9 @@ namespace MagmaRokOn
             // 
             // list14
             // 
-            this.list14.BackColor = System.Drawing.Color.Black;
+            this.list14.BackColor = System.Drawing.Color.White;
             this.list14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list14.ForeColor = System.Drawing.Color.White;
+            this.list14.ForeColor = System.Drawing.Color.Black;
             this.list14.Location = new System.Drawing.Point(7, 441);
             this.list14.MaxLength = 74;
             this.list14.Name = "list14";
@@ -8451,9 +8505,9 @@ namespace MagmaRokOn
             // 
             // todo15
             // 
-            this.todo15.BackColor = System.Drawing.Color.Black;
+            this.todo15.BackColor = System.Drawing.Color.White;
             this.todo15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.todo15.ForeColor = System.Drawing.Color.White;
+            this.todo15.ForeColor = System.Drawing.Color.Black;
             this.todo15.Location = new System.Drawing.Point(34, 467);
             this.todo15.MaxLength = 74;
             this.todo15.Name = "todo15";
@@ -8467,9 +8521,9 @@ namespace MagmaRokOn
             // 
             // list15
             // 
-            this.list15.BackColor = System.Drawing.Color.Black;
+            this.list15.BackColor = System.Drawing.Color.White;
             this.list15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.list15.ForeColor = System.Drawing.Color.White;
+            this.list15.ForeColor = System.Drawing.Color.Black;
             this.list15.Location = new System.Drawing.Point(7, 467);
             this.list15.MaxLength = 74;
             this.list15.Name = "list15";
@@ -8480,19 +8534,9 @@ namespace MagmaRokOn
             this.list15.Text = "15.";
             this.list15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // todoPic
-            // 
-            this.todoPic.Image = global::MagmaRokOn.Properties.Resources.todo_fire;
-            this.todoPic.Location = new System.Drawing.Point(5, 3);
-            this.todoPic.Name = "todoPic";
-            this.todoPic.Size = new System.Drawing.Size(242, 57);
-            this.todoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.todoPic.TabIndex = 50;
-            this.todoPic.TabStop = false;
-            // 
             // panelTODO
             // 
-            this.panelTODO.BackColor = System.Drawing.Color.Transparent;
+            this.panelTODO.BackColor = System.Drawing.Color.Gainsboro;
             this.panelTODO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTODO.Controls.Add(this.todoPic);
             this.panelTODO.Controls.Add(this.list15);
@@ -8534,21 +8578,15 @@ namespace MagmaRokOn
             this.panelTODO.Size = new System.Drawing.Size(254, 502);
             this.panelTODO.TabIndex = 139;
             // 
-            // pictureBox1
+            // todoPic
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(739, 54);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 20);
-            this.pictureBox1.TabIndex = 140;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(739, 576);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 16);
-            this.pictureBox2.TabIndex = 141;
-            this.pictureBox2.TabStop = false;
+            this.todoPic.Image = ((System.Drawing.Image)(resources.GetObject("todoPic.Image")));
+            this.todoPic.Location = new System.Drawing.Point(5, 3);
+            this.todoPic.Name = "todoPic";
+            this.todoPic.Size = new System.Drawing.Size(242, 57);
+            this.todoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.todoPic.TabIndex = 50;
+            this.todoPic.TabStop = false;
             // 
             // panel12
             // 
@@ -8570,39 +8608,26 @@ namespace MagmaRokOn
             this.updater.DoWork += new System.ComponentModel.DoWorkEventHandler(this.updater_DoWork);
             this.updater.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.updater_RunWorkerCompleted);
             // 
-            // cboEncodingQuality
+            // PictureBoxMagmaLogoTop
             // 
-            this.cboEncodingQuality.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboEncodingQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEncodingQuality.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEncodingQuality.FormattingEnabled = true;
-            this.cboEncodingQuality.Items.AddRange(new object[] {
-            "1 (lowest)",
-            "2",
-            "3 (default)",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10 (highest)"});
-            this.cboEncodingQuality.Location = new System.Drawing.Point(405, 506);
-            this.cboEncodingQuality.Name = "cboEncodingQuality";
-            this.cboEncodingQuality.Size = new System.Drawing.Size(103, 23);
-            this.cboEncodingQuality.TabIndex = 172;
-            this.ToolTip.SetToolTip(this.cboEncodingQuality, "Select audio quality");
-            this.cboEncodingQuality.SelectedIndexChanged += new System.EventHandler(this.cboEncodingQuality_SelectedIndexChanged);
+            this.PictureBoxMagmaLogoTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureBoxMagmaLogoTop.BackColor = System.Drawing.Color.Gainsboro;
+            this.PictureBoxMagmaLogoTop.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxMagmaLogoTop.Image")));
+            this.PictureBoxMagmaLogoTop.Location = new System.Drawing.Point(786, 11);
+            this.PictureBoxMagmaLogoTop.Margin = new System.Windows.Forms.Padding(0);
+            this.PictureBoxMagmaLogoTop.Name = "PictureBoxMagmaLogoTop";
+            this.PictureBoxMagmaLogoTop.Size = new System.Drawing.Size(200, 42);
+            this.PictureBoxMagmaLogoTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureBoxMagmaLogoTop.TabIndex = 102;
+            this.PictureBoxMagmaLogoTop.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1014, 626);
             this.Controls.Add(this.panel12);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelTODO);
             this.Controls.Add(this.PictureBoxMagmaLogoTop);
             this.Controls.Add(this.menuStrip1);
@@ -8651,9 +8676,7 @@ namespace MagmaRokOn
             this.TabPageAudio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prevEndMilliseconds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prevEndMinutes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSpectrum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMilliseconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpCrowd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCrowd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericBackingAttenuation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericVocalAttenuation)).EndInit();
@@ -8675,23 +8698,19 @@ namespace MagmaRokOn
             this.groupDrumMix.ResumeLayout(false);
             this.groupDrumMix.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumericPreviewMins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSpectrum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpCrowd)).EndInit();
             this.TabPageGameData.ResumeLayout(false);
             this.TabPageGameData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpSolos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpMuteVol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMuteVol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericVocalMute)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numVersion)).EndInit();
             this.groupID.ResumeLayout(false);
             this.groupID.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDrumSFX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpTuningCents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTuningCents)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpGuitarTuning)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHelpTonicNote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericGuidePitchAttenuation)).EndInit();
             this.GroupBoxDifficulty.ResumeLayout(false);
             this.GroupBoxDifficulty.PerformLayout();
@@ -8758,25 +8777,28 @@ namespace MagmaRokOn
             ((System.ComponentModel.ISupportInitialize)(this.PictureDrumDifficulty2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureDrumDifficulty7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureDrumDifficulty1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpSolos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpMuteVol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDrumSFX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpTuningCents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpGuitarTuning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelpTonicNote)).EndInit();
             this.contextMenuStrip3.ResumeLayout(false);
             this.PanelFooter.ResumeLayout(false);
             this.PanelFooter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProviderCharCheck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImportant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRemove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImportant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWii)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).EndInit();
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picChecklist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.todoPic)).EndInit();
             this.panelTODO.ResumeLayout(false);
             this.panelTODO.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.todoPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8925,7 +8947,6 @@ namespace MagmaRokOn
         private Panel panel3;
         private CheckBox chkMaster;
         private Panel PanelFooter;
-        private PictureBox pictureBox9;
         private Label LabelBuildTo;
         private Button ButtonBuildSong;
         private TextBox TextBoxBuildDestination;
@@ -9021,10 +9042,8 @@ namespace MagmaRokOn
         private ToolStripSeparator toolStripMenuItem8;
         private ToolStripMenuItem wiiConversion;
         private ToolStripMenuItem skinsToolStripMenuItem;
-        private ToolStripMenuItem oldDarkTool;
         private Button ButtonBuildTo;
         private PictureBox picChecklist;
-        private ToolStripMenuItem cIsForColorfulTool;
         private ContextMenuStrip contextMenuStrip3;
         private ToolStripMenuItem loadTemplateToolStripMenuItem;
         private ToolStripMenuItem saveCurrentListAsTemplateToolStripMenuItem;
@@ -9066,8 +9085,6 @@ namespace MagmaRokOn
         private PictureBox picRemove;
         private PictureBox picImportant;
         private PictureBox picTemplate;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
         private Panel panel12;
         private ToolStripSeparator toolStripMenuItem12;
         private ToolStripMenuItem bypassNemosMIDIValidator;
@@ -9125,7 +9142,6 @@ namespace MagmaRokOn
         private ToolStripMenuItem checkForUpdates;
         private BackgroundWorker updater;
         private ToolStripMenuItem viewChangeLog;
-        private ToolStripMenuItem burnBabyBurn;
         private ComboBox cboTonality;
         private CheckBox chkTonality;
         private CheckBox chkDIYStems;
@@ -9163,5 +9179,6 @@ namespace MagmaRokOn
         private HScrollBar scrollBand;
         private Label lblBandDiff;
         private ComboBox cboEncodingQuality;
+        private ToolStripMenuItem cleanLightTool;
     }
 }

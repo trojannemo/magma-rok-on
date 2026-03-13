@@ -51,7 +51,7 @@ namespace MagmaRokOn
             // LabelTitle
             // 
             this.LabelTitle.AutoSize = true;
-            this.LabelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelTitle.ForeColor = System.Drawing.Color.Black;
             this.LabelTitle.Location = new System.Drawing.Point(12, 9);
             this.LabelTitle.Name = "LabelTitle";
             this.LabelTitle.Size = new System.Drawing.Size(64, 13);
@@ -60,8 +60,7 @@ namespace MagmaRokOn
             // 
             // transferCancelButton
             // 
-            this.transferCancelButton.BackColor = System.Drawing.Color.Black;
-            this.transferCancelButton.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.transferCancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.transferCancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.transferCancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.transferCancelButton.FlatAppearance.BorderSize = 0;
@@ -80,7 +79,7 @@ namespace MagmaRokOn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(411, 92);
             this.Controls.Add(this.transferCancelButton);
             this.Controls.Add(this.LabelTitle);

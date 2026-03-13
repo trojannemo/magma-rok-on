@@ -41,8 +41,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClose.AutoSize = true;
             this.btnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnClose.BackColor = System.Drawing.Color.Black;
-            this.btnClose.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
@@ -80,8 +79,7 @@
             this.btnClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClipboard.AutoSize = true;
             this.btnClipboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnClipboard.BackColor = System.Drawing.Color.Black;
-            this.btnClipboard.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnClipboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnClipboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClipboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClipboard.FlatAppearance.BorderSize = 0;
@@ -101,8 +99,7 @@
             this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnOpen.AutoSize = true;
             this.btnOpen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnOpen.BackColor = System.Drawing.Color.Black;
-            this.btnOpen.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpen.FlatAppearance.BorderSize = 0;
@@ -122,8 +119,7 @@
             this.btnCleaner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCleaner.AutoSize = true;
             this.btnCleaner.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCleaner.BackColor = System.Drawing.Color.Black;
-            this.btnCleaner.BackgroundImage = global::MagmaRokOn.Properties.Resources.button_bg_large;
+            this.btnCleaner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.btnCleaner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCleaner.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCleaner.FlatAppearance.BorderSize = 0;
@@ -143,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(580, 388);
             this.Controls.Add(this.btnCleaner);
             this.Controls.Add(this.btnOpen);

@@ -32,22 +32,7 @@ namespace MagmaRokOn
             mMainForm = mainform;
             var skin = mMainForm == null ? "" : mMainForm.ActiveSkin;
             switch (skin)
-            {
-                case "fire":
-                    btnOpen.BackgroundImage = Resources.btn_large_lava;
-                    btnClose.BackgroundImage = Resources.btn_large_lava;
-                    btnCleaner.BackgroundImage = Resources.btn_xlarge_lava;
-                    btnClipboard.BackgroundImage = Resources.btn_xlarge_lava;
-                    break;
-                case "colorful":
-                    SkinDefaults();
-                    SkinButtonStyles(FlatStyle.Flat);
-                    SkinButtonText(Color.White);
-                    btnOpen.BackColor = Color.FromArgb(27, 178, 37);
-                    btnCleaner.BackColor = Color.FromArgb(196, 33, 34);
-                    btnClipboard.BackColor = Color.FromArgb(230, 216, 0);
-                    btnClose.BackColor = Color.FromArgb(39, 85, 196);
-                    break;
+            {                
                 case "custom":
                     SkinDefaults();
                     SkinButtonStyles(mMainForm.SkinButtonStyle);

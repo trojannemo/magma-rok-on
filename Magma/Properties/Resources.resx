@@ -118,11 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="todo_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\todo_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XK1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XK1.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ContentImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ContentImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="difficulty_button_off_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\difficulty_button_off_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,56 +127,29 @@
   <data name="pip_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pip_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_bg_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\50x20_button_bg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="XK0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XK0.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pip_devil_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pip_devil_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pip_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pip_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="XK2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XK2.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="skull_sm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skull_sm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="skull_disabled_sm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skull_disabled_sm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="footer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\footer.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="todo_fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\todo_fire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pip_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pip_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="todo_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\todo_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="magma_logo_sized" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magma_logo_sized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="XK6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XK6.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="footer_gradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\footer-gradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="XK1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XK1.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="footer_divider" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\footer-divider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pip_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pip_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="difficulty_button_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\difficulty_button_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ContentImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ContentImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pip_devil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pip_devil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,55 +157,25 @@
   <data name="difficulty_button_ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\difficulty_button_ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_bg_long" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\250x22_button_bg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="magma_logo_sized_original" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magma_logo_sized_original.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XK5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XK5.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="XK4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XK4.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="difficulty_button_on_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\difficulty_button_on_disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="header_fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\header-fire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XK4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XK4.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="XK5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XK5.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="working" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\working.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="magma_logo_sized_colorful" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magma_logo_sized_colorful.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_bg_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\100x20_button_bg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="XK3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XK3.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="bg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magma_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\res\magma_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg_onfire2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg_onfire2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_large_lava" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_large_lava.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_small_lava" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_small_lava.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_xlarge_lava" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_xlarge_lava.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="magma_onfire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magma_fire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="todo_onfire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\todo_onfire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="todo_header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\res\todo_header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

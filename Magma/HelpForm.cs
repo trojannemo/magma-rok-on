@@ -24,17 +24,6 @@ namespace MagmaRokOn
 
             switch (mMainForm.ActiveSkin)
             {
-                case "fire":
-                    btnReadMe.BackgroundImage = Resources.btn_xlarge_lava;
-                    btnClose.BackgroundImage = Resources.btn_large_lava;
-                    break;
-                case "colorful":
-                    SkinDefaults();
-                    SkinButtonStyles(FlatStyle.Flat);
-                    SkinButtonText(Color.White);
-                    btnClose.BackColor = Color.FromArgb(27, 178, 37);
-                    btnReadMe.BackColor = Color.FromArgb(39, 85, 196);
-                    break;
                 case "custom":
                     SkinDefaults();
                     SkinButtonStyles(mMainForm.SkinButtonStyle);
