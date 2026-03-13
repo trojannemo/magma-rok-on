@@ -1,11 +1,26 @@
 Magma: Rok On Edition v4
 Developed by Harmonix Music Systems
-Modified by TrojanNemo 2013-2015, FujiSkunk 2019-2024, TrojanNemo 2025-Present
+Modified by TrojanNemo 2013-2015, FujiSkunk 2019-2024, TrojanNemo 2025-2026
 (with contributions from many!)
 
 -------------------
 
 FEATURES / CHANGE LOG:
+
+v4.1.0
+
+MAJOR reskinning - gets rid of all AI images since that apparently was killing the environment and hurting some users - thanks to StackOverflow0x for contributing his "Clean Light" skin that is now the new Magma default - all others were deleted and are not coming back - custom skins are still enabled if you want to make your own - just make sure not to use AI images!
+NEW icon and default album art - created by Yours Truly in Photoshop - enjoy
+MERGED PR by Aloquendiar - this fixes errors with versions created using the 2x bass pedal mode (duplicate IDs), and also fixes _rb3con discrepancies - thanks!!!
+FIXED creation of BMP album art file that would work on Windows but would not work on Linux/Wine - now should work in both without Magma throwing an error about the album art being invalid
+FIXED apparently longstanding bug with audio quality selection that was only noticeable if you were messing with the accompanying .rok files - changed it to a dropbox and fixed behavior now - thanks to Roger for bringing it up
+FIXED automatic separating of stems from mogg file that was apparently broken but nobody had reported it - should work as intended now when importing CON files
+FIXED issue raised by GucciGuwop420 on GitHub where importing a CON/DTA file it would default to 0 value for drums
+FIXED bug where difficulty was saving correctly but upon loading was displaying one bubble less than actual - thanks to jphn for pointing it out
+FIXED issue of animation speed not saving correctly
+REMOVED custom animation speeds that were reported to not be accepted by the game
+
+----------
 
 v4.0.3
 
@@ -725,4 +740,3 @@ The entire C3 Authors community, who beta tested and gave great feedback.
 -------------------
 
 For technical support or for more great tools like this one, visit our forums at forums.customscreators.com
-
