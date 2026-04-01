@@ -309,6 +309,7 @@ namespace MagmaRokOn
             Log(Tools.MIDI_ERROR_MESSAGE);
             Log("Ready to send files to MagmaCompiler ... hold on.");
             //Tools.RemovePSDrumsXNotes(ProjectFile.MidiFile);
+            Tools.RemoveKeySignatureEvents(ProjectFile.MidiFile);
             if (Tools.CheckMIDIFor2X(ProjectFile.MidiFile))
             {
                 if (!Tools.Separate2XMidi(ProjectFile.MidiFile))
