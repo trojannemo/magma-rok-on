@@ -1414,6 +1414,43 @@ namespace MagmaRokOn
             }
         }
 
+        public bool RemoveKeySignatureEvents(string MIDI)
+        {
+            try
+            {
+                songMidi = NemoLoadMIDI(MIDI);
+                if (songMidi == null) return false;
+                var cleaned = false;
+                for (var z = 0; z < songMidi.Events.Tracks; z++)
+                {
+                    var to_remove = new List<MidiEvent>();
+                    foreach (var ev in songMidi.Events[z])
+                    {
+                        if (ev.CommandCode != MidiCommandCode.MetaEvent) continue;
+                        var meta = (MetaEvent)ev;
+                        if (meta.MetaEventType == MetaEventType.KeySignature)
+                        {
+                            to_remove.Add(ev);
+                        }
+                    }
+                    foreach (var remove in to_remove)
+                    {
+                        songMidi.Events[z].Remove(remove);
+                    }
+                    if (!to_remove.Any()) continue;
+                    cleaned = true;
+                }
+
+                if (!cleaned) return true;
+                MidiFile.Export(MIDI, songMidi.Events);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool Separate2XMidi(string MIDI)
         {
             MIDI1X = Path.GetDirectoryName(MIDI) + "\\" + Path.GetFileNameWithoutExtension(MIDI) + "1x.mid";
