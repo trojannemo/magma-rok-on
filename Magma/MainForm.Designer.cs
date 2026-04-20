@@ -8590,9 +8590,9 @@ namespace MagmaRokOn
             this.panelTODO.Controls.Add(this.picRemove);
             this.panelTODO.Controls.Add(this.picImportant);
             this.panelTODO.Controls.Add(this.picTemplate);
-            this.panelTODO.Location = new System.Drawing.Point(748, 74);
+            this.panelTODO.Location = new System.Drawing.Point(748, 71);
             this.panelTODO.Name = "panelTODO";
-            this.panelTODO.Size = new System.Drawing.Size(254, 502);
+            this.panelTODO.Size = new System.Drawing.Size(254, 505);
             this.panelTODO.TabIndex = 139;
             // 
             // todoPic
@@ -8609,7 +8609,7 @@ namespace MagmaRokOn
             // 
             this.pictureBox1.Location = new System.Drawing.Point(748, 54);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 17);
             this.pictureBox1.TabIndex = 140;
             this.pictureBox1.TabStop = false;
             // 
@@ -8624,7 +8624,7 @@ namespace MagmaRokOn
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel12.Location = new System.Drawing.Point(1, 50);
+            this.panel12.Location = new System.Drawing.Point(1, 53);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1030, 1);
             this.panel12.TabIndex = 142;
