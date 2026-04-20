@@ -84,7 +84,6 @@ namespace MagmaRokOn
         private PictureBox PictureGuitarDifficulty2;
         private PictureBox PictureGuitarDifficulty7;
         private PictureBox PictureGuitarDifficulty1;
-        private TabPage TabPageGameData;
         private Label LabelLength;
         private ComboBox ComboAnimationSpeed;
         private Label LabelAnimationSpeed;
@@ -627,6 +626,7 @@ namespace MagmaRokOn
             this.picWii = new System.Windows.Forms.PictureBox();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.picChecklist = new System.Windows.Forms.PictureBox();
+            this.PictureBoxMagmaLogoTop = new System.Windows.Forms.PictureBox();
             this.todo1 = new System.Windows.Forms.TextBox();
             this.list1 = new System.Windows.Forms.TextBox();
             this.todo2 = new System.Windows.Forms.TextBox();
@@ -659,10 +659,11 @@ namespace MagmaRokOn
             this.list15 = new System.Windows.Forms.TextBox();
             this.panelTODO = new System.Windows.Forms.Panel();
             this.todoPic = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.PlaybackTimer = new System.Windows.Forms.Timer(this.components);
             this.updater = new System.ComponentModel.BackgroundWorker();
-            this.PictureBoxMagmaLogoTop = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.TopLevelTabs.SuspendLayout();
             this.TabPageInformation.SuspendLayout();
@@ -800,14 +801,16 @@ namespace MagmaRokOn
             ((System.ComponentModel.ISupportInitialize)(this.picWii)).BeginInit();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picChecklist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).BeginInit();
             this.panelTODO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.todoPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -1548,7 +1551,6 @@ namespace MagmaRokOn
             // 
             this.TopLevelTabs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.TopLevelTabs.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.TopLevelTabs.Controls.Add(this.TabPageInformation);
             this.TopLevelTabs.Controls.Add(this.TabPageAudio);
             this.TopLevelTabs.Controls.Add(this.TabPageGameData);
@@ -1633,9 +1635,9 @@ namespace MagmaRokOn
             this.TabPageInformation.Controls.Add(this.NumericUpDownYear);
             this.TabPageInformation.Controls.Add(this.PictureBoxAlbumArt);
             this.TabPageInformation.ForeColor = System.Drawing.Color.DarkGray;
-            this.TabPageInformation.Location = new System.Drawing.Point(4, 25);
+            this.TabPageInformation.Location = new System.Drawing.Point(4, 22);
             this.TabPageInformation.Name = "TabPageInformation";
-            this.TabPageInformation.Size = new System.Drawing.Size(749, 571);
+            this.TabPageInformation.Size = new System.Drawing.Size(749, 574);
             this.TabPageInformation.TabIndex = 6;
             this.TabPageInformation.Text = "Information";
             this.TabPageInformation.DragDrop += new System.Windows.Forms.DragEventHandler(this.HandleDragDrop);
@@ -2683,7 +2685,7 @@ namespace MagmaRokOn
             this.useDefaultArt,
             this.visitAlbumArtRepository});
             this.contextMenuStrip4.Name = "contextMenuStrip4";
-            this.contextMenuStrip4.Size = new System.Drawing.Size(199, 70);
+            this.contextMenuStrip4.Size = new System.Drawing.Size(199, 48);
             // 
             // useDefaultArt
             // 
@@ -2822,9 +2824,9 @@ namespace MagmaRokOn
             this.TabPageAudio.Controls.Add(this.picSpectrum);
             this.TabPageAudio.Controls.Add(this.picHelpCrowd);
             this.TabPageAudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPageAudio.Location = new System.Drawing.Point(4, 25);
+            this.TabPageAudio.Location = new System.Drawing.Point(4, 22);
             this.TabPageAudio.Name = "TabPageAudio";
-            this.TabPageAudio.Size = new System.Drawing.Size(749, 571);
+            this.TabPageAudio.Size = new System.Drawing.Size(749, 574);
             this.TabPageAudio.TabIndex = 7;
             this.TabPageAudio.Text = "Audio";
             this.TabPageAudio.DragDrop += new System.Windows.Forms.DragEventHandler(this.HandleDragDrop);
@@ -5172,9 +5174,10 @@ namespace MagmaRokOn
             this.TabPageGameData.Controls.Add(this.picHelpGuitarTuning);
             this.TabPageGameData.Controls.Add(this.picHelpTonicNote);
             this.TabPageGameData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPageGameData.Location = new System.Drawing.Point(4, 25);
+            this.TabPageGameData.ForeColor = System.Drawing.Color.DarkGray;
+            this.TabPageGameData.Location = new System.Drawing.Point(4, 22);
             this.TabPageGameData.Name = "TabPageGameData";
-            this.TabPageGameData.Size = new System.Drawing.Size(749, 571);
+            this.TabPageGameData.Size = new System.Drawing.Size(749, 574);
             this.TabPageGameData.TabIndex = 8;
             this.TabPageGameData.Text = "Game Data";
             this.TabPageGameData.DragDrop += new System.Windows.Forms.DragEventHandler(this.HandleDragDrop);
@@ -8050,10 +8053,11 @@ namespace MagmaRokOn
             this.PanelHeader.Controls.Add(this.ButtonGameDataTab);
             this.PanelHeader.Controls.Add(this.ButtonAudioTab);
             this.PanelHeader.Controls.Add(this.ButtonInformationTab);
+            this.PanelHeader.Controls.Add(this.PictureBoxMagmaLogoTop);
             this.PanelHeader.ForeColor = System.Drawing.Color.Gainsboro;
-            this.PanelHeader.Location = new System.Drawing.Point(-1, 3);
+            this.PanelHeader.Location = new System.Drawing.Point(-1, 0);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1018, 50);
+            this.PanelHeader.Size = new System.Drawing.Size(1018, 54);
             this.PanelHeader.TabIndex = 100;
             // 
             // picChecklist
@@ -8068,6 +8072,19 @@ namespace MagmaRokOn
             this.picChecklist.TabIndex = 32;
             this.picChecklist.TabStop = false;
             this.picChecklist.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picChecklist_MouseClick);
+            // 
+            // PictureBoxMagmaLogoTop
+            // 
+            this.PictureBoxMagmaLogoTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureBoxMagmaLogoTop.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBoxMagmaLogoTop.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxMagmaLogoTop.Image")));
+            this.PictureBoxMagmaLogoTop.Location = new System.Drawing.Point(786, 8);
+            this.PictureBoxMagmaLogoTop.Margin = new System.Windows.Forms.Padding(0);
+            this.PictureBoxMagmaLogoTop.Name = "PictureBoxMagmaLogoTop";
+            this.PictureBoxMagmaLogoTop.Size = new System.Drawing.Size(200, 42);
+            this.PictureBoxMagmaLogoTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureBoxMagmaLogoTop.TabIndex = 102;
+            this.PictureBoxMagmaLogoTop.TabStop = false;
             // 
             // todo1
             // 
@@ -8536,7 +8553,7 @@ namespace MagmaRokOn
             // 
             // panelTODO
             // 
-            this.panelTODO.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelTODO.BackColor = System.Drawing.Color.Transparent;
             this.panelTODO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTODO.Controls.Add(this.todoPic);
             this.panelTODO.Controls.Add(this.list15);
@@ -8573,9 +8590,9 @@ namespace MagmaRokOn
             this.panelTODO.Controls.Add(this.picRemove);
             this.panelTODO.Controls.Add(this.picImportant);
             this.panelTODO.Controls.Add(this.picTemplate);
-            this.panelTODO.Location = new System.Drawing.Point(748, 74);
+            this.panelTODO.Location = new System.Drawing.Point(748, 71);
             this.panelTODO.Name = "panelTODO";
-            this.panelTODO.Size = new System.Drawing.Size(254, 502);
+            this.panelTODO.Size = new System.Drawing.Size(254, 505);
             this.panelTODO.TabIndex = 139;
             // 
             // todoPic
@@ -8588,12 +8605,28 @@ namespace MagmaRokOn
             this.todoPic.TabIndex = 50;
             this.todoPic.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(748, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 17);
+            this.pictureBox1.TabIndex = 140;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(748, 576);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(10, 16);
+            this.pictureBox2.TabIndex = 141;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel12.Location = new System.Drawing.Point(753, 53);
+            this.panel12.Location = new System.Drawing.Point(1, 53);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(260, 1);
+            this.panel12.Size = new System.Drawing.Size(1030, 1);
             this.panel12.TabIndex = 142;
             // 
             // PlaybackTimer
@@ -8608,28 +8641,16 @@ namespace MagmaRokOn
             this.updater.DoWork += new System.ComponentModel.DoWorkEventHandler(this.updater_DoWork);
             this.updater.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.updater_RunWorkerCompleted);
             // 
-            // PictureBoxMagmaLogoTop
-            // 
-            this.PictureBoxMagmaLogoTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PictureBoxMagmaLogoTop.BackColor = System.Drawing.Color.Gainsboro;
-            this.PictureBoxMagmaLogoTop.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxMagmaLogoTop.Image")));
-            this.PictureBoxMagmaLogoTop.Location = new System.Drawing.Point(786, 11);
-            this.PictureBoxMagmaLogoTop.Margin = new System.Windows.Forms.Padding(0);
-            this.PictureBoxMagmaLogoTop.Name = "PictureBoxMagmaLogoTop";
-            this.PictureBoxMagmaLogoTop.Size = new System.Drawing.Size(200, 42);
-            this.PictureBoxMagmaLogoTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PictureBoxMagmaLogoTop.TabIndex = 102;
-            this.PictureBoxMagmaLogoTop.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1014, 626);
             this.Controls.Add(this.panel12);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelTODO);
-            this.Controls.Add(this.PictureBoxMagmaLogoTop);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.PanelFooter);
@@ -8795,10 +8816,12 @@ namespace MagmaRokOn
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picChecklist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).EndInit();
             this.panelTODO.ResumeLayout(false);
             this.panelTODO.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.todoPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMagmaLogoTop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -9085,6 +9108,8 @@ namespace MagmaRokOn
         private PictureBox picRemove;
         private PictureBox picImportant;
         private PictureBox picTemplate;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
         private Panel panel12;
         private ToolStripSeparator toolStripMenuItem12;
         private ToolStripMenuItem bypassNemosMIDIValidator;
@@ -9180,5 +9205,6 @@ namespace MagmaRokOn
         private Label lblBandDiff;
         private ComboBox cboEncodingQuality;
         private ToolStripMenuItem cleanLightTool;
+        private TabPage TabPageGameData;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -7939,7 +7939,7 @@ namespace MagmaRokOn
 
         private void SkinToDoStuff(Color color, int type)
         {
-            /*var item = ActiveItem; //save it to put back after we skin the boxes
+            var item = ActiveItem; //save it to put back after we skin the boxes
 
             for (var i = 0; i < 15; i++)
             {
@@ -7964,7 +7964,7 @@ namespace MagmaRokOn
                 }
             }
 
-            ActiveItem = item;*/
+            ActiveItem = item;
         }
 
         private void SkinComboBoxes(Color color, int type)
@@ -7972,7 +7972,7 @@ namespace MagmaRokOn
             var comboboxes = new[]
                 {
                     ComboBoxAutogenTheme, ComboAnimationSpeed, ComboHopo, ComboVocalGender, ComboVocalPercussion, ComboVocalScroll,
-                    ComboTonicNote, ComboRating, ComboDrumSFX, ComboDrums, ComboBoxGenre, ComboBoxSubGenre
+                    ComboTonicNote, ComboRating, ComboDrumSFX, ComboDrums, ComboBoxGenre, ComboBoxSubGenre, cboBandFail
                 };
             
             foreach (var combobox in comboboxes)
@@ -7994,7 +7994,7 @@ namespace MagmaRokOn
             var comboboxes = new[]
                 {
                     ComboBoxAutogenTheme, ComboAnimationSpeed, ComboHopo, ComboVocalGender, ComboVocalPercussion, ComboVocalScroll,
-                    ComboTonicNote, ComboRating, ComboDrumSFX, ComboDrums, ComboBoxGenre, ComboBoxSubGenre
+                    ComboTonicNote, ComboRating, ComboDrumSFX, ComboDrums, ComboBoxGenre, ComboBoxSubGenre, cboBandFail
                 };
 
             foreach (var combobox in comboboxes)
@@ -9816,7 +9816,6 @@ namespace MagmaRokOn
             {
                 fileName = fileName.Substring(0, fileName.Length - "_rb3con".Length);
             }
-            Console.WriteLine(chk2xBass.Checked);
             if (chk2xBass.Checked)
             {
                 fileName += "1x";
