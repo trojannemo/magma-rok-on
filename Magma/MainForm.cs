@@ -2335,6 +2335,7 @@ namespace MagmaRokOn
                 RefreshWindowTitle();
             }
             //Tools.RemovePSDrumsXNotes(ProjectFile.MidiFile);
+            Tools.RemoveKeySignatureEvents(ProjectFile.MidiFile);
 
             if (ProjectFile.GetSaveStatus() == SaveStatus.kUnsaved)
             {
